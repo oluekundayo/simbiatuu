@@ -1,7 +1,7 @@
 [build]
 command = "ng build"
 functions = "netlify/functions"
-publish = "dist/simbiatuu/browser"
+publish = "dist/simbiwebapp/browser"
 
 [[plugins]]
   package = "@netlify/angular-runtime"
