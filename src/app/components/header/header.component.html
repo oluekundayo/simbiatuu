@@ -1,0 +1,160 @@
+<div class="fixed z-50 w-full">
+  <div class="md:px-14">
+    <nav class="bg-oryo lg:rounded-3xl">
+      <div class="me-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 joto">
+          <div class="flex justify-between items-center joto">
+            <div class="flex-shrink-0">
+              <div
+                class="flex items-center cursor-pointer"
+                [routerLink]="['/']"
+              >
+                <span class="text-[#242528] text-2xl font-bold mr-2">⦿</span>
+                <span class="text-white font-extrabold text-lg"
+                  >SÍMBÍÀTÚÚ.</span
+                >
+              </div>
+              <!-- <img
+                class="h-8 w-auto"
+                src="../assets/img/logo/oryo_logo.png"
+                alt="Workflow"
+                [routerLink]="['/']"
+                routerLinkActive="active"
+              /> -->
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <ng-container *ngTemplateOutlet="navLinks"></ng-container>
+              </div>
+            </div>
+            <div class="hidden md:block">
+              <!-- Button (aligned to the right) -->
+              <button
+                class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-white text-[#e35336] backdrop-blur transition-all hover:bg-[#e35336a0]"
+              >
+                <span class="text-sm font-semibold tracking-wide button-text-3"
+                  >Contact Us</span
+                >
+                <span
+                  class="transition-transform duration-300 ease-in-out group-hover:rotate-45 group-hover:translate-x-1 button-text-3"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"
+                    class="w-4 h-4 fill-current"
+                  >
+                    <path
+                      d="M336 96c8.8 0 16 7.2 16 16v224c0 8.8-7.2 16-16 16s-16-7.2-16-16V150.6L59.3 411.3c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L297.4 128H112c-8.8 0-16-7.2-16-16s7.2-16 16-16h224z"
+                    />
+                  </svg>
+                </span>
+                <div class="button-overlay"></div>
+              </button>
+            </div>
+          </div>
+          <!-- Hamburger menu for mobile -->
+          <div class="-mr-2 flex md:hidden">
+            <button
+              (click)="toggleMenu()"
+              type="button"
+              class="text-white hover:text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!-- Heroicon name: menu -->
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div
+        class="md:hidden"
+        id="mobile-menu"
+        [class]="menu ? 'block' : 'hidden'"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+          <ng-container *ngTemplateOutlet="navLinks"></ng-container>
+
+          <button
+            class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-white text-[#e35336] backdrop-blur transition-all hover:bg-[#e35336a0]"
+          >
+            <span class="text-sm font-semibold tracking-wide button-text-3"
+              >Contact Us</span
+            >
+            <span
+              class="transition-transform duration-300 ease-in-out group-hover:rotate-45 group-hover:translate-x-1 button-text-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                class="w-4 h-4 fill-current"
+              >
+                <path
+                  d="M336 96c8.8 0 16 7.2 16 16v224c0 8.8-7.2 16-16 16s-16-7.2-16-16V150.6L59.3 411.3c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L297.4 128H112c-8.8 0-16-7.2-16-16s7.2-16 16-16h224z"
+                />
+              </svg>
+            </span>
+            <div class="button-overlay"></div>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- Navigation Link Template -->
+<ng-template #navLinks>
+  <a
+    class="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    [routerLink]="['/about']"
+    routerLinkActive="active"
+  >
+    About us
+  </a>
+  <a
+    class="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    [routerLink]="['/services']"
+    routerLinkActive="active"
+  >
+    Services
+  </a>
+  <a
+    class="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    href="https://oryoltd.com/blog"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Blog
+  </a>
+  <a
+    class="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    [routerLink]="['/careers']"
+    routerLinkActive="active"
+  >
+    Careers
+  </a>
+  <a
+    class="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    [routerLink]="['/clients']"
+    routerLinkActive="active"
+  >
+    Clients
+  </a>
+</ng-template>

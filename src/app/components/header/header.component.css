@@ -1,0 +1,17 @@
+.bg-oryo {
+    background: #e35336;
+    color: #fff;
+  }
+
+  .joto {
+    width: 100%;
+  }
+
+  .text-oryo {
+    color: #088158;
+  }
+
+  .active {
+    border-bottom: 2px solid #651100;
+    border-radius: 0px;
+  }
