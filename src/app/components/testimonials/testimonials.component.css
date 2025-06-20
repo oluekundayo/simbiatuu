@@ -1,0 +1,19 @@
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.image-train-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-train-track {
+  display: flex;
+  flex-direction: row;
+  animation: scrollLeft 30s linear infinite;
+}

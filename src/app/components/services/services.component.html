@@ -1,0 +1,52 @@
+<section class="bg-white py-24 px-4 relative">
+  <!-- <div class="gradent bottom-0 left-0 opacity-15 w-fit h-fit md:h-[500px] md:w-[500px]"></div> -->
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      @for (service of services; track service.title) {
+      <div class="flex items-start flex-col space-x-4">
+        <div
+          class="w-12 h-12 flex items-center justify-center rounded-full text-white"
+          [class]="service.iconBg"
+        >
+          <img
+            [src]="service.icon"
+            alt="{{ service.title }} icon"
+            class="w-6 h-6"
+          />
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-1">
+            {{ service.title }}
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            {{ service.description }}
+          </p>
+        </div>
+      </div>
+      }
+    </div>
+    <div class=" flex justify-center items-center mt-5">
+        <button
+            class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-[#ffbd59] text-white backdrop-blur transition-all hover:bg-[#e35336a0]"
+          >
+            <span class="text-sm font-semibold tracking-wide button-text-3"
+              >View Our Services</span
+            >
+            <span
+              class="transition-transform duration-300 ease-in-out group-hover:rotate-45 group-hover:translate-x-1 button-text-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                class="w-4 h-4 fill-current"
+              >
+                <path
+                  d="M336 96c8.8 0 16 7.2 16 16v224c0 8.8-7.2 16-16 16s-16-7.2-16-16V150.6L59.3 411.3c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L297.4 128H112c-8.8 0-16-7.2-16-16s7.2-16 16-16h224z"
+                />
+              </svg>
+            </span>
+            <div class="button-overlay"></div>
+          </button>
+    </div>
+  </div>
+</section>

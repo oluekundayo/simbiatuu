@@ -5,7 +5,7 @@
         <div class="flex items-center justify-between h-16 joto">
           <div class="flex justify-between items-center joto">
             <div class="flex-shrink-0">
-              <div
+              <!-- <div
                 class="flex items-center cursor-pointer"
                 [routerLink]="['/']"
               >
@@ -13,14 +13,13 @@
                 <span class="text-white font-extrabold text-lg"
                   >SÍMBÍÀTÚÚ.</span
                 >
-              </div>
-              <!-- <img
+              </div> -->
+              <img
                 class="h-8 w-auto"
-                src="../assets/img/logo/oryo_logo.png"
+                src="simbiatuu.png"
                 alt="Workflow"
                 [routerLink]="['/']"
-                routerLinkActive="active"
-              /> -->
+              />
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
@@ -30,7 +29,7 @@
             <div class="hidden md:block">
               <!-- Button (aligned to the right) -->
               <button
-                class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-white text-[#e35336] backdrop-blur transition-all hover:bg-[#e35336a0]"
+                class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-white text-[#FFA500] backdrop-blur transition-all hover:bg-[#e35336a0]"
               >
                 <span class="text-sm font-semibold tracking-wide button-text-3"
                   >Contact Us</span
@@ -93,7 +92,7 @@
           <ng-container *ngTemplateOutlet="navLinks"></ng-container>
 
           <button
-            class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-white text-[#e35336] backdrop-blur transition-all hover:bg-[#e35336a0]"
+            class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-white text-[#ffbd59] backdrop-blur transition-all hover:bg-[#e35336a0]"
           >
             <span class="text-sm font-semibold tracking-wide button-text-3"
               >Contact Us</span
@@ -122,21 +121,14 @@
 <!-- Navigation Link Template -->
 <ng-template #navLinks>
   <a
-    class="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    class="text-[#ffbd59] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
     [routerLink]="['/about']"
     routerLinkActive="active"
   >
     About us
   </a>
   <a
-    class="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-    [routerLink]="['/services']"
-    routerLinkActive="active"
-  >
-    Services
-  </a>
-  <a
-    class="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    class="text-[#ffbd59] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
     href=""
     target="_blank"
     rel="noopener noreferrer"
@@ -144,17 +136,24 @@
     Blog
   </a>
   <a
-    class="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    class="text-[#ffbd59] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    [routerLink]="['/services']"
+    routerLinkActive="active"
+  >
+    Services
+  </a>
+  <!-- <a
+    class="text-[#ffbd59] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
     [routerLink]="['/careers']"
     routerLinkActive="active"
   >
     Careers
   </a>
   <a
-    class="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+    class="text-[#ffbd59] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
     [routerLink]="['/clients']"
     routerLinkActive="active"
   >
     Clients
-  </a>
+  </a> -->
 </ng-template>

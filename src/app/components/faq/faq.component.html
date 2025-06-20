@@ -1,0 +1,39 @@
+
+<section class="py-20 px-4 bg-gradient-to-r from-[#ffbd59] to-[#F8FAFC] text-white p-6 text-center relative">
+  <div class="gradent-left w-fit h-fit md:h-[500px] md:w-[500px]"></div>
+  <div class="gradent-right absolute w-fit h-fit md:h-[454px] md:w-[440px]"></div>
+  <div class="max-w-4xl mx-auto text-center mb-10">
+    <h2 class="text-3xl font-bold mb-2">Frequently asked questions</h2>
+    <p class="text-gray-600">How Stackmatix can benefit your business</p>
+  </div>
+
+  <div class="max-w-4xl mx-auto space-y-4">
+    @for (faq of faqs; track faq.question; let i = $index) {
+      <div
+        class="rounded-xl border transition-all duration-300"
+        [class]="faq.open ? 'bg-gray-50 border-gray-200' : 'bg-white border-gray-300'"
+      >
+        <button
+          class="w-full text-left p-6 flex items-center justify-between"
+          (click)="toggleFaq(i)"
+        >
+          <span class="font-semibold text-base text-gray-900">
+            {{ faq.question }}
+          </span>
+          <span
+            class="w-6 h-6 flex items-center justify-center rounded-full"
+            [class]="faq.open ? 'bg-orange-400 text-white' : 'bg-black text-white'"
+          >
+            {{ faq.open ? '−' : '+' }}
+          </span>
+        </button>
+
+        @if (faq.open) {
+          <div class="px-6 pb-6 text-sm text-gray-700">
+            {{ faq.answer }}
+          </div>
+        }
+      </div>
+    }
+  </div>
+</section>

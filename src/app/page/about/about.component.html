@@ -1,7 +1,10 @@
 <div class="min-h-screen bg-[#0f0f0f] text-white font-sans">
   <!-- NAVIGATION -->
   <app-header></app-header>
-  <header class="h-auto md:h-screen flex items-center bg-black">
+  <header class="h-auto md:h-screen flex items-center bg-black relative">
+    <div
+      class="gradent bottom-0 left-0 opacity-10 w-fit h-fit md:h-[500px] md:w-[500px]"
+    ></div>
     <div
       class="w-full max-w-screen-2xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-6 py-12 md:py-0 md:px-24"
     >
@@ -91,8 +94,12 @@
     </div>
   </header>
   <div
-    class="flex flex-col lg:flex-row max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 gap-8 pt-20"
+    class="flex flex-col lg:flex-row max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8 gap-8 pt-20 relative"
   >
+    <div class="gradent-left w-fit h-fit md:h-[500px] md:w-[500px]"></div>
+    <div
+      class="gradent-right absolute w-fit h-fit md:h-[454px] md:w-[440px]"
+    ></div>
     <!-- Sidebar -->
     <!-- <aside
       class="bg-[#1e1e1e] rounded-2xl p-6 w-full lg:w-1/4 text-center shadow-lg"
@@ -186,79 +193,55 @@
           </div>
           <div class="bg-[#1e1e1e] p-4 rounded-lg shadow hover:shadow-lg">
             <h3 class="text-lg font-bold flex items-center gap-2">
-              <i class="fas fa-mobile-alt text-yellow-400"></i> Mobile Apps
+              <i class="fas fa-mobile-alt text-yellow-400"></i> Digital Products
             </h3>
             <p class="text-sm text-gray-400 mt-2">
-              Professional development of applications for iOS and Android.
+              From templates to toolkits, I create ready-to-use resources
+              designed to save time, drive results, and empower entrepreneurs to
+              grow smarter.
             </p>
           </div>
           <div class="bg-[#1e1e1e] p-4 rounded-lg shadow hover:shadow-lg">
             <h3 class="text-lg font-bold flex items-center gap-2">
-              <i class="fas fa-camera text-yellow-400"></i> Photography
+              <i class="fas fa-camera text-yellow-400"></i> Analytics &
+              Reporting
             </h3>
             <p class="text-sm text-gray-400 mt-2">
-              I make high-quality photos of any category at a professional
-              level.
+              Understand your growth. I provide clear reports that translate
+              numbers into strategy, so you can scale with confidence and
+              direction.
             </p>
           </div>
         </div>
-      </section>
 
-      <!-- Testimonials Section -->
-      <section class="mb-10">
-        <h2 class="text-xl sm:text-2xl font-semibold mb-4">Testimonials</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="bg-[#1e1e1e] p-4 rounded-lg">
-            <h3 class="font-bold">Beauty By Vicky Lounge</h3>
-            <p class="text-sm text-gray-400 mt-2">
-              Have been looking for who to help me with my web design and Mr Ola
-              took it up! He did a c...
-            </p>
-          </div>
-          <div class="bg-[#1e1e1e] p-4 rounded-lg">
-            <h3 class="font-bold">Daniel L.</h3>
-            <p class="text-sm text-gray-400 mt-2">
-              Ola delivered beyond my expectations. Not only did he build a
-              functional, beautiful...
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Clients Section -->
-      <section>
-        <h2 class="text-xl sm:text-2xl font-semibold mb-4">Clients</h2>
-        <div
-          class="flex flex-wrap gap-6 items-center justify-center sm:justify-start"
-        >
-          <img
-            src="https://via.placeholder.com/80x40"
-            alt="Client 1"
-            class="h-10"
-          />
-          <img
-            src="https://via.placeholder.com/80x40"
-            alt="Client 2"
-            class="h-10"
-          />
-          <img
-            src="https://via.placeholder.com/80x40"
-            alt="Client 3"
-            class="h-10"
-          />
-          <img
-            src="https://via.placeholder.com/80x40"
-            alt="Client 4"
-            class="h-10"
-          />
-          <img
-            src="https://via.placeholder.com/80x40"
-            alt="Client 5"
-            class="h-10"
-          />
+        <div class="flex justify-center items-center mt-5">
+          <button
+            class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-[#ffbd59] text-white backdrop-blur transition-all hover:bg-[#e35336a0]"
+          >
+            <span class="text-sm font-semibold tracking-wide button-text-3"
+              >View Our Services</span
+            >
+            <span
+              class="transition-transform duration-300 ease-in-out group-hover:rotate-45 group-hover:translate-x-1 button-text-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                class="w-4 h-4 fill-current"
+              >
+                <path
+                  d="M336 96c8.8 0 16 7.2 16 16v224c0 8.8-7.2 16-16 16s-16-7.2-16-16V150.6L59.3 411.3c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L297.4 128H112c-8.8 0-16-7.2-16-16s7.2-16 16-16h224z"
+                />
+              </svg>
+            </span>
+            <div class="button-overlay"></div>
+          </button>
         </div>
       </section>
     </main>
   </div>
+
+  <!-- Testimonials Section -->
+  <app-testimonials />
   <app-footer />
 </div>
