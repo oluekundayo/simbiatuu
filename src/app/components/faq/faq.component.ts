@@ -10,22 +10,22 @@ export class FaqComponent {
   faqs = [
     {
       question:
-        'What makes Stackmatix the best marketing agency for venture-backed startups?',
+        'What types of businesses do you typically support?',
       answer:
-        'Stackmatix is purpose-built to help venture-backed startups scale fast. We’ve worked with 200+ startups backed by top-tier VCs like a16z, Sequoia, HFO and YCombinator, driving results across paid media, analytics, SEO, and growth strategy. Our team of startup marketers knows how to balance efficiency with speed, making us the ideal partner for early-stage companies looking to grow quickly and responsibly.',
+        'I work primarily with small to mid-sized enterprises (SMEs) across diverse industries including health, wellness, technology, lifestyle, hospitality, non-profits, and real estate. Whether a business is in the launch phase, scaling, or undergoing a strategic rebrand, my approach is tailored to meet its specific growth objectives.',
       open: true,
     },
     {
       question:
-        "Do you specialize in working with Seed to Pre-IPO or even IPO'd startups/scaleups?",
+        "How do your marketing services differ from traditional agencies?",
       answer:
-        'Yes! We work across all funding stages—from Seed through Pre-IPO—and support IPO-ready teams looking to scale performance channels or prep for exit.',
+        'My services combine strategic insight with compelling storytelling and full-stack marketing execution. As both a marketer and entrepreneur, I understand the challenges businesses face from the inside out. This perspective allows me to develop holistic, results-driven solutions that not only enhance visibility but also strengthen brand trust and long-term positioning.',
       open: false,
     },
     {
-      question: 'Do you have experience in our industry?',
+      question: 'Do you offer support for businesses that are still defining their brand identity?',
       answer:
-        'We’ve worked with companies across SaaS, fintech, healthtech, marketplace, and more. Our industry-agnostic approach is grounded in deep channel expertise and testing frameworks.',
+        'Yes. I frequently work with clients who are seeking greater clarity around their brand voice, positioning, and narrative. Through structured brand discovery and messaging strategy sessions, I help organizations articulate a clear, consistent identity that resonates with their target audience and aligns with their core mission.',
       open: false,
     },
   ];

@@ -5,6 +5,8 @@ import { TestimonialsComponent } from "../../components/testimonials/testimonial
 import { ServicesComponent } from "../../components/services/services.component";
 import { FaqComponent } from "../../components/faq/faq.component";
 import { FooterComponent } from "../../components/footer/footer.component";
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-index',
@@ -13,5 +15,11 @@ import { FooterComponent } from "../../components/footer/footer.component";
   styleUrl: './index.component.css'
 })
 export class IndexComponent {
-
+constructor(private router: Router) {
+    this.router.events
+      .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo(0, 0); // Instant jump to top
+      });
+  }
 }
