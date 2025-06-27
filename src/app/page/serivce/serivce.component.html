@@ -1,0 +1,114 @@
+<div class="bg-[#121212] min-h-screen ">
+  <!-- NAVIGATION -->
+  <app-header></app-header>
+  <!-- HEADER -->
+ <header class="h-auto md:h-screen flex items-center bg-black relative">
+    <div
+      class="gradent bottom-0 left-0 opacity-10 w-[300px] h-[300px] md:h-[500px] md:w-[500px]"
+    ></div>
+    <div
+      class="w-full max-w-screen-2xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-6 py-12 md:py-0 md:px-24"
+    >
+      <!-- Text Content -->
+      <div class="text-center md:text-left md:w-1/2 pt-6 md:pt-0">
+        <h1
+          class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight"
+        >
+          Strategy meets storytelling. 
+        </h1>
+        <p
+          class="text-white mb-6 max-w-md mx-auto md:mx-0 text-sm sm:text-base"
+        >
+          Execution meets results.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
+        >
+          <button
+            class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-full bg-white text-[#e35336] backdrop-blur transition-all hover:bg-[#e35336a0]"
+          >
+            <span class="text-sm font-semibold tracking-wide button-text-3"
+              >Contact Us</span
+            >
+            <span
+              class="transition-transform duration-300 ease-in-out group-hover:rotate-45 group-hover:translate-x-1 button-text-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                class="w-4 h-4 fill-current"
+              >
+                <path
+                  d="M336 96c8.8 0 16 7.2 16 16v224c0 8.8-7.2 16-16 16s-16-7.2-16-16V150.6L59.3 411.3c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L297.4 128H112c-8.8 0-16-7.2-16-16s7.2-16 16-16h224z"
+                />
+              </svg>
+            </span>
+            <div class="button-overlay"></div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Image Train (Right) -->
+      <div class="md:w-1/2 w-full overflow-hidden">
+        <div
+          class="image-train-container relative h-[360px] sm:h-[420px] md:h-[480px] overflow-hidden"
+        >
+          <div class="image-train-track animate-scrollUp">
+            <div class="image-train-row flex gap-4 px-2">
+              <img
+                src="forbes.jpg"
+                alt="People meeting"
+                class="w-full object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <app-services></app-services>
+
+  <section class="px-4 py-12 max-w-7xl mx-auto">
+  <div class="mb-8">
+    <h2 class="text-3xl font-semibold text-white mb-2">Our other Business Highlights</h2>
+
+    <!-- Filters -->
+    <div class="flex flex-wrap items-center gap-3 my-4">
+      @for (cat of categories; track cat) {
+        <button
+          class="px-4 py-1 rounded-full text-sm border transition"
+          [class]="selectedCategory === cat?'bg-[#e85427] text-white border-[#e85427]':'bg-white text-gray-600 border-gray-300'"
+          (click)="setCategory(cat)"
+        >
+          {{ cat }}
+        </button>
+      }
+    </div>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    @for (study of filteredStudies; track study.title) {
+      <div class="rounded-lg border shadow-sm p-4 hover:shadow-md transition bg-white">
+        <img
+          [src]="study.image"
+          [alt]="study.title"
+          class="h-36 w-full object-cover mb-4 rounded-md bg-gray-50"
+        />
+        <p class="text-xs uppercase text-gray-500 mb-1">{{ study.type }}</p>
+        <h3 class="font-semibold text-lg text-gray-900 mb-2">{{ study.title }}</h3>
+        <p class="text-sm text-gray-700 mb-4">{{ study.description }}</p>
+        <a href="javascript:void(0)" class="text-[#e85427] text-sm font-medium hover:underline">See Work →</a>
+      </div>
+    }
+  </div>
+</section>
+
+  <app-testimonials></app-testimonials>
+
+  <app-faq></app-faq>
+  <app-footer />
+</div>
+
+

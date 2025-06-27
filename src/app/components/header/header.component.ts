@@ -1,6 +1,6 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,8 +10,12 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class HeaderComponent {
   menu: boolean = false;
+  _router = inject(Router);
 
   toggleMenu() {
     this.menu = !this.menu;
+  }
+  send() {
+    this._router.navigateByUrl('/contact')
   }
 }

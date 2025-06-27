@@ -1,0 +1,217 @@
+<div class="bg-white min-h-screen">
+  <!-- NAVIGATION -->
+  <app-header></app-header>
+  <!-- HEADER -->
+  <header class="h-auto md:h-screen flex items-center bg-black relative">
+    <div
+      class="gradent bottom-0 left-0 opacity-10 w-[300px] h-[300px] md:h-[500px] md:w-[500px]"
+    ></div>
+    <div
+      class="w-full max-w-screen-2xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-6 py-12 md:py-0 md:px-24"
+    >
+      <!-- Text Content -->
+      <div class="text-center md:text-left md:w-1/2 pt-6 md:pt-0">
+        <h1
+          class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight"
+        >
+          Maximize Your Brand’s Potential.
+        </h1>
+        <p
+          class="text-white mb-6 max-w-md mx-auto md:mx-0 text-sm sm:text-base"
+        >
+          At Simbiatuu, we've helped countless entrepreneurs and businesses
+          launch, grow, and thrive. With a blend of storytelling, strategy, and
+          creativity, we know what it takes to build brands that connect and
+          convert. What’s holding you back? Fill out the form and let’s talk
+          about how we can bring clarity to your vision, momentum to your
+          marketing, and growth to your business.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
+        >
+          <button
+            class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-full bg-white text-[#e35336] backdrop-blur transition-all hover:bg-[#e35336a0]"
+          >
+            <span class="text-sm font-semibold tracking-wide button-text-3"
+              >Contact Us</span
+            >
+            <span
+              class="transition-transform duration-300 ease-in-out group-hover:rotate-45 group-hover:translate-x-1 button-text-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 384 512"
+                class="w-4 h-4 fill-current"
+              >
+                <path
+                  d="M336 96c8.8 0 16 7.2 16 16v224c0 8.8-7.2 16-16 16s-16-7.2-16-16V150.6L59.3 411.3c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L297.4 128H112c-8.8 0-16-7.2-16-16s7.2-16 16-16h224z"
+                />
+              </svg>
+            </span>
+            <div class="button-overlay"></div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Image Train (Right) -->
+      <div class="md:w-1/2 w-full overflow-hidden">
+        <div
+          class="image-train-container relative h-[360px] sm:h-[420px] md:h-[480px] overflow-hidden"
+        >
+          <div class="image-train-track animate-scrollUp">
+            <div class="image-train-row flex gap-4 px-2">
+              <img
+                src="forbes.jpg"
+                alt="People meeting"
+                class="w-full object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto px-6 py-10">
+    <!-- Section Title -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-gray-900">Let's Connect Now</h2>
+      <p class="mt-2 text-lg text-gray-600"></p>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="flex flex-col md:flex-row justify-between gap-10 relative">
+      <!-- Left Section - Contact Information -->
+      <div class="flex-1 sticky top-0">
+        <p class="text-xl font-semibold text-gray-800 mb-5">Let’s Connect</p>
+        <p class="text-lg text-gray-700 mb-2">
+          📧 Email:
+          <a href="mailto:simbiatuu@example.com" class="text-teal-600">{{
+            "simbiatuu@example.com"
+          }}</a>
+        </p>
+        <p class="text-lg text-gray-700 mb-2">
+          📞 Phone: <span class="text-teal-600">+44 7852 304977</span>
+        </p>
+        <p class="text-lg text-gray-700">
+          📱 Instagram & TikTok:
+          <span class="text-teal-600">{{ "@simbiatuu" }}</span>
+        </p>
+      </div>
+
+      <!-- Right Section - Contact Form -->
+      <div class="flex-1">
+        <div class="max-w-4xl mx-auto p-4">
+          <div class="border border-dotted border-gray-300 rounded-lg bg-white">
+            <h2
+              class="bg-gray-300 text-lg font-semibold text-gray-800 mb-6 flex items-center gap-2 p-3"
+            >
+              📩 Contact Us Today
+            </h2>
+
+            <form class=" p-6" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <!-- Name Field -->
+              <div class="mb-4">
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-700"
+                  >Name <span class="text-red-600">*</span></label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  formControlName="name"
+                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
+                  placeholder="Your Full Name"
+                  required
+                />
+              </div>
+
+              <!-- Email Field -->
+              <div class="mb-4">
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700"
+                  >Email Address <span class="text-red-600">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  formControlName="email"
+                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+
+              <!-- Business Name Field -->
+              <div class="mb-4">
+                <label
+                  for="businessName"
+                  class="block text-sm font-medium text-gray-700"
+                  >Business Name (Optional)</label
+                >
+                <input
+                  type="text"
+                  id="businessName"
+                  formControlName="businessName"
+                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
+                  placeholder="Your Business Name"
+                />
+              </div>
+
+              <!-- Challenge/Goal Field -->
+              <div class="mb-4">
+                <label
+                  for="challenge"
+                  class="block text-sm font-medium text-gray-700"
+                  >What’s Your Biggest Challenge or Goal Right Now?
+                  <span class="text-red-600">*</span></label
+                >
+                <textarea
+                  id="challenge"
+                  formControlName="challenge"
+                  rows="4"
+                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
+                  placeholder="Tell me about it in a few sentences"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Preferred Contact Method Field -->
+              <div class="mb-4">
+                <label
+                  for="contactMethod"
+                  class="block text-sm font-medium text-gray-700"
+                  >Preferred Contact Method
+                  <span class="text-red-600">*</span></label
+                >
+                <select
+                  id="contactMethod"
+                  formControlName="contactMethod"
+                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
+                  required
+                >
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                  <option value="instagram">DM on Instagram</option>
+                </select>
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                [disabled]="!contactForm.valid"
+                class="w-full bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 transition"
+              >
+                Let’s Get Started!
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer />
+</div>

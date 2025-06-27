@@ -42,7 +42,7 @@
   /* z-index: -9; */
   border-radius: 367px;
   opacity: 0.1;
-  background: #FFA500;
+  background: #e85427;
   filter: blur(100px);
   /* flex-shrink: 0; */
 }
@@ -57,7 +57,7 @@
   right: 0px;
   /* z-index: -9; */
   border-radius: 367px;
-  background: #FFA500;
+  background: #e85427;
   filter: blur(100px);
   /* flex-shrink: 0; */
 }
@@ -65,7 +65,7 @@
   position: absolute;
   /* z-index: -9; */
   border-radius: 367px;
-  background: #FFA500;
+  background: #e85427;
   filter: blur(100px);
   /* flex-shrink: 0; */
 }
@@ -75,7 +75,7 @@
   right: 0vh;
   /* z-index: -9; */
   opacity: 0.3;
-  background: #FFA500;
+  background: #e85427;
   filter: blur(100px);
   /* flex-shrink: 0; */
 }

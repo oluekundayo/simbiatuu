@@ -16,4 +16,18 @@ export const routes: Routes = [
         (m) => m.AboutComponent
       ),
   },
+  {
+    path: 'service',
+    loadComponent: () =>
+      import('./page/serivce/serivce.component').then(
+        (m) => m.SerivceComponent
+      ),
+  },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./page/contact/contact.component').then(
+        (m) => m.ContactComponent
+      ),
+  },
 ];
