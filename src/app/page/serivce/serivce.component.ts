@@ -22,7 +22,7 @@ export class SerivceComponent {
       type: 'E-Commerce',
       description:
         ' UK Active Wear + Lifestyle. Built for the man and woman who own their story.',
-      image: 'coming-soon.png',
+      image: 'braveCo-black.png',
     },
     {
       title: '6fig+Marketing by  SÍMBÍÀTÚÚ',
