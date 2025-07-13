@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-blog',
@@ -8,4 +9,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './blog.component.css'
 })
 export class BlogComponent {
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo(0, 0); // Instant jump to top
+      });
+  }
 }
