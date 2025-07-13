@@ -5,10 +5,11 @@ import { TestimonialsComponent } from "../../components/testimonials/testimonial
 import { ServicesComponent } from "../../components/services/services.component";
 import { AnimatedTypingComponent } from "../../components/animated-typing/animated-typing.component";
 import { HeaderComponent } from "../../components/header/header.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-serivce',
-  imports: [FooterComponent, FaqComponent, TestimonialsComponent, ServicesComponent, HeaderComponent],
+  imports: [FooterComponent, FaqComponent, TestimonialsComponent, ServicesComponent, HeaderComponent, RouterLink],
   templateUrl: './serivce.component.html',
   styleUrl: './serivce.component.css'
 })

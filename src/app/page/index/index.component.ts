@@ -1,21 +1,29 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from "../../components/header/header.component";
-import { AnimatedTypingComponent } from "../../components/animated-typing/animated-typing.component";
-import { TestimonialsComponent } from "../../components/testimonials/testimonials.component";
-import { ServicesComponent } from "../../components/services/services.component";
-import { FaqComponent } from "../../components/faq/faq.component";
-import { FooterComponent } from "../../components/footer/footer.component";
-import { NavigationEnd, Router } from '@angular/router';
+import { HeaderComponent } from '../../components/header/header.component';
+import { AnimatedTypingComponent } from '../../components/animated-typing/animated-typing.component';
+import { TestimonialsComponent } from '../../components/testimonials/testimonials.component';
+import { ServicesComponent } from '../../components/services/services.component';
+import { FaqComponent } from '../../components/faq/faq.component';
+import { FooterComponent } from '../../components/footer/footer.component';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-index',
-  imports: [HeaderComponent, AnimatedTypingComponent, TestimonialsComponent, ServicesComponent, FaqComponent, FooterComponent],
+  imports: [
+    HeaderComponent,
+    AnimatedTypingComponent,
+    TestimonialsComponent,
+    ServicesComponent,
+    FaqComponent,
+    FooterComponent,
+    RouterLink,
+  ],
   templateUrl: './index.component.html',
-  styleUrl: './index.component.css'
+  styleUrl: './index.component.css',
 })
 export class IndexComponent {
-constructor(private router: Router) {
+  constructor(private router: Router) {
     this.router.events
       .pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd))
       .subscribe(() => {

@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../../components/header/header.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { TestimonialsComponent } from "../../components/testimonials/testimonials.component";
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-about',
-  imports: [HeaderComponent, FooterComponent, TestimonialsComponent],
+  imports: [HeaderComponent, FooterComponent, TestimonialsComponent, RouterLink],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
