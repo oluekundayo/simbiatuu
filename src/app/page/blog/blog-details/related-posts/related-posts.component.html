@@ -1,0 +1,21 @@
+<div class="mt-16">
+  <h2 class="text-xl font-semibold mb-4">You might also like</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      @for (blog of blogs; track blog) {
+      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" (click)="blogDetails(blog)">
+        <img [src]="blog.image" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="font-semibold text-lg mb-2 text-black">
+            {{ blog.title }}
+          </h3>
+          <p class="text-xs  text-black mb-4">
+            {{ blog.details }}
+          </p>
+          <p class="text-sm text-gray-600">
+            {{ blog.author }} • {{ blog.date }}
+          </p>
+        </div>
+      </div>
+      }
+    </div>
+</div>

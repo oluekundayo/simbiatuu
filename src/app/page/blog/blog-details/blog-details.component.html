@@ -1,0 +1,39 @@
+
+  <!-- NAVIGATION -->
+  <app-header></app-header>
+<div class="container mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10 pt-28 relative">
+  <!-- Main Blog Content -->
+  <div class="lg:col-span-2">
+    <!-- Title -->
+    <h1 class="text-3xl font-bold mb-4">{{ blog.title }}</h1>
+
+    <!-- Hero Image -->
+    <img [src]="blog.image" alt="Blog Cover" class="rounded-lg w-full mb-6" />
+
+    <!-- Blog Content -->
+    <div class="prose max-w-none" [innerHTML]="blog.content"></div>
+
+    <!-- Tags & Actions -->
+    <div class="mt-6 flex flex-wrap items-center justify-between text-sm text-gray-500">
+      <div class="space-x-2">
+        <span *ngFor="let tag of blog.tags" class="bg-gray-100 px-3 py-1 rounded-full text-xs">#{{ tag }}</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="hover:text-black">♥ Like</button>
+        <button class="hover:text-black">↗ Share</button>
+      </div>
+    </div>
+
+    <!-- Author Info -->
+    <app-blog-author [author]="blog.author"></app-blog-author>
+
+    <!-- Related Posts -->
+    <app-related-posts></app-related-posts>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sticky top-20 self-start">
+    <app-blog-sidebar></app-blog-sidebar>
+  </div>
+</div>
+<app-footer />

@@ -29,14 +29,14 @@ export class SerivceComponent {
       type: 'Marketing',
       description:
         'Comprehensive global full-stack marketing company based in Lagos and united kingdom. Focused on health, wellness, tech, lifestyle, non-profits and hospitality sectors. Pioneer of 6figmoms Academy - Full-stack Marketing and business coaching academy for moms in Lagos and the United Kingdom',
-      image: 'coming-soon.png',
+      image: 'sixfig.jpg',
     },
     {
       title: 'SÍMBÍÀTÚÚ Luxury Homes',
       type: 'E-Commerce',
       description:
         'Luxury Real Estate Business based in Lagos and England. Solely focused on the sales of houses and running an Airbnb.',
-      image: 'coming-soon.png',
+      image: 'collections.jpg',
     },
     {
       title: 'SÍMBÍÀTÚÚ Cares Agency',
@@ -78,7 +78,7 @@ export class SerivceComponent {
       type: 'Dining',
       description:
         'A cute Nigerian family dining restaurant,natural  drinks, a Nigerian food and dessert corner for eat-in, takeaways and events. ',
-      image: 'coming-soon.png',
+      image: 'simbiatuu-ding.png',
     },
   ];
 

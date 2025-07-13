@@ -17,6 +17,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'blog',
+    loadChildren: () =>
+      import('./page/blog/blog.routes').then(
+        (m) => m.BlogRoutes
+      ),
+  },
+  {
     path: 'service',
     loadComponent: () =>
       import('./page/serivce/serivce.component').then(
