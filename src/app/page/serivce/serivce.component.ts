@@ -14,30 +14,37 @@ import { RouterLink } from '@angular/router';
   styleUrl: './serivce.component.css'
 })
 export class SerivceComponent {
-  categories = ['All', 'E-Commerce', 'Marketing', 'Health', 'cloud computing', 'Vending'];
+  categories = ['All', 'E-Commerce', 'Marketing', 'Health', 'cloud computing', 'Vending', 'wash'];
   selectedCategory = 'All';
 
   caseStudies = [
     {
-      title: 'BraveCo by SÍMBÍÀTÚÚ',
+      title: 'BraveWoman Collections by SÍMBÍÀTÚÚ',
       type: 'E-Commerce',
       description:
-        ' UK Active Wear + Lifestyle. Built for the man and woman who own their story.',
-      image: 'braveCo-black.png',
+        ' Online Boutique for fashionable moms who love a blend of simplicity and modernization. Clothes Built for the boss mom who owns her  story.',
+      image: 'collections.jpg',
     },
     {
       title: '6fig+Marketing by  SÍMBÍÀTÚÚ',
       type: 'Marketing',
       description:
-        'Comprehensive global full-stack marketing company based in Lagos and united kingdom. Focused on health, wellness, tech, lifestyle, non-profits and hospitality sectors. Pioneer of 6figmoms Academy - Full-stack Marketing and business coaching academy for moms in Lagos and the United Kingdom',
+        'Comprehensive global full-stack marketing company based in the United Kingdom. Focused on health, wellness, tech, lifestyle, non-profits and hospitality sectors. Pioneer of 6figmoms Academy Full-stack Marketing and business coaching academy for struggling moms in the United Kingdom.',
       image: 'sixfig.jpg',
+    },
+    {
+      title: 'SÍMBÍÀTÚÚ Dines',
+      type: 'Dining',
+      description:
+        'A cute Nigerian family dining restaurant,natural  drinks, a Nigerian food and dessert corner for eat-in, takeaways and events. ',
+      image: 'simbiatuu-ding.png',
     },
     {
       title: 'SÍMBÍÀTÚÚ Luxury Homes',
       type: 'E-Commerce',
       description:
         'Luxury Real Estate Business based in Lagos and England. Solely focused on the sales of houses and running an Airbnb.',
-      image: 'collections.jpg',
+      image: 'coming-soon.png',
     },
     {
       title: 'SÍMBÍÀTÚÚ Cares Agency',
@@ -75,11 +82,11 @@ export class SerivceComponent {
       image: 'coming-soon.png',
     },
     {
-      title: 'SÍMBÍÀTÚÚ Dines',
-      type: 'Dining',
+      title: 'Hand CarWash by SÍMBÍÀTÚÚ',
+      type: 'wash',
       description:
-        'A cute Nigerian family dining restaurant,natural  drinks, a Nigerian food and dessert corner for eat-in, takeaways and events. ',
-      image: 'simbiatuu-ding.png',
+        'Hand Car wash business in North England, UK',
+      image: 'coming-soon.png',
     },
   ];
 
