@@ -1,7 +1,8 @@
 <div class="min-h-screen bg-[#0f0f0f] text-white font-sans">
   <!-- NAVIGATION -->
   <app-header></app-header>
-  <header class="h-auto md:h-screen flex items-center bg-black relative">
+
+  <header class="h-auto md:h-[90vh] flex items-center bg-black relative">
     <div
       class="gradent bottom-0 left-0 opacity-10 w-[300px] h-[300px] md:h-[500px] md:w-[500px]"
     ></div>
@@ -51,7 +52,7 @@
       </div>
 
       <!-- Image Train (Right) -->
-      <div class="md:w-1/2 w-full overflow-hidden">
+      <!-- <div class="md:w-1/2 w-full overflow-hidden">
         <div
           class="image-train-container relative h-[360px] sm:h-[420px] md:h-[480px] overflow-hidden"
         >
@@ -88,6 +89,21 @@
                 src="forbes.jpg"
                 alt="Debugging code"
                 class="w-full sm:w-52 md:w-60 object-cover rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <div class="md:w-1/2 w-full overflow-hidden">
+        <div
+          class="image-train-container relative h-[360px] sm:h-[420px] md:h-[480px] overflow-hidden"
+        >
+          <div class="image-train-track animate-scrollUp">
+            <div class="image-train-row flex gap-4 px-2">
+              <img
+                src="simbi1.jpg"
+                alt="People meeting"
+                class="w-full object-cover rounded-lg"
               />
             </div>
           </div>
@@ -209,7 +225,7 @@
           </div>
           <div class="bg-[#1e1e1e] p-4 rounded-lg shadow hover:shadow-lg">
             <h3 class="text-lg font-bold flex items-center gap-2">
-              <i class="fas fa-camera text-yellow-400"></i> 
+              <i class="fas fa-camera text-yellow-400"></i>
               Business Consultancy & Coaching
             </h3>
             <p class="text-sm text-gray-400 mt-2">
@@ -251,6 +267,7 @@
     </main>
   </div>
 
+  <app-streamline></app-streamline>
   <!-- Testimonials Section -->
   <app-testimonials />
   <app-footer />

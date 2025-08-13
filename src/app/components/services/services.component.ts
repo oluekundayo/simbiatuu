@@ -10,9 +10,9 @@ import { RouterLink } from '@angular/router';
 export class ServicesComponent {
   services = [
     {
-      title: 'Social Media Marketing',
+      title: 'Portrait Photography ',
       description:
-        'I help businesses build strong, story-led social media strategies that drive engagement, grow visibility and build trust with the right audience.',
+        'I help businesses capture compelling, story-led visuals that showcase their brand, connect emotionally with their audience, and build trust through impactful photography.',
       icon: 'archive-tick.svg',
       iconBg: 'bg-blue-500',
     },

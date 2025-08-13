@@ -1,4 +1,4 @@
-.image-train-container {
+/* .image-train-container {
     height: 500px;
     overflow: hidden;
     position: relative;
@@ -21,7 +21,7 @@
   .image-wrap {
     flex: 1 1 100%;
     max-width: 100%;
-  }
+  } */
   
   /* .image-wrap img {
     width: 100%;
@@ -31,7 +31,7 @@
   } */
   
   /* Responsive */
-  @media (min-width: 640px) {
+  /* @media (min-width: 640px) {
     .image-wrap {
       flex: 1 1 48%;
     }
@@ -50,5 +50,5 @@
     100% {
       transform: translateY(-50%);
     }
-  }
+  } */
   

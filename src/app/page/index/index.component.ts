@@ -7,6 +7,7 @@ import { FaqComponent } from '../../components/faq/faq.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
+import { StreamlineComponent } from "../../components/streamline/streamline.component";
 
 @Component({
   selector: 'app-index',
@@ -18,7 +19,8 @@ import { filter } from 'rxjs';
     FaqComponent,
     FooterComponent,
     RouterLink,
-  ],
+    StreamlineComponent
+],
   templateUrl: './index.component.html',
   styleUrl: './index.component.css',
 })

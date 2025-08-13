@@ -6,10 +6,11 @@ import { ServicesComponent } from "../../components/services/services.component"
 import { AnimatedTypingComponent } from "../../components/animated-typing/animated-typing.component";
 import { HeaderComponent } from "../../components/header/header.component";
 import { RouterLink } from '@angular/router';
+import { StreamlineComponent } from "../../components/streamline/streamline.component";
 
 @Component({
   selector: 'app-serivce',
-  imports: [FooterComponent, FaqComponent, TestimonialsComponent, ServicesComponent, HeaderComponent, RouterLink],
+  imports: [FooterComponent, FaqComponent, TestimonialsComponent, ServicesComponent, HeaderComponent, RouterLink, StreamlineComponent],
   templateUrl: './serivce.component.html',
   styleUrl: './serivce.component.css'
 })
