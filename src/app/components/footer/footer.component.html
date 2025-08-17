@@ -1,10 +1,10 @@
 <!-- Footer Call to Action -->
-<div class="bg-[#7d7d7d] text-center py-12 px-4">
-  <h2 class="text-2xl sm:text-3xl font-semibold text-white max-w-3xl mx-auto">
+<div class="bg-white text-center py-12 px-4">
+  <h2 class="text-2xl sm:text-3xl font-semibold text-black max-w-3xl mx-auto">
     Trusted by 100's of venture-backed startups and scaleups around the world.
   </h2>
   <button
-    class="mt-6 custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-orange-400 text-white backdrop-blur transition-all hover:bg-[#e35336a0]"
+    class="mt-6 custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-[#c86635] text-white backdrop-blur transition-all hover:bg-[#e35336a0]"
     [routerLink]="['/contact']"
     routerLinkActive="router-link-active"
   >
@@ -76,7 +76,7 @@
   </div>
 </footer> -->
 
-<footer class="bg-slate-900 text-white">
+<footer class="bg-[#9a7aa4] text-white">
   <div class="max-w-7xl mx-auto px-6 py-12">
     <div class="mb-12">
       <!-- <h2 class="text-2xl font-bold text-yellow-400">Logo Here</h2> -->
@@ -92,12 +92,12 @@
         <p class="text-lg">Let’s create something amazing together.</p>
       </div>
     </div>
-    <div class="border-t border-slate-700 mb-12"></div>
+    <div class="border-t border-white mb-12"></div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
       <div class="lg:col-span-1">
         <h3 class="text-lg font-semibold mb-6 text-white">Reach us</h3>
-        <div class="space-y-4 text-slate-300 text-sm">
+        <div class="space-y-4 text-white text-sm">
           <div class="flex items-start gap-3">
             <svg
               class="w-5 h-5 mt-0.5 flex-shrink-0"
@@ -150,7 +150,7 @@
       <!-- Company Section -->
       <div class="lg:col-span-1">
         <h3 class="text-lg font-semibold mb-6 text-white">Company</h3>
-        <ul class="space-y-3 text-slate-300 text-sm">
+        <ul class="space-y-3 text-white text-sm">
           <li>
             <a
               href="#"
@@ -178,7 +178,7 @@
       <!-- Legal Section -->
       <div class="lg:col-span-1">
         <h3 class="text-lg font-semibold mb-6 text-white">Legal</h3>
-        <ul class="space-y-3 text-slate-300 text-sm">
+        <ul class="space-y-3 text-white text-sm">
           <li>
             <a
               href="#"
@@ -213,7 +213,7 @@
       <!-- Quick Links Section -->
       <div class="lg:col-span-1">
         <h3 class="text-lg font-semibold mb-6 text-white">Quick Links</h3>
-        <ul class="space-y-3 text-slate-300 text-sm">
+        <ul class="space-y-3 text-white text-sm">
           <li>
             <a
               href="#"
@@ -250,18 +250,18 @@
               [(ngModel)]="email"
               name="email"
               placeholder="Your email address"
-              class="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-200"
+              class="w-full px-4 py-3 bg-[#9a7aa4] border border-white rounded-lg text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-200"
               required
             />
           </div>
           <button
             type="submit"
-            class="w-full bg-yellow-400 text-slate-900 px-4 py-3 rounded-lg font-semibold hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all duration-200 transform hover:scale-[1.02]"
+            class="w-full bg-[#c86635] text-white px-4 py-3 rounded-lg font-semibold hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all duration-200 transform hover:scale-[1.02]"
           >
             Subscribe
           </button>
         </form>
-        <p class="text-xs text-slate-400 mt-4 leading-relaxed">
+        <p class="text-xs text-white mt-4 leading-relaxed">
           * We'll send you weekly updates for your<br />
           better tool management.
         </p>
@@ -270,17 +270,17 @@
   </div>
 
   <!-- Bottom Bar -->
-  <div class="border-t border-slate-700">
+  <div class="border-t border-white">
     <div class="max-w-7xl mx-auto px-6 py-6">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-slate-400 text-sm">
+        <p class="text-white text-sm">
           © {{currentYear}} Company Name. All rights reserved.
         </p>
         <div class="flex items-center gap-6">
           <!-- Social Media Icons -->
           <a
             href="#"
-            class="text-slate-400 hover:text-yellow-400 transition-colors duration-200"
+            class="text-white hover:text-yellow-400 transition-colors duration-200"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -288,19 +288,10 @@
               />
             </svg>
           </a>
+          
           <a
             href="#"
-            class="text-slate-400 hover:text-yellow-400 transition-colors duration-200"
-          >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
-              />
-            </svg>
-          </a>
-          <a
-            href="#"
-            class="text-slate-400 hover:text-yellow-400 transition-colors duration-200"
+            class="text-white hover:text-yellow-400 transition-colors duration-200"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path

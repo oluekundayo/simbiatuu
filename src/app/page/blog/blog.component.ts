@@ -5,7 +5,7 @@ import { ComingSoonComponent } from "../../components/coming-soon/coming-soon.co
 
 @Component({
   selector: 'app-blog',
-  imports: [RouterOutlet, ComingSoonComponent],
+  imports: [ComingSoonComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
