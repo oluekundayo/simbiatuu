@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { FooterComponent } from "../../components/footer/footer.component";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HeaderComponent } from "../../components/header/header.component";
+import { StreamlineComponent } from "../../components/streamline/streamline.component";
 
 @Component({
   selector: 'app-contact',
-  imports: [FooterComponent, ReactiveFormsModule, HeaderComponent],
+  imports: [FooterComponent, ReactiveFormsModule, HeaderComponent, StreamlineComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
