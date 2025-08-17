@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
+import { ComingSoonComponent } from "../../components/coming-soon/coming-soon.component";
 
 @Component({
   selector: 'app-blog',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ComingSoonComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })

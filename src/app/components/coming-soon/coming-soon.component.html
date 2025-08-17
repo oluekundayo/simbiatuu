@@ -1,0 +1,44 @@
+<div class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-pink-200 via-white to-blue-200">
+  
+  <!-- Logo -->
+  <div class="absolute top-6 left-6 flex items-center space-x-2">
+    <!-- <img src="assets/logo.svg" alt="Insites Logo" class="h-8" /> -->
+    <div class="space-y-4 col-span-1">
+        <div class="flex items-center">
+          <span class="text-[#242528] text-2xl font-bold mr-2">⦿</span>
+          <span class="text-[#242528] font-extrabold text-lg">SÍMBÍÀTÚÚ.</span>
+        </div>
+        <!-- <div class="flex items-center gap-2">
+          <img src="https://via.placeholder.com/40x40" alt="Logo" class="w-10 h-10" />
+          <span class="font-extrabold text-xl">STACKMATIX</span>
+        </div> -->
+        <!-- <p class="text-lg">Let’s create something amazing together.</p> -->
+      </div>
+    <!-- <div>
+      <h1 class="text-sm font-semibold text-gray-800">insites</h1>
+      <p class="text-xs text-gray-500 -mt-1">workspace</p>
+    </div> -->
+  </div>
+
+  <!-- Main Text -->
+  <div class="px-4">
+    <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+      We are creating <br />
+      something amazing
+    </h1>
+    <p class="text-lg text-gray-600">We will launch our website soon!</p>
+  </div>
+  <button [routerLink]="['/']" routerLinkActive="router-link-active"  class="w-fit bg-yellow-400 text-slate-900 px-4 py-3 rounded-lg font-semibold hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all duration-200 transform hover:scale-[1.02]">
+    Return to Home
+  </button>
+
+  <!-- Footer -->
+  <div class="absolute bottom-6 w-full flex justify-between items-center px-6 text-gray-500 text-xs">
+    <p>Copyright © {{currentYear}}. Powered by Insites.</p>
+    <div class="flex space-x-4 text-gray-600">
+      <a href="#" class="hover:text-gray-800"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="hover:text-gray-800"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:text-gray-800"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</div>

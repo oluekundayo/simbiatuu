@@ -14,19 +14,19 @@ export class ContactComponent {
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      name: ['', Validators.required],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      businessName: [''],
-      challenge: ['', Validators.required],
-      contactMethod: ['email', Validators.required]
+      phone: [''],
+      subject: ['General Inquiry'],
+      message: ['', Validators.required],
     });
   }
 
   onSubmit() {
     if (this.contactForm.valid) {
-      const formData = this.contactForm.value;
-      console.log('Form Data:', formData);
-      // Here, you can send the data to your backend via a service
+      console.log(this.contactForm.value);
+      alert('Message Sent!');
     }
   }
 }

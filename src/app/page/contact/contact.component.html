@@ -2,14 +2,13 @@
   <!-- NAVIGATION -->
   <app-header></app-header>
   <!-- HEADER -->
-  <header class="h-auto md:h-screen flex items-center bg-black relative">
+  <!-- <header class="h-auto md:h-screen flex items-center bg-black relative">
     <div
       class="gradent bottom-0 left-0 opacity-10 w-[300px] h-[300px] md:h-[500px] md:w-[500px]"
     ></div>
     <div
       class="w-full max-w-screen-2xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-6 py-12 md:py-0 md:px-24"
     >
-      <!-- Text Content -->
       <div class="text-center md:text-left md:w-1/2 pt-6 md:pt-0">
         <h1
           class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight"
@@ -29,31 +28,9 @@
         <div
           class="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
         >
-          <!-- <button
-            class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-full bg-white text-[#e35336] backdrop-blur transition-all hover:bg-[#e35336a0]"
-          >
-            <span class="text-sm font-semibold tracking-wide button-text-3"
-              >Contact Us</span
-            >
-            <span
-              class="transition-transform duration-300 ease-in-out group-hover:rotate-45 group-hover:translate-x-1 button-text-3"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 384 512"
-                class="w-4 h-4 fill-current"
-              >
-                <path
-                  d="M336 96c8.8 0 16 7.2 16 16v224c0 8.8-7.2 16-16 16s-16-7.2-16-16V150.6L59.3 411.3c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L297.4 128H112c-8.8 0-16-7.2-16-16s7.2-16 16-16h224z"
-                />
-              </svg>
-            </span>
-            <div class="button-overlay"></div>
-          </button> -->
         </div>
       </div>
 
-      <!-- Image Train (Right) -->
       <div class="md:w-1/2 w-full overflow-hidden">
         <div
           class="image-train-container relative h-[360px] sm:h-[420px] md:h-[480px] overflow-hidden"
@@ -70,148 +47,109 @@
         </div>
       </div>
     </div>
-  </header>
+  </header> -->
 
-  <div class="max-w-7xl mx-auto px-6 py-10">
-    <!-- Section Title -->
-    <div class="text-center mb-10">
-      <h2 class="text-4xl font-bold text-gray-900">Let's Connect Now</h2>
-      <p class="mt-2 text-lg text-gray-600"></p>
-    </div>
 
-    <!-- Contact Form Section -->
-    <div class="flex flex-col md:flex-row justify-between gap-10 relative">
-      <!-- Left Section - Contact Information -->
-      <div class="flex-1 sticky top-0">
-        <p class="text-xl font-semibold text-gray-800 mb-5">Let’s Connect</p>
-        <p class="text-lg text-gray-700 mb-2">
-          📧 Email:
-          <a href="mailto:simbiatuu@example.com" class="text-teal-600">{{
-            "simbiatuu@example.com"
-          }}</a>
-        </p>
-        <p class="text-lg text-gray-700 mb-2">
-          📞 Phone: <span class="text-teal-600">+44 7852 304977</span>
-        </p>
-        <p class="text-lg text-gray-700">
-          📱 Instagram & TikTok:
-          <span class="text-teal-600">{{ "@simbiatuu" }}</span>
-        </p>
+  <div class="min-h-screen bg-gray-50 flex items-center justify-center py-36 px-6 md:py-12">
+  <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <!-- Left Side - Contact Information -->
+    <div class="bg-[#0b253a] text-white rounded-lg p-8 shadow-lg relative">
+      <h2 class="text-2xl font-semibold mb-2">Contact Information</h2>
+      <p class="text-gray-300 mb-6">Say something to start a live chat!</p>
+
+      <!-- Phone -->
+      <div class="flex items-center gap-3 mb-4">
+        <img src="bxs_phone-call.svg" alt="">
+        <span><a href="tel:+447852304977">+44 7852 304977</a></span>
       </div>
 
-      <!-- Right Section - Contact Form -->
-      <div class="flex-1">
-        <div class="max-w-4xl mx-auto p-4">
-          <div class="border border-dotted border-gray-300 rounded-lg bg-white">
-            <h2
-              class="bg-gray-300 text-lg font-semibold text-gray-800 mb-6 flex items-center gap-2 p-3"
-            >
-              📩 Contact Us Today
-            </h2>
+      <!-- Email -->
+      <div class="flex items-center gap-3 mb-4">
+        <img src="ic_sharp-email.svg" alt="">
+        <span><a href="mailto:sales@simbiatuu.com">{{"sales@simbiatuu.com"}}</a></span>
+      </div>
 
-            <form class=" p-6" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-              <!-- Name Field -->
-              <div class="mb-4">
-                <label
-                  for="name"
-                  class="block text-sm font-medium text-gray-700"
-                  >Name <span class="text-red-600">*</span></label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  formControlName="name"
-                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
-                  placeholder="Your Full Name"
-                  required
-                />
-              </div>
+      <!-- Address -->
+      <div class="flex items-center gap-3 mb-6">
+        <img src="carbon_location-filled.svg" alt="">
+        <span>Instagram & TikTok: {{"@simbiatuu"}}</span>
+      </div>
 
-              <!-- Email Field -->
-              <div class="mb-4">
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-gray-700"
-                  >Email Address <span class="text-red-600">*</span></label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  formControlName="email"
-                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
+      <!-- Social Icons -->
+      <div class="flex space-x-4 mt-6">
+        <a href="#" class="bg-yellow-400 text-black p-3 rounded-full hover:bg-yellow-500 flex justify-center items-center">
+          <img src="x.svg" alt="">
+        </a>
+        <a href="#" class="bg-yellow-400 text-black p-3 rounded-full hover:bg-yellow-500 flex justify-center items-center">
+          <img src="ig.svg" alt="">
+        </a>
+        <!-- <a href="#" class="bg-yellow-400 text-black p-3 rounded-full hover:bg-yellow-500">
+          <i class="fab fa-instagram"></i>
+        </a> -->
+      </div>
+      <div class="absolute bottom-0 right-0">
+        <img src="Group 1000001785.svg" alt="">
+      </div>
+    </div>
 
-              <!-- Business Name Field -->
-              <div class="mb-4">
-                <label
-                  for="businessName"
-                  class="block text-sm font-medium text-gray-700"
-                  >Business Name (Optional)</label
-                >
-                <input
-                  type="text"
-                  id="businessName"
-                  formControlName="businessName"
-                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
-                  placeholder="Your Business Name"
-                />
-              </div>
+    <!-- Right Side - Contact Form -->
+    <div class="bg-white rounded-lg p-8 shadow-lg relative">
+      <h2 class="text-xl font-semibold text-gray-700 mb-6">Contact Us</h2>
 
-              <!-- Challenge/Goal Field -->
-              <div class="mb-4">
-                <label
-                  for="challenge"
-                  class="block text-sm font-medium text-gray-700"
-                  >What’s Your Biggest Challenge or Goal Right Now?
-                  <span class="text-red-600">*</span></label
-                >
-                <textarea
-                  id="challenge"
-                  formControlName="challenge"
-                  rows="4"
-                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
-                  placeholder="Tell me about it in a few sentences"
-                  required
-                ></textarea>
-              </div>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-4">
+        <!-- Name Fields -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input formControlName="firstName" type="text" placeholder="First Name"
+            class="border-b border-gray-300 focus:border-yellow-500 outline-none py-2" />
+          <input formControlName="lastName" type="text" placeholder="Last Name"
+            class="border-b border-gray-300 focus:border-yellow-500 outline-none py-2" />
+        </div>
 
-              <!-- Preferred Contact Method Field -->
-              <div class="mb-4">
-                <label
-                  for="contactMethod"
-                  class="block text-sm font-medium text-gray-700"
-                  >Preferred Contact Method
-                  <span class="text-red-600">*</span></label
-                >
-                <select
-                  id="contactMethod"
-                  formControlName="contactMethod"
-                  class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500"
-                  required
-                >
-                  <option value="email">Email</option>
-                  <option value="phone">Phone</option>
-                  <option value="instagram">DM on Instagram</option>
-                </select>
-              </div>
+        <!-- Email and Phone -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input formControlName="email" type="email" placeholder="Email"
+            class="border-b border-gray-300 focus:border-yellow-500 outline-none py-2" />
+          <input formControlName="phone" type="text" placeholder="Phone Number"
+            class="border-b border-gray-300 focus:border-yellow-500 outline-none py-2" />
+        </div>
 
-              <!-- Submit Button -->
-              <button
-                type="submit"
-                [disabled]="!contactForm.valid"
-                class="w-full bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 transition"
-              >
-                Let’s Get Started!
-              </button>
-            </form>
+        <!-- Subject -->
+        <div>
+          <label class="block text-gray-600 mb-2">Preferred Contact Method?</label>
+          <div class="flex flex-wrap gap-4">
+            <label class="flex items-center gap-2">
+              <input type="radio" name="subject" formControlName="subject" value="General Inquiry" />
+              Email
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="radio" name="subject" formControlName="subject" value="Support" />
+              Phone
+            </label>
+            <label class="flex items-center gap-2">
+              <input type="radio" name="subject" formControlName="subject" value="Feedback" />
+              DM on Instagram
+            </label>
           </div>
         </div>
+
+        <!-- Message -->
+        <textarea formControlName="message" rows="4" placeholder="Write your message..."
+          class="w-full border-b border-gray-300 focus:border-yellow-500 outline-none py-2"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit"
+          class="bg-[#0b253a] text-white px-6 py-3 rounded-md hover:bg-[#133553] transition w-full md:w-auto">
+          Send Message
+        </button>
+      </form>
+      <div class="absolute bottom-0 right-0">
+        <img src="letter_send 1.svg" width="120px" alt="">
       </div>
     </div>
   </div>
+</div>
+
 
   <app-footer />
 </div>
