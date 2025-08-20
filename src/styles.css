@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+/* 🎨 Color Palette
+
+Dusty Purple — #9a7aa4
+
+Dark Aquamarine — #488e82
+
+Harvest Gold — #c8932b
+
+Rosewood — #b74852
+
+Persimmon — #c86635
+
+Jungle Green — #318144
+
+Dusty Purple — #af849e
+
+Gunmetal Blue — #343f5e
+
+Tyrian Purple — #6c2346 */
 @import "tailwindcss";
 
 .custom-button {

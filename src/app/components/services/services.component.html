@@ -1,6 +1,5 @@
-<section class="bg-white py-24 px-4 relative">
-  <!-- <div class="gradent bottom-0 left-0 opacity-15 w-fit h-fit md:h-[500px] md:w-[500px]"></div> -->
-  <div class="max-w-7xl mx-auto">
+<!-- <section class="bg-white py-24 px-4 relative">
+ <div class="max-w-7xl mx-auto">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
       @for (service of services; track service.title) {
       <div class="flex items-start flex-col space-x-4">
@@ -50,4 +49,90 @@
           </button>
     </div>
   </div>
+</section> -->
+
+<section
+  class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white min-h-screen"
+>
+  <!-- Main Container -->
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-20">
+      <h3
+        class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-2"
+      >
+        We provide the best services
+      </h3>
+      <p class="text-lg text-gray-600 text-sm leading-relaxed"></p>
+    </div>
+    <!-- Section Loop -->
+    @for (section of sections; track section.id; let i = $index) {
+    <div
+      class="mb-16 lg:mb-24 last:mb-0 sticky top-24 bg-white transition-opacity duration-700 ease-in-out p-0 round-2"
+    >
+      <!-- Content Grid -->
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center"
+      >
+        <!-- Left Content Column -->
+        <div class="order-2 lg:order-1 space-y-6 lg:space-y-8">
+          <!-- Title Section -->
+          <div class="text-center lg:text-left">
+            <h3 class="text-3xl font-semibold mb-1 mb-2">
+              {{ section.title }}
+            </h3>
+            <p class="text-lg text-gray-600 text-sm leading-relaxed">
+              {{ section.subtitle }}
+            </p>
+          </div>
+
+          <!-- Features List -->
+          <!-- <div class="space-y-3 lg:space-y-4">
+              @for (feature of section.features; track feature) {
+                <div class="flex items-start gap-3 lg:gap-4">
+                  <div class="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <p class="text-base sm:text-lg text-gray-600 leading-relaxed">{{ feature }}</p>
+                </div>
+              }
+            </div> -->
+
+          <!-- CTA Buttons -->
+          <!-- <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 lg:pt-6">
+              <button
+                class="w-full sm:w-auto bg-indigo-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-base sm:text-lg hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-300"
+              >
+                Get Started
+              </button>
+              <button
+                class="w-full sm:w-auto border-2 border-indigo-600 text-indigo-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-base sm:text-lg hover:bg-indigo-600 hover:text-white transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-indigo-300"
+              >
+                Learn More
+              </button>
+            </div> -->
+        </div>
+
+        <!-- Right Image Column -->
+        <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div class="relative">
+            <div
+              class="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem]"
+            >
+              <img
+                [src]="section.img"
+                [alt]="section.title + ' ' + section.subtitle"
+                class="w-full h-full object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+              />
+              <!-- Optional decorative element -->
+              <div
+                class="absolute -inset-4 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl -z-10 blur-xl opacity-50"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+  <!-- Optional Background Pattern -->
+  <!-- <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%234f46e5" fill-opacity="0.05"%3E%3Ccircle cx="7" cy="7" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] pointer-events-none"></div> -->
 </section>
