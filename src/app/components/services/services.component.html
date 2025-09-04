@@ -60,9 +60,9 @@
       <h3
         class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-2"
       >
-        We provide the best services
+        We provide the best Affiliate services
       </h3>
-      <p class="text-lg text-gray-600 text-sm leading-relaxed"></p>
+      <p class="text-lg text-gray-600 leading-relaxed"></p>
     </div>
     <!-- Section Loop -->
     @for (section of sections; track section.id; let i = $index) {
@@ -74,26 +74,30 @@
         class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center"
       >
         <!-- Left Content Column -->
-        <div class="order-2 lg:order-1 space-y-6 lg:space-y-8">
+        <div class="order-2 lg:order-1 space-y-6 lg:space-y-8 pt-4 pb-8">
           <!-- Title Section -->
           <div class="text-center lg:text-left">
-            <h3 class="text-3xl font-semibold mb-1 mb-2">
+            <h3 class="text-3xl font-semibold mb-2">
               {{ section.title }}
             </h3>
-            <p class="text-lg text-gray-600 text-sm leading-relaxed">
+            <p class="text-lg text-gray-600 leading-relaxed">
               {{ section.subtitle }}
             </p>
           </div>
 
           <!-- Features List -->
-          <!-- <div class="space-y-3 lg:space-y-4">
+          <div class="space-y-3 lg:space-y-4">
               @for (feature of section.features; track feature) {
                 <div class="flex items-start gap-3 lg:gap-4">
-                  <div class="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <p class="text-base sm:text-lg text-gray-600 leading-relaxed">{{ feature }}</p>
+                  <div class="w-2 h-2 bg-gray-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <p class="text-base sm:text-sm text-gray-600 leading-relaxed">{{ feature }}</p>
                 </div>
               }
-            </div> -->
+            </div>
+            
+            <p class="text-lg text-gray-600 leading-relaxed">
+              {{ section.phoneContent }}
+            </p>
 
           <!-- CTA Buttons -->
           <!-- <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 lg:pt-6">

@@ -10,22 +10,22 @@ export class FaqComponent {
   faqs = [
     {
       question:
-        'What types of businesses do you typically support?',
+        'What is affiliate marketing, and how can it benefit my business?',
       answer:
-        'I work primarily with small to mid-sized enterprises (SMEs) across diverse industries including health, wellness, technology, lifestyle, hospitality, non-profits, and real estate. Whether a business is in the launch phase, scaling, or undergoing a strategic rebrand, my approach is tailored to meet its specific growth objectives.',
+        'Affiliate marketing is a performance based marketing model where independent partners (affiliates) promote your products or services. You only pay them when they generate sales, leads, or traffic for you. This ensures cost effective growth and a higher return on investment.',
       open: true,
     },
     {
       question:
-        "How do your marketing services differ from traditional agencies?",
+        "How do you find the right affiliates for my brand?",
       answer:
-        'My services combine strategic insight with compelling storytelling and full-stack marketing execution. As both a marketer and entrepreneur, I understand the challenges businesses face from the inside out. This perspective allows me to develop holistic, results-driven solutions that not only enhance visibility but also strengthen brand trust and long-term positioning.',
+        'We carefully vet affiliates based on your target audience, niche, and campaign goals. Our network includes bloggers, influencers, media buyers, and content creators who are experienced in driving quality traffic that converts.',
       open: false,
     },
     {
-      question: 'Do you offer support for businesses that are still defining their brand identity?',
+      question: 'How much does it cost to run an affiliate program with you?',
       answer:
-        'Yes. I frequently work with clients who are seeking greater clarity around their brand voice, positioning, and narrative. Through structured brand discovery and messaging strategy sessions, I help organizations articulate a clear, consistent identity that resonates with their target audience and aligns with their core mission.',
+        'The cost depends on your business goals, commission structure, and level of management required. You’ll typically pay affiliates a percentage of each sale or a set amount per lead. We’ll work with you to design a program that fits your budget.',
       open: false,
     },
   ];

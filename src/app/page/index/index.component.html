@@ -3,9 +3,12 @@
   <app-header></app-header>
   <!-- HEADER -->
   <header class="h-auto md:h-[90vh] flex items-center relative">
-
-  <div class="gradent top-0 left-0 opacity-30 md:opacity-10 w-[300px] h-[300px] md:h-[500px] md:w-[500px]"></div>
-  <div class="gradent-right absolute w-[300px] h-[300px] md:h-[454px] md:w-[440px]"></div>
+    <div
+      class="gradent top-0 left-0 opacity-30 md:opacity-10 w-[300px] h-[300px] md:h-[500px] md:w-[500px]"
+    ></div>
+    <div
+      class="gradent-right absolute w-[300px] h-[300px] md:h-[454px] md:w-[440px]"
+    ></div>
     <div
       class="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-10 px-6 py-12 md:py-0 md:px-24"
     >
@@ -21,10 +24,9 @@
           <p>
             <app-animated-typing
               [phrases]="[
-                'a Portrait Photographer',
-                'a full-stack marketer',
-                'a multi-entrepreneur',
-                'a Personal Brander'
+                'a Unattached affiliate marketer',
+                'a Related affiliate marketer',
+                'a Involved affiliate marketer'
               ]"
             />
           </p>
@@ -32,17 +34,19 @@
         <p
           class="text-black mb-6 max-w-md mx-auto md:mx-0 text-sm md:text-base"
         >
-          Based in the UK. I support SMEs across various sectors, including
-          health, wellness, tech, lifestyle, hospitality, non-profits, and real
-          estate, utilizing a unique blend of strategy, creativity, and
-          storytelling.
+          Based in the UK. I create affiliate strategies that put your products
+          in front of the right audiences—through a voice they already trust.
+          Specialising in tech, hospitality, fashion, lifestyle, non-profits,
+          real estate,health & wellness. I make sure your brand isn’t just
+          promoted, but championed.
         </p>
         <div
           class="flex flex-col sm:flex-row justify-center md:justify-start gap-4"
         >
           <button
             class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-full bg-[#c86635] text-white backdrop-blur transition-all hover:bg-[#e35336a0]"
-            [routerLink]="['/about']" routerLinkActive="router-link-active" 
+            [routerLink]="['/about']"
+            routerLinkActive="router-link-active"
           >
             <span class="text-sm font-semibold tracking-wide button-text-3"
               >View My Portfolio</span

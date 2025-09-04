@@ -1,21 +1,37 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from "../../components/footer/footer.component";
-import { FaqComponent } from "../../components/faq/faq.component";
-import { TestimonialsComponent } from "../../components/testimonials/testimonials.component";
-import { ServicesComponent } from "../../components/services/services.component";
-import { AnimatedTypingComponent } from "../../components/animated-typing/animated-typing.component";
-import { HeaderComponent } from "../../components/header/header.component";
+import { FooterComponent } from '../../components/footer/footer.component';
+import { FaqComponent } from '../../components/faq/faq.component';
+import { TestimonialsComponent } from '../../components/testimonials/testimonials.component';
+import { ServicesComponent } from '../../components/services/services.component';
+import { AnimatedTypingComponent } from '../../components/animated-typing/animated-typing.component';
+import { HeaderComponent } from '../../components/header/header.component';
 import { RouterLink } from '@angular/router';
-import { StreamlineComponent } from "../../components/streamline/streamline.component";
+import { StreamlineComponent } from '../../components/streamline/streamline.component';
 
 @Component({
   selector: 'app-serivce',
-  imports: [FooterComponent, FaqComponent, TestimonialsComponent, ServicesComponent, HeaderComponent, RouterLink, StreamlineComponent],
+  imports: [
+    FooterComponent,
+    FaqComponent,
+    TestimonialsComponent,
+    ServicesComponent,
+    HeaderComponent,
+    RouterLink,
+    StreamlineComponent,
+  ],
   templateUrl: './serivce.component.html',
-  styleUrl: './serivce.component.css'
+  styleUrl: './serivce.component.css',
 })
 export class SerivceComponent {
-  categories = ['All', 'E-Commerce', 'Marketing', 'Health', 'cloud computing', 'Vending', 'wash'];
+  categories = [
+    'All',
+    'E-Commerce',
+    'Marketing',
+    'Health',
+    'cloud computing',
+    'Vending',
+    'wash',
+  ];
   selectedCategory = 'All';
 
   caseStudies = [
@@ -64,8 +80,7 @@ export class SerivceComponent {
     {
       title: 'SÍMBÍÀTÚÚ Vends',
       type: 'Vending',
-      description:
-        'Vending Business in England, UK',
+      description: 'Vending Business in England, UK',
       image: 'coming-soon.png',
     },
     {
@@ -85,8 +100,7 @@ export class SerivceComponent {
     {
       title: 'Hand CarWash by SÍMBÍÀTÚÚ',
       type: 'wash',
-      description:
-        'Hand Car wash business in North England, UK',
+      description: 'Hand Car wash business in North England, UK',
       image: 'coming-soon.png',
     },
   ];
@@ -101,4 +115,17 @@ export class SerivceComponent {
   setCategory(category: string) {
     this.selectedCategory = category;
   }
+
+  features = [
+    'Blog posts, reviews, and features that spotlight your products authentically.',
+    'Social media content (Instagram, TikTok, LinkedIn) that engages and sells.',
+    'Video scripts and campaigns that feel human, not salesy.',
+    'Storytelling that connects your product to real people and real solutions.',
+  ];
+
+  performance = [
+    'Ongoing analytics to measure affiliate ROI.',
+    'Regular reporting so you know exactly what’s working.',
+    'Continuous campaign adjustments for higher conversions.',
+  ];
 }

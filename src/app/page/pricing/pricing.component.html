@@ -1,0 +1,78 @@
+<!-- NAVIGATION -->
+<app-header></app-header>
+
+<div class="flex flex-col items-center py-12 px-4 pt-28">
+  <!-- Header -->
+  <h2 class="text-2xl font-bold text-gray-800">
+    With SÍMBÍÀTÚÚ, Simple, transparent pricing is what we give
+  </h2>
+  <p class="text-gray-500 mt-2">No contracts. No surprise fees.</p>
+
+  <!-- Toggle Billing -->
+  <div class="flex bg-gray-100 rounded-full mt-6 p-1">
+    <button
+      class="px-4 py-2 text-sm font-medium rounded-full transition"
+      [class.bg-[#c86635]]="billingCycle() === 'monthly'"
+      [class.text-white]="billingCycle() === 'monthly'"
+      (click)="billingCycle.set('monthly')"
+    >
+      Monthly
+    </button>
+    <button
+      class="px-4 py-2 text-sm font-medium rounded-full transition"
+      [class.bg-[#c86635]]="billingCycle() === 'yearly'"
+      [class.text-white]="billingCycle() === 'yearly'"
+      (click)="billingCycle.set('yearly')"
+    >
+      Yearly
+    </button>
+  </div>
+
+  <!-- Plans -->
+  <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
+    @for (plan of plans; track plan.name) {
+    <div
+      class="rounded-2xl shadow-lg p-6 flex flex-col items-center text-center transition transform hover:scale-105 hover:bg-[#c86635] hover:text-white"
+      [class.bg-[#c86635]]="plan.highlighted"
+      [class.text-white]="plan.highlighted"
+    >
+      <p class="text-lg font-semibold">{{ plan.name }}</p>
+      <p class="mt-2 text-3xl font-bold">
+        £{{
+          billingCycle() === "monthly" ? plan.price.monthly : plan.price.yearly
+        }}
+        <span class="text-sm font-normal">/month</span>
+      </p>
+
+      <ul class="mt-4 space-y-2 text-sm text-left w-full">
+        @for (feature of plan.features; track feature) {
+        <li class="flex items-center gap-2">
+          <span class="w-2 h-2 bg-current rounded-full"></span>
+          {{ feature }}
+        </li>
+        }
+      </ul>
+
+      <button
+        type="button"
+        (click)="send()"
+        class="mt-6 w-full rounded-full py-2 font-medium border transition cursor-pointer"
+        [class.bg-white]="plan.highlighted"
+        [class.text-[#c86635]]="plan.highlighted"
+        [class.border-white]="plan.highlighted"
+        [class.bg-[#c86635]]="!plan.highlighted"
+        [class.text-white]="!plan.highlighted"
+        [class.border-[#c86635]]="!plan.highlighted"
+      >
+        {{ plan.button }}
+      </button>
+    </div>
+    }
+  </div>
+</div>
+
+<app-streamline></app-streamline>
+<app-testimonials></app-testimonials>
+
+<app-faq></app-faq>
+<app-footer />

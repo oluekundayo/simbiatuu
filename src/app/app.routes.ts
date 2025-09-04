@@ -17,6 +17,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'pricing',
+    loadComponent: () =>
+      import('./page/pricing/pricing.component').then(
+        (m) => m.PricingComponent
+      ),
+  },
+  {
     path: 'blog',
     loadChildren: () =>
       import('./page/blog/blog.routes').then(
