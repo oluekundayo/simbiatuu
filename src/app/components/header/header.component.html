@@ -10,7 +10,9 @@
                 [routerLink]="['/']"
               >
                 <!-- <span class="text-[#242528] text-2xl font-bold mr-2">⦿</span> -->
-                <span class="text-white font-extrabold text-2xl">SÍMBÍÀTÚÚ</span>
+                <span class="text-white font-extrabold text-2xl"
+                  >SÍMBÍÀTÚÚ</span
+                >
               </div>
               <!-- <img
                 class="h-8 w-auto"
@@ -19,13 +21,37 @@
                 [routerLink]="['/']"
               /> -->
             </div>
-            <div class="hidden md:block">
+            <button
+              (click)="toggleCreate()"
+              type="button"
+              class="text-white hover:text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main</span>
+              <!-- Heroicon name: menu -->
+              <svg
+                class="h-11 w-11"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+            <!-- <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
                 <ng-container *ngTemplateOutlet="navLinks"></ng-container>
               </div>
-            </div>
-            <div class="hidden md:block">
-              <!-- Button (aligned to the right) -->
+            </div> -->
+            <!-- <div class="hidden md:block">
               <button
                 class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-white text-black backdrop-blur transition-all hover:bg-[#9a7aa4]"
                 (click)="send()"
@@ -48,10 +74,10 @@
                 </span>
                 <div class="button-overlay"></div>
               </button>
-            </div>
+            </div> -->
           </div>
           <!-- Hamburger menu for mobile -->
-          <div class="-mr-2 flex md:hidden">
+          <!-- <div class="-mr-2 flex md:hidden">
             <button
               (click)="toggleMenu()"
               type="button"
@@ -60,7 +86,6 @@
               aria-expanded="false"
             >
               <span class="sr-only">Open main</span>
-              <!-- Heroicon name: menu -->
               <svg
                 class="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +102,7 @@
                 ></path>
               </svg>
             </button>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -92,7 +117,7 @@
 
           <button
             class="custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-white text-[#9a7aa4] backdrop-blur transition-all hover:bg-[#9a7aa4]"
-                (click)="send()"
+            (click)="send()"
           >
             <span class="text-sm font-semibold tracking-wide button-text-3"
               >Contact Us</span
@@ -141,7 +166,7 @@
   >
     Services
   </a>
-   <a
+  <a
     class="text-white hover:text-[#c86635] px-3 py-2 rounded-md text-sm font-medium"
     [routerLink]="['/pricing']"
     routerLinkActive="active"
@@ -156,3 +181,55 @@
     Clients
   </a> -->
 </ng-template>
+
+<!-- @if (iscreateOpen) { -->
+<app-drawer
+  [isOpen]="iscreateOpen"
+  [title]="''"
+  (close)="toggleCreate()"
+  [arrow]="arrow"
+  [arrowName]="arrowName"
+  (backNav)="toggleSolutions()"
+  size="md"
+  [mobileSize]="'full'"
+>
+  @if (!isSolutionsOpen) {
+  <div class="w-full h-full overflow-y-auto">
+    <nav class="flex flex-col items-start justify-start space-y-6 px-10 py-6">
+      @for (item of mainServices; track $index) { @if (item.link) {
+      <a
+        class="text-white text-3xl md:text-5xl font-medium hover:text-[#c86635]"
+        [routerLink]="[item.link]"
+        routerLinkActive="active"
+      >
+        {{ item.title }}
+      </a>
+      } @if (item.click) {
+      <a
+        href="javascript:void(0)"
+        class="text-white text-3xl md:text-5xl font-medium hover:text-[#c86635]"
+        (click)="item.click()"
+      >
+        {{ item.title }}
+      </a>
+      } }
+    </nav>
+  </div>
+  } @else {
+  <div class="w-full h-full overflow-y-auto">
+    <nav class="flex flex-col items-start justify-start space-y-6 px-10 py-6">
+      @for (item of services; track $index) {
+      <a
+        class="text-white text-3xl md:text-5xl font-medium hover:text-[#c86635]"
+        [routerLink]="[item.link]"
+        routerLinkActive="active"
+      >
+        {{ item.title }}
+      </a>
+      }
+    </nav>
+  </div>
+  }
+</app-drawer>
+
+<!-- } -->
