@@ -40,7 +40,7 @@ export class HeaderComponent {
   mainServices = [
     { title: 'Home', link: '/home' },
     { title: 'About us', link: '/about' },
-    { title: 'Services', link: '/service' },
+    // { title: 'Services', link: '/service' },
     { title: 'Our solutions', click: () => this.toggleSolutions('Our solutions') },
     { title: 'Blog', link: '/blog' },
     { title: 'Pricing', link: '/pricing' },

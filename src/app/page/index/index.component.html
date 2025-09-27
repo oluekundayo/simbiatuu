@@ -80,167 +80,272 @@
     </div>
   </header> -->
 
-  <section class="bg-gradient-to-r from-purple-800 to-pink-600 text-white py-20">
-  <div class="container mx-auto px-6 text-center">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">
-      Your Partner in Growth—From Local Dreams to Global Leaders
-    </h1>
-    <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
-      At SÍMBÍÀTÚÚ, we empower both businesses and individuals to grow with confidence.
-      From startups to enterprises, we deliver the tools, expertise, and creativity to help you thrive.
-    </p>
-    <a href="#services"
-      class="bg-white text-purple-700 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-purple-100 transition">
-      🚀 Let’s unlock your next level of success
-    </a>
-  </div>
-</section>
+  <section
+    class="relative bg-cover bg-center bg-no-repeat text-white py-20 pt-64"
+    style="background-image: url('/img/01.jpg')"
+  >
+    <!-- Overlay (optional, for readability) -->
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-[#6c23464d] to-[#9a7aa400]"
+    ></div>
 
-<section class="py-16 bg-gray-50">
-  <div class="container mx-auto px-6">
-    <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">
-      Find out how we can help your business today
-    </h2>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
-      @for (service of services; track service) {
-        <div
-        class="flex flex-col items-center justify-center bg-white rounded-2xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition group"
+    <!-- Content -->
+    <div class="container relative mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Your Partner in Growth—From Local Dreams to Global Leaders
+      </h1>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+        At SÍMBÍÀTÚÚ, we empower both businesses and individuals to grow with
+        confidence. From startups to enterprises, we deliver the tools,
+        expertise, and creativity to help you thrive.
+      </p>
+      <a
+        href="#services"
+        class="bg-white text-[#c86635] font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-purple-100 transition"
       >
-        <!-- Icon -->
+        Let’s unlock your next level of success
+      </a>
+    </div>
+  </section>
+
+  <!-- <div
+    class="grid grid-cols-12 md:h-full lg:min-h-[340px] xl:min-h-[460px] gap-inner-spacing h-[200px] sm:h-[300px]"
+  >
+    <div class="col-span-12">
+      <div class="h-full overflow-hidden rounded-[20px] lg:rounded">
+        <div class="relative h-full">
+          <img
+            alt=""
+            loading="lazy"
+            decoding="async"
+            data-nimg="fill"
+            class="object-cover"
+            sizes="50vw"
+            srcset="
+              /_next/image/?url=https%3A%2F%2Fcms-radius-com-bucket.s3.eu-west-2.amazonaws.com%2Fimage_11_788ec0932c.webp&amp;w=384&amp;q=75   384w,
+              /_next/image/?url=https%3A%2F%2Fcms-radius-com-bucket.s3.eu-west-2.amazonaws.com%2Fimage_11_788ec0932c.webp&amp;w=640&amp;q=75   640w,
+              /_next/image/?url=https%3A%2F%2Fcms-radius-com-bucket.s3.eu-west-2.amazonaws.com%2Fimage_11_788ec0932c.webp&amp;w=750&amp;q=75   750w,
+              /_next/image/?url=https%3A%2F%2Fcms-radius-com-bucket.s3.eu-west-2.amazonaws.com%2Fimage_11_788ec0932c.webp&amp;w=828&amp;q=75   828w,
+              /_next/image/?url=https%3A%2F%2Fcms-radius-com-bucket.s3.eu-west-2.amazonaws.com%2Fimage_11_788ec0932c.webp&amp;w=1080&amp;q=75 1080w,
+              /_next/image/?url=https%3A%2F%2Fcms-radius-com-bucket.s3.eu-west-2.amazonaws.com%2Fimage_11_788ec0932c.webp&amp;w=1200&amp;q=75 1200w,
+              /_next/image/?url=https%3A%2F%2Fcms-radius-com-bucket.s3.eu-west-2.amazonaws.com%2Fimage_11_788ec0932c.webp&amp;w=1920&amp;q=75 1920w,
+              /_next/image/?url=https%3A%2F%2Fcms-radius-com-bucket.s3.eu-west-2.amazonaws.com%2Fimage_11_788ec0932c.webp&amp;w=2048&amp;q=75 2048w,
+              /_next/image/?url=https%3A%2F%2Fcms-radius-com-bucket.s3.eu-west-2.amazonaws.com%2Fimage_11_788ec0932c.webp&amp;w=3840&amp;q=75 3840w
+            "
+            src="/_next/image/?url=https%3A%2F%2Fcms-radius-com-bucket.s3.eu-west-2.amazonaws.com%2Fimage_11_788ec0932c.webp&amp;w=3840&amp;q=75"
+            style="
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              inset: 0px;
+              color: transparent;
+            "
+          />
+        </div>
+        <div class="relative -mt-2.5">
+          <div aria-hidden="true" class="h-2.5 bg-gradient-rainbow"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">
+        Find out how we can help your business today
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-7 gap-6">
+        @for (service of services; track service) {
         <div
-          class="text-4xl mb-4 bg-gradient-to-r text-transparent bg-clip-text group-hover:scale-110 transform transition {{service.color}}"
+          class="relative flex flex-col items-center justify-center bg-white rounded-2xl shadow-sm border border-gray-200 p-2 md:p-6 hover:shadow-lg transition group"
         >
-          {{ service.icon }}
+          <!-- Icon -->
+          <ng-icon
+            [name]="service.icon"
+            [size]="'30px'"
+            class="w-24 h-24 mb-4 text-gray-700 group-hover:text-transparent group-hover:bg-clip-text"
+          ></ng-icon>
+
+          <!-- Label -->
+          <p class="text-sm font-semibold text-gray-700 text-center">
+            {{ service.name }}
+          </p>
+
+          <!-- Colored bar -->
+          <div
+            class="absolute bottom-0 left-0 lg:bottom-0 lg:left-0 h-full w-2.5 lg:h-2.5 lg:w-full z-10"
+            [style.backgroundColor]="service.color"
+          ></div>
+        </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="why-choose" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Why Choose SÍMBÍÀTÚÚ?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div
+          class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
+        >
+          <h3 class="font-semibold text-xl mb-3">
+            📖 Storytelling at the Core
+          </h3>
+          <p>
+            We make your brand unforgettable by connecting with people through
+            stories, not products.
+          </p>
         </div>
 
-        <!-- Label -->
-        <p class="text-sm font-semibold text-gray-700 text-center">
-          {{ service.name }}
-        </p>
+        <div
+          class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
+        >
+          <h3 class="font-semibold text-xl mb-3">🌐 One Ecosystem</h3>
+          <p>
+            Marketing, events, tech, fashion, care—we bring it all under one
+            roof.
+          </p>
+        </div>
+
+        <div
+          class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
+        >
+          <h3 class="font-semibold text-xl mb-3">🎯 Industry Expertise</h3>
+          <p>
+            From health to fashion, hospitality to real estate, we know your
+            world.
+          </p>
+        </div>
+
+        <div
+          class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
+        >
+          <h3 class="font-semibold text-xl mb-3">📈 Scalable Growth</h3>
+          <p>
+            Our solutions flex as you grow—from local launches to global
+            expansions.
+          </p>
+        </div>
       </div>
-      }
     </div>
-  </div>
-</section>
+  </section>
 
+  <section id="industries" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Industries We Serve</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
+          <h3 class="font-semibold text-xl mb-3">💊 Health & Wellness</h3>
+          <p>
+            Supporting healthcare and wellness ventures with strategy and
+            innovation.
+          </p>
+        </div>
 
-<section id="why-choose" class="py-20 bg-white">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-12">Why Choose SÍMBÍÀTÚÚ?</h2>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      
-      <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-3">📖 Storytelling at the Core</h3>
-        <p>We make your brand unforgettable by connecting with people through stories, not products.</p>
+        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
+          <h3 class="font-semibold text-xl mb-3">🏨 Hospitality & Lifestyle</h3>
+          <p>
+            Helping lifestyle and hospitality brands create unforgettable
+            experiences.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
+          <h3 class="font-semibold text-xl mb-3">
+            💻 Tech & Digital Innovation
+          </h3>
+          <p>
+            Providing digital solutions to keep businesses ahead in
+            fast-changing markets.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
+          <h3 class="font-semibold text-xl mb-3">👗 Fashion & Retail</h3>
+          <p>
+            Style-driven strategies that grow brands and engage consumers
+            worldwide.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
+          <h3 class="font-semibold text-xl mb-3">
+            🤝 Non-Profit & Social Impact
+          </h3>
+          <p>
+            Empowering charities and NGOs with storytelling and growth
+            strategies.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
+          <h3 class="font-semibold text-xl mb-3">🏡 Real Estate</h3>
+          <p>
+            Smarter property solutions for investors, agents, and communities.
+          </p>
+        </div>
       </div>
-      
-      <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-3">🌐 One Ecosystem</h3>
-        <p>Marketing, events, tech, fashion, care—we bring it all under one roof.</p>
-      </div>
-
-      <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-3">🎯 Industry Expertise</h3>
-        <p>From health to fashion, hospitality to real estate, we know your world.</p>
-      </div>
-
-      <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-3">📈 Scalable Growth</h3>
-        <p>Our solutions flex as you grow—from local launches to global expansions.</p>
-      </div>
-
     </div>
-  </div>
-</section>
-
-<section id="industries" class="py-20 bg-gray-50">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-12">Industries We Serve</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-      <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-3">💊 Health & Wellness</h3>
-        <p>Supporting healthcare and wellness ventures with strategy and innovation.</p>
-      </div>
-
-      <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-3">🏨 Hospitality & Lifestyle</h3>
-        <p>Helping lifestyle and hospitality brands create unforgettable experiences.</p>
-      </div>
-
-      <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-3">💻 Tech & Digital Innovation</h3>
-        <p>Providing digital solutions to keep businesses ahead in fast-changing markets.</p>
-      </div>
-
-      <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-3">👗 Fashion & Retail</h3>
-        <p>Style-driven strategies that grow brands and engage consumers worldwide.</p>
-      </div>
-
-      <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-3">🤝 Non-Profit & Social Impact</h3>
-        <p>Empowering charities and NGOs with storytelling and growth strategies.</p>
-      </div>
-
-      <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-        <h3 class="font-semibold text-xl mb-3">🏡 Real Estate</h3>
-        <p>Smarter property solutions for investors, agents, and communities.</p>
-      </div>
-
+  </section>
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">About Us</h2>
+      <p class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
+        <strong>SÍMBÍÀTÚÚ</strong> means <em>Brave Woman</em>—a name rooted in
+        resilience, passion, and purpose. Founded by a single immigrant mom in
+        the UK, our journey reflects the spirit we bring to every project:
+        turning challenges into opportunities, and passion into progress.
+      </p>
+      <p class="mt-6 max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
+        Every venture—whether in marketing, care, charities, fashion, food, real
+        estate, or events—has one mission: to create growth that transforms
+        businesses and lives. At SÍMBÍÀTÚÚ, we don’t just build brands—we build
+        confidence, opportunities, and connections that last.
+      </p>
     </div>
-  </div>
-</section>
-<section id="about" class="py-20 bg-white">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">About Us</h2>
-    <p class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
-      <strong>SÍMBÍÀTÚÚ</strong> means <em>Brave Woman</em>—a name rooted in resilience, passion, and purpose.
-      Founded by a single immigrant mom in the UK, our journey reflects the spirit we bring to every project:
-      turning challenges into opportunities, and passion into progress.
-    </p>
-    <p class="mt-6 max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
-      Every venture—whether in marketing, care, charities, fashion, food, real estate, or events—has one mission:
-      to create growth that transforms businesses and lives. At SÍMBÍÀTÚÚ, we don’t just build brands—we build
-      confidence, opportunities, and connections that last.
-    </p>
-  </div>
-</section>
-<section id="mission" class="py-20 bg-gray-50">
-  <div class="container mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Our Mission, Vision & Values</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-      
-      <div class="p-6 bg-white shadow rounded-xl">
-        <h3 class="font-semibold text-xl mb-4">🎯 Mission</h3>
-        <p>To empower individuals and businesses of all sizes through creativity, strategy, and storytelling—helping them scale locally and globally while making a meaningful impact.</p>
-      </div>
-      
-      <div class="p-6 bg-white shadow rounded-xl">
-        <h3 class="font-semibold text-xl mb-4">🌍 Vision</h3>
-        <p>To become a leading multi-service company in the UK and beyond—transforming businesses into brands that inspire, connect, and thrive worldwide.</p>
-      </div>
-      
-      <div class="p-6 bg-white shadow rounded-xl">
-        <h3 class="font-semibold text-xl mb-4">💡 Core Values</h3>
-        <ul class="space-y-2">
-          <li>Resilience – Turning challenges into opportunities.</li>
-          <li>Integrity – Honesty, trust, and transparency.</li>
-          <li>Innovation – Modern solutions for evolving markets.</li>
-          <li>Collaboration – Growth through partnership.</li>
-          <li>Impact – Creating measurable difference in communities.</li>
-        </ul>
-      </div>
+  </section>
+  <section id="mission" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">
+        Our Mission, Vision & Values
+      </h2>
 
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+        <div class="p-6 bg-white shadow rounded-xl">
+          <h3 class="font-semibold text-xl mb-4">🎯 Mission</h3>
+          <p>
+            To empower individuals and businesses of all sizes through
+            creativity, strategy, and storytelling—helping them scale locally
+            and globally while making a meaningful impact.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white shadow rounded-xl">
+          <h3 class="font-semibold text-xl mb-4">🌍 Vision</h3>
+          <p>
+            To become a leading multi-service company in the UK and
+            beyond—transforming businesses into brands that inspire, connect,
+            and thrive worldwide.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white shadow rounded-xl">
+          <h3 class="font-semibold text-xl mb-4">💡 Core Values</h3>
+          <ul class="space-y-2">
+            <li>Resilience – Turning challenges into opportunities.</li>
+            <li>Integrity – Honesty, trust, and transparency.</li>
+            <li>Innovation – Modern solutions for evolving markets.</li>
+            <li>Collaboration – Growth through partnership.</li>
+            <li>Impact – Creating measurable difference in communities.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- <app-services></app-services> -->
-
 
   <!-- <app-streamline></app-streamline>
   <app-testimonials></app-testimonials> -->

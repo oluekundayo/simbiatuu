@@ -34,7 +34,7 @@ export class DrawerComponent {
   // Order matters here
   private orderedSizes: DrawerSize[] = ['sm', 'md', 'lg', 'xl', 'full'];
 
-  get responsiveSizeClass(): string {
+  responsiveSizeClass(): string {
     const mobileClass = this.sizeMap[this.mobileSize] || this.sizeMap['full'];
     const desktopClass = this.sizeMap[this.size] || this.sizeMap['md'];
 
@@ -43,12 +43,19 @@ export class DrawerComponent {
     const smallerIndex = Math.max(0, currentIndex - 1); // fallback to 'sm'
     const mdSize = this.orderedSizes[smallerIndex];
     const mdClass = this.sizeMap[mdSize];
-    // console.log(
-    //   'object :>> ',
-    //   `${mobileClass} md:${mdClass} lg:${desktopClass}`
-    // );
+    console.log(
+      'object :>> ',
+      `${mobileClass} md:${mdClass} lg:${desktopClass}`
+    );
     return `${mobileClass} md:${mdClass} lg:${desktopClass}`;
   }
+
+  //  responsiveSizeClass(): string {
+  //   const mobileClass = this.sizeMap[this.mobileSize] || this.sizeMap['full'];
+  //   const desktopClass = this.sizeMap[this.size] || this.sizeMap['md'];
+  //   console.log(`${mobileClass} md:${desktopClass}`);
+  //   return `${mobileClass} md:${desktopClass}`;
+  // }
 
   closeDrawer(): void {
     this.isOpen = false;
