@@ -163,7 +163,7 @@
           <!-- Icon -->
           <ng-icon
             [name]="service.icon"
-            [size]="'30px'"
+            [size]="'40px'"
             class="w-24 h-24 mb-4 text-gray-700 group-hover:text-transparent group-hover:bg-clip-text"
           ></ng-icon>
 
@@ -184,112 +184,233 @@
   </section>
 
   <section id="why-choose" class="py-20 bg-white">
-    <div class="container mx-auto px-6 text-center">
+    <div class="container mx-auto px-6 md:px-28 text-center">
       <h2 class="text-3xl font-bold mb-12">Why Choose SÍMBÍÀTÚÚ?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <div
+        class="mb-16 bg-white transition-opacity duration-700 ease-in-out p-0 round-2"
+      >
+        <!-- Content Grid -->
         <div
-          class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center"
         >
-          <h3 class="font-semibold text-xl mb-3">
-            📖 Storytelling at the Core
+          <!-- Left Content Column -->
+          <div class="order-1 lg:order-2 space-y-6 lg:space-y-8 pt-4 pb-8">
+            <!-- Title Section -->
+            <div class="text-center lg:text-left">
+              <h3 class="text-3xl font-semibold mb-2">One Ecosystem</h3>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Marketing, events, tech, fashion, care we bring it all under one
+                roof.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Image Column -->
+          <div
+            class="order-2 lg:order-1 flex justify-center lg:justify-end pb-8"
+          >
+            <img
+              src="img/02.jpg"
+              alt="Storytelling at the Core"
+              class="w-full h-full object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center"
+        >
+          <!-- Left Content Column -->
+          <div class="order-2 lg:order-1 space-y-6 lg:space-y-8 pt-4 pb-8">
+            <!-- Title Section -->
+            <div class="text-center lg:text-left">
+              <h3 class="text-3xl font-semibold mb-2">
+                Storytelling at the Core
+              </h3>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                We make your brand unforgettable by connecting with people
+                through stories, not products.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Image Column -->
+          <div
+            class="order-1 lg:order-2 flex justify-center lg:justify-end pb-8"
+          >
+            <img
+              src="img/03.jpg"
+              alt="Storytelling at the Core"
+              class="w-full h-full object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center"
+        >
+          <!-- Left Content Column -->
+          <div class="order-1 lg:order-2 space-y-6 lg:space-y-8 pt-4 pb-8">
+            <!-- Title Section -->
+            <div class="text-center lg:text-left">
+              <h3 class="text-3xl font-semibold mb-2">Industry Expertise</h3>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                From health to fashion, hospitality to real estate, we know your
+                world.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Image Column -->
+          <div
+            class="order-2 lg:order-1 flex justify-center lg:justify-end pb-8"
+          >
+            <img
+              src="img/04.jpg"
+              alt="Storytelling at the Core"
+              class="w-full h-full object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center"
+        >
+          <!-- Left Content Column -->
+          <div class="order-2 lg:order-1 space-y-6 lg:space-y-8 pt-4 pb-8">
+            <!-- Title Section -->
+            <div class="text-center lg:text-left">
+              <h3 class="text-3xl font-semibold mb-2">Scalable Growth</h3>
+              <p class="text-lg text-gray-600 leading-relaxed">
+                Our solutions flex as you grow—from local launches to global
+                expansions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Image Column -->
+          <div
+            class="order-1 lg:order-2 flex justify-center lg:justify-end pb-8"
+          >
+            <img
+              src="img/05.jpg"
+              alt="Storytelling at the Core"
+              class="w-full h-full object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white container mx-auto px-6 md:px-28">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+        <!-- Left: Features -->
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold mb-8">
+            Industries We Serve
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div
+              *ngFor="let feature of featuress"
+              class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition flex flex-col items-start"
+            >
+              <!-- Icon -->
+              <div
+                class="flex items-center justify-center w-12 h-12 rounded-full bg-[#eb002b3a] mb-4"
+              >
+                <fa-icon
+                  [icon]="feature.icon"
+                  class="text-[#eb002b] text-xl"
+                ></fa-icon>
+              </div>
+
+              <!-- Title -->
+              <h3 class="text-base font-semibold text-gray-900 mb-2">
+                {{ feature.title }}
+              </h3>
+
+              <!-- Description -->
+              <p class="text-sm text-gray-600">
+                {{ feature.desc }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="flex justify-center h-full">
+          <img
+            src="img/06.jpg"
+            alt="Features Illustration"
+            class="max-w-full lg:max-w-md rounded-2xl shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white container mx-auto px-6 md:px-28">
+    <div class="container mx-auto px-6">
+      <!-- Heading -->
+      <div class="flex flex-col md:flex-row md:justify-between items-center">
+        <div>
+          <h2
+            class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-justify"
+          >
+            Why SÍMBÍÀTÚÚ
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto text-justify mb-12">
+            <strong>SÍMBÍÀTÚÚ</strong> means <em>Brave Woman</em> a name rooted
+            in resilience, passion, and purpose. Founded by a single immigrant
+            mom in the UK, our journey reflects the spirit we bring to every
+            project: turning challenges into opportunities, and passion into
+            progress.
+          </p>
+        </div>
+        <!-- CTA -->
+        <div class="flex justify-center mb-4">
+          <a
+            [routerLink]="['/about']"
+            routerLinkActive="router-link-active"
+            class="inline-flex items-center px-6 py-3 border border-[#eb002b] text-[#eb002b] font-medium rounded-full hover:bg-[#eb002b] hover:text-white transition"
+          >
+            About us
+            <fa-icon [icon]="['fas', 'arrow-right']" class="ml-2"></fa-icon>
+          </a>
+        </div>
+      </div>
+
+      <!-- Grid of features -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div
+          *ngFor="let feature of features"
+          class="bg-white border border-gray-200 rounded-3xl p-6 flex flex-col items-start text-left hover:shadow-md transition"
+        >
+          <!-- Icon -->
+          <fa-icon
+            [icon]="feature.icon"
+            class="text-[#eb002b] text-4xl mb-4"
+          ></fa-icon>
+
+          <!-- Title -->
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">
+            {{ feature.title }}
           </h3>
-          <p>
-            We make your brand unforgettable by connecting with people through
-            stories, not products.
-          </p>
-        </div>
 
-        <div
-          class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
-        >
-          <h3 class="font-semibold text-xl mb-3">🌐 One Ecosystem</h3>
-          <p>
-            Marketing, events, tech, fashion, care—we bring it all under one
-            roof.
-          </p>
-        </div>
-
-        <div
-          class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
-        >
-          <h3 class="font-semibold text-xl mb-3">🎯 Industry Expertise</h3>
-          <p>
-            From health to fashion, hospitality to real estate, we know your
-            world.
-          </p>
-        </div>
-
-        <div
-          class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition"
-        >
-          <h3 class="font-semibold text-xl mb-3">📈 Scalable Growth</h3>
-          <p>
-            Our solutions flex as you grow—from local launches to global
-            expansions.
+          <!-- Description -->
+          <p class="text-sm text-gray-600">
+            {{ feature.desc }}
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="industries" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-12">Industries We Serve</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-          <h3 class="font-semibold text-xl mb-3">💊 Health & Wellness</h3>
-          <p>
-            Supporting healthcare and wellness ventures with strategy and
-            innovation.
-          </p>
-        </div>
-
-        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-          <h3 class="font-semibold text-xl mb-3">🏨 Hospitality & Lifestyle</h3>
-          <p>
-            Helping lifestyle and hospitality brands create unforgettable
-            experiences.
-          </p>
-        </div>
-
-        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-          <h3 class="font-semibold text-xl mb-3">
-            💻 Tech & Digital Innovation
-          </h3>
-          <p>
-            Providing digital solutions to keep businesses ahead in
-            fast-changing markets.
-          </p>
-        </div>
-
-        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-          <h3 class="font-semibold text-xl mb-3">👗 Fashion & Retail</h3>
-          <p>
-            Style-driven strategies that grow brands and engage consumers
-            worldwide.
-          </p>
-        </div>
-
-        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-          <h3 class="font-semibold text-xl mb-3">
-            🤝 Non-Profit & Social Impact
-          </h3>
-          <p>
-            Empowering charities and NGOs with storytelling and growth
-            strategies.
-          </p>
-        </div>
-
-        <div class="p-6 bg-white shadow rounded-xl hover:shadow-lg transition">
-          <h3 class="font-semibold text-xl mb-3">🏡 Real Estate</h3>
-          <p>
-            Smarter property solutions for investors, agents, and communities.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="about" class="py-20 bg-white">
+  <!-- <section id="about" class="py-20 bg-white">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-6">About Us</h2>
       <p class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed">
@@ -343,7 +464,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- <app-services></app-services> -->
 

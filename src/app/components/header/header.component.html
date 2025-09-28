@@ -1,30 +1,30 @@
 <div class="fixed z-50 w-full">
   <div class="md:px-14">
-    <nav class="bg-[#9a7aa4] lg:rounded-3xl">
+    <nav class="bg-[#ffffff] lg:rounded-3xl shadow-2xl">
       <div class="me-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 joto">
           <div class="flex justify-between items-center joto">
             <div class="flex-shrink-0">
-              <div
+              <!-- <div
                 class="flex items-center cursor-pointer"
                 [routerLink]="['/']"
               >
-                <!-- <span class="text-[#242528] text-2xl font-bold mr-2">⦿</span> -->
-                <span class="text-white font-extrabold text-2xl"
+                <span class="text-[#242528] text-2xl font-bold mr-2">⦿</span> 
+                <span class="text-black font-extrabold text-2xl"
                   >SÍMBÍÀTÚÚ</span
                 >
-              </div>
-              <!-- <img
+              </div> -->
+              <img
                 class="h-8 w-auto"
-                src="simbiatuu.png"
+                src="img/simbiatuu-logo.png"
                 alt="Workflow"
                 [routerLink]="['/']"
-              /> -->
+              />
             </div>
             <button
               (click)="toggleCreate()"
               type="button"
-              class="text-white hover:text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              class="text-black hover:text-black inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -198,7 +198,7 @@
     <nav class="flex flex-col items-start justify-start space-y-6 px-10 py-6">
       @for (item of mainServices; track $index) { @if (item.link) {
       <a
-        class="text-white text-3xl md:text-5xl font-medium hover:text-[#c86635]"
+        class="text-white text-3xl md:text-5xl font-medium hover:text-[#eb002b]"
         [routerLink]="[item.link]"
         routerLinkActive="active"
       >
@@ -207,7 +207,7 @@
       } @if (item.click) {
       <a
         href="javascript:void(0)"
-        class="text-white text-3xl md:text-5xl font-medium hover:text-[#c86635]"
+        class="text-white text-3xl md:text-5xl font-medium hover:text-[#eb002b]"
         (click)="item.click()"
       >
         {{ item.title }}
@@ -220,7 +220,7 @@
     <nav class="flex flex-col items-start justify-start space-y-6 px-10 py-6">
       @for (item of services; track $index) {
       <a
-        class="text-white text-3xl md:text-5xl font-medium hover:text-[#c86635]"
+        class="text-white text-3xl md:text-5xl font-medium hover:text-[#eb002b]"
         [routerLink]="[item.link]"
         routerLinkActive="active"
       >
