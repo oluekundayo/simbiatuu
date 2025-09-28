@@ -18,9 +18,9 @@ export class StreamlineComponent {
     { img: 'simbi1.jpg', rotate: -4, translateY: 10, scale: 0.95 },
     { img: 'simbi2.jpg', rotate: -2, translateY: 5,  scale: 0.98 },
     { img: 'simbi3.jpg', rotate: 0,  translateY: 0,  scale: 1 },
-    { img: 'simbi4.jpg', rotate: 2,  translateY: 5,  scale: 0.98 },
-    { img: 'simbi5.jpg', rotate: 4,  translateY: 10, scale: 0.95 },
-    { img: 'madam.jpg', rotate: 8,  translateY: 20, scale: 0.9 },
+    // { img: 'simbi4.jpg', rotate: 2,  translateY: 5,  scale: 0.98 },
+    // { img: 'simbi5.jpg', rotate: 4,  translateY: 10, scale: 0.95 },
+    // { img: 'madam.jpg', rotate: 8,  translateY: 20, scale: 0.9 },
   ];
 
   send() {

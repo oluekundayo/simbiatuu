@@ -4,7 +4,7 @@
     Trusted by 100's of venture-backed startups and scaleups around the world.
   </h2>
   <button
-    class="mt-6 custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-[#c86635] text-white backdrop-blur transition-all hover:bg-[#e35336a0]"
+    class="mt-6 custom-button group relative inline-flex items-center justify-between gap-3 px-6 py-3 rounded-md bg-[#eb002b] text-white backdrop-blur transition-all hover:bg-[#eb002b]"
     [routerLink]="['/contact']"
     routerLinkActive="router-link-active"
   >
@@ -79,16 +79,20 @@
 <footer class="bg-[#9a7aa4] text-white">
   <div class="max-w-7xl mx-auto px-6 py-12">
     <div class="mb-12">
-      <!-- <h2 class="text-2xl font-bold text-yellow-400">Logo Here</h2> -->
+      <!-- <h2 class="text-2xl font-bold text-[#eb002b]">Logo Here</h2> -->
       <div class="space-y-4 col-span-1">
-        <div class="flex items-center">
+        <!-- <div class="flex items-center">
           <span class="text-white text-2xl font-bold mr-2">⦿</span>
           <span class="text-white font-extrabold text-lg">SÍMBÍÀTÚÚ.</span>
-        </div>
-        <!-- <div class="flex items-center gap-2">
-          <img src="https://via.placeholder.com/40x40" alt="Logo" class="w-10 h-10" />
-          <span class="font-extrabold text-xl">STACKMATIX</span>
         </div> -->
+        <div class="flex-shrink-0">
+              <img
+                class="h-8 w-auto"
+                src="img/simbiatuu-logo-no-bg2.png"
+                alt="simbiatuu"
+                [routerLink]="['/']"
+              />
+            </div>
         <p class="text-lg">Let’s create something amazing together.</p>
       </div>
     </div>
@@ -154,21 +158,21 @@
           <li>
             <a
               href="#"
-              class="hover:text-yellow-400 transition-colors duration-200"
+              class="hover:text-[#eb002b] transition-colors duration-200"
               >About</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="hover:text-yellow-400 transition-colors duration-200"
+              class="hover:text-[#eb002b] transition-colors duration-200"
               >Contact</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="hover:text-yellow-400 transition-colors duration-200"
+              class="hover:text-[#eb002b] transition-colors duration-200"
               >Blogs</a
             >
           </li>
@@ -182,28 +186,28 @@
           <li>
             <a
               href="#"
-              class="hover:text-yellow-400 transition-colors duration-200"
+              class="hover:text-[#eb002b] transition-colors duration-200"
               >Privacy Policy</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="hover:text-yellow-400 transition-colors duration-200"
+              class="hover:text-[#eb002b] transition-colors duration-200"
               >Terms & Services</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="hover:text-yellow-400 transition-colors duration-200"
+              class="hover:text-[#eb002b] transition-colors duration-200"
               >Terms of Use</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="hover:text-yellow-400 transition-colors duration-200"
+              class="hover:text-[#eb002b] transition-colors duration-200"
               >Refund Policy</a
             >
           </li>
@@ -217,21 +221,21 @@
           <li>
             <a
               href="#"
-              class="hover:text-yellow-400 transition-colors duration-200"
+              class="hover:text-[#eb002b] transition-colors duration-200"
               >Techlabz Keybox</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="hover:text-yellow-400 transition-colors duration-200"
+              class="hover:text-[#eb002b] transition-colors duration-200"
               >Downloads</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="hover:text-yellow-400 transition-colors duration-200"
+              class="hover:text-[#eb002b] transition-colors duration-200"
               >Forum</a
             >
           </li>
@@ -250,13 +254,13 @@
               [(ngModel)]="email"
               name="email"
               placeholder="Your email address"
-              class="w-full px-4 py-3 bg-[#9a7aa4] border border-white rounded-lg text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-200"
+              class="w-full px-4 py-3 bg-[#9a7aa4] border border-white rounded-lg text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-[#eb002b] focus:border-transparent transition-all duration-200"
               required
             />
           </div>
           <button
             type="submit"
-            class="w-full bg-[#c86635] text-white px-4 py-3 rounded-lg font-semibold hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all duration-200 transform hover:scale-[1.02]"
+            class="w-full bg-[#eb002b] text-white px-4 py-3 rounded-lg font-semibold hover:bg-[#eb002b] focus:outline-none focus:ring-2 focus:ring-[#eb002b] focus:ring-offset-2 focus:ring-offset-slate-900 transition-all duration-200 transform hover:scale-[1.02]"
           >
             Subscribe
           </button>
@@ -274,13 +278,13 @@
     <div class="max-w-7xl mx-auto px-6 py-6">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-white text-sm">
-          © {{currentYear}} Company Name. All rights reserved.
+          © {{currentYear}} SÍMBÍÀTÚÚ. All rights reserved.
         </p>
         <div class="flex items-center gap-6">
           <!-- Social Media Icons -->
           <a
             href="#"
-            class="text-white hover:text-yellow-400 transition-colors duration-200"
+            class="text-white hover:text-[#eb002b] transition-colors duration-200"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -291,7 +295,7 @@
           
           <a
             href="#"
-            class="text-white hover:text-yellow-400 transition-colors duration-200"
+            class="text-white hover:text-[#eb002b] transition-colors duration-200"
           >
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path

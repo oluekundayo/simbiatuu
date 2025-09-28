@@ -32,7 +32,7 @@ Tyrian Purple — #6c2346 */
 }
 
 .button-overlay {
-  background-color: #dec4e6;
+  background-color: #eb002b;
   border: 1px #000;
   border-radius: 100%;
   width: 125%;
@@ -61,7 +61,7 @@ Tyrian Purple — #6c2346 */
   /* z-index: -9; */
   border-radius: 367px;
   opacity: 0.1;
-  background: #6c2346;
+  background: #eb002b;
   filter: blur(100px);
   /* flex-shrink: 0; */
 }
@@ -76,7 +76,7 @@ Tyrian Purple — #6c2346 */
   right: 0px;
   /* z-index: -9; */
   border-radius: 367px;
-  background: #6c2346;
+  background: #eb002b;
   filter: blur(100px);
   /* flex-shrink: 0; */
 }
@@ -84,7 +84,7 @@ Tyrian Purple — #6c2346 */
   position: absolute;
   /* z-index: -9; */
   border-radius: 367px;
-  background: #6c2346;
+  background: #eb002b;
   filter: blur(100px);
   /* flex-shrink: 0; */
 }
@@ -94,7 +94,7 @@ Tyrian Purple — #6c2346 */
   right: 0vh;
   /* z-index: -9; */
   opacity: 0.3;
-  background: #6c2346;
+  background: #eb002b;
   filter: blur(100px);
   /* flex-shrink: 0; */
 }
