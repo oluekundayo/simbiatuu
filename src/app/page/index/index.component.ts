@@ -182,12 +182,12 @@ export class IndexComponent implements OnInit {
     //   icon: 'heroCamera',
     //   color: 'from-teal-400 to-green-400',
     // },
-    {
-      name: 'Public Speaking',
-      desc: 'Inspiring talks that spark change.',
-      icon: 'heroMicrophone',
-      color: 'from-violet-400 to-indigo-400',
-    },
+    // {
+    //   name: 'Public Speaking',
+    //   desc: 'Inspiring talks that spark change.',
+    //   icon: 'heroMicrophone',
+    //   color: 'from-violet-400 to-indigo-400',
+    // },
     // {
     //   name: 'Real Estate',
     //   desc: 'Smarter property solutions.',
