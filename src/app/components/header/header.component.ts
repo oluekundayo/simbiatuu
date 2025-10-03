@@ -54,9 +54,9 @@ export class HeaderComponent {
       link: '/affiliate',
     },
     {
-      title: 'Care Agency',
-      description: 'Trusted, people-first care services.',
-      link: '/care',
+      title: 'Couture',
+      description: 'Style-driven solutions for brands & consumers.',
+      link: '/Couture',
     },
     {
       title: 'Charity & Non-Profit Support',
@@ -64,59 +64,59 @@ export class HeaderComponent {
       link: '/charity',
     },
     {
-      title: 'Cloud Academy',
-      description: 'Digital learning for modern growth.',
-      link: '/cloud',
-    },
-    {
-      title: 'Coutoure',
-      description: 'Style-driven solutions for brands & consumers.',
-      link: '/coutoure',
-    },
-    {
-      title: 'Digital Products',
-      description: 'Scalable, future-ready solutions.',
-      link: '/digital',
-    },
-    {
       title: 'Events & Styling',
       description: 'Memorable experiences that connect.',
       link: '/events',
     },
     {
-      title: 'Food & Dining',
-      description: 'Culinary ventures that delight and inspire.',
-      link: '/food',
-    },
-    {
-      title: 'Full-Stack Content Marketing',
+      title: '360 Content Marketing',
       description: 'Strategy, storytelling, and execution.',
-      link: '/fullstack',
+      link: '/360Content',
     },
     {
       title: 'Gift Shop',
       description: 'Curated gifting for every occasion.',
       link: '/gift',
     },
-    {
-      title: 'Photography',
-      description: 'Visual storytelling that captures impact.',
-      link: '/photo',
-    },
-    {
-      title: 'Public Speaking',
-      description: 'Inspiring talks that spark change.',
-      link: '/public',
-    },
-    {
-      title: 'Real Estate',
-      description: 'Smarter property solutions.',
-      link: '/real',
-    },
-    {
-      title: 'Vending Services',
-      description: 'Convenience that works anywhere.',
-      link: '/vending',
-    },
+    // {
+    //   title: 'Cloud Academy',
+    //   description: 'Digital learning for modern growth.',
+    //   link: '/cloud',
+    // },
+    // {
+    //   title: 'Digital Products',
+    //   description: 'Scalable, future-ready solutions.',
+    //   link: '/digital',
+    // },
+    // {
+    //   title: 'Food & Dining',
+    //   description: 'Culinary ventures that delight and inspire.',
+    //   link: '/food',
+    // },
+    // {
+    //   title: 'Care Agency',
+    //   description: 'Trusted, people-first care services.',
+    //   link: '/care',
+    // },
+    // {
+    //   title: 'Photography',
+    //   description: 'Visual storytelling that captures impact.',
+    //   link: '/photo',
+    // },
+    // {
+    //   title: 'Public Speaking',
+    //   description: 'Inspiring talks that spark change.',
+    //   link: '/public',
+    // },
+    // {
+    //   title: 'Real Estate',
+    //   description: 'Smarter property solutions.',
+    //   link: '/real',
+    // },
+    // {
+    //   title: 'Vending Services',
+    //   description: 'Convenience that works anywhere.',
+    //   link: '/vending',
+    // },
   ];
 }
