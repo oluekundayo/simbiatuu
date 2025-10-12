@@ -44,4 +44,25 @@ export const routes: Routes = [
         (m) => m.ContactComponent
       ),
   },
+  {
+    path: 'affiliate',
+    loadComponent: () =>
+      import('./page/affilicate/affilicate.component').then(
+        (m) => m.AffilicateComponent
+      ),
+  },
+  {
+    path: 'events',
+    loadComponent: () =>
+      import('./page/event/event.component').then(
+        (m) => m.EventComponent
+      ),
+  },
+  {
+    path: '360Content',
+    loadComponent: () =>
+      import('./page/digital/digital.component').then(
+        (m) => m.DigitalComponent
+      ),
+  },
 ];

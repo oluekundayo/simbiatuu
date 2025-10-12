@@ -1,0 +1,212 @@
+<!-- NAVIGATION -->
+<app-header></app-header>
+<section
+  class="relative bg-gradient-to-r from-red-600 to-red-700 text-white py-24 overflow-hidden"
+>
+  <!-- Background Image Overlay -->
+  <div class="absolute inset-0 opacity-10">
+    <div
+      class="h-full w-full bg-[url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center"
+    ></div>
+  </div>
+
+  <!-- Content Container -->
+  <div class="container mx-auto px-4 relative z-10 md:px-14">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+        SÍMBÍÀTÚÚ 360° CONTENT SOLUTION
+      </h1>
+
+      <p class="text-xl md:text-2xl mb-8">
+        Comprehensive, full-stack marketing services tailored for brands and
+        individuals in the UK & Nigeria. We are storytellers who leverage
+        the power of narrative to connect brands with their target audiences.
+      </p>
+
+      <a
+        href="#contact"
+        class="inline-flex items-center bg-white text-red-600 font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors"
+      >
+        Get Started Today
+        <fa-icon [icon]="['fas', 'arrow-right']" class="ml-2 text-red-600"></fa-icon>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">WHAT WE DO</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Our comprehensive marketing services are designed to help your brand
+        stand out and connect with your audience.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-14">
+      @for (service of services; track service.title) {
+        <div
+          class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+        >
+          <div class="flex items-center mb-4">
+            <fa-icon
+              [icon]="service.icon"
+              class="w-10 h-10 text-red-600"
+            ></fa-icon>
+            <h3 class="text-xl font-bold ml-3">{{ service.title }}</h3>
+          </div>
+
+          <ul class="space-y-2">
+            @for (item of service.items; track item) {
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span>{{ item }}</span>
+              </li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <span class="text-red-600 font-bold text-lg">⭐ BONUS SERVICES</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        For Added Impact & Differentiation
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Take your marketing to the next level with our specialized bonus
+        services.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-14">
+      @for (service of bonusServices; track service.title) {
+        <div
+          class="bg-red-50 rounded-lg border border-red-100 p-6 hover:shadow-md transition-shadow"
+        >
+          <div class="flex items-center mb-4">
+            <fa-icon [icon]="service.icon" class="w-10 h-10 text-red-600"></fa-icon>
+            <h3 class="text-xl font-bold ml-3">{{ service.title }}</h3>
+          </div>
+
+          <ul class="space-y-2">
+            @for (item of service.items; track item) {
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span>{{ item }}</span>
+              </li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+
+<app-pricing [plans]="pricingPlans"></app-pricing>
+
+<section id="testimonials" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">TESTIMONIALS</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        See what our clients have to say about working with us.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-14">
+      @for (testimonial of testimonials; track testimonial) {
+        <div class="bg-red-50 border border-red-100 rounded-lg p-6 relative">
+          <div class="absolute top-4 right-4 text-red-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12h.01M15 12h.01M9 16h.01M15 16h.01M4 8h16"
+              />
+            </svg>
+          </div>
+
+          <div class="flex mb-4">
+            @for (i of [1,2,3,4,5]; track i) {
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 text-yellow-500"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.946a1 1 0 00.95.69h4.146c.969 0 1.371 1.24.588 1.81l-3.357 2.44a1 1 0 00-.364 1.118l1.285 3.946c.3.922-.755 1.688-1.54 1.118l-3.357-2.44a1 1 0 00-1.175 0l-3.357 2.44c-.784.57-1.838-.196-1.539-1.118l1.285-3.946a1 1 0 00-.364-1.118L2.079 9.373c-.783-.57-.38-1.81.588-1.81h4.146a1 1 0 00.95-.69l1.286-3.946z"
+                />
+              </svg>
+            }
+          </div>
+
+          <p class="text-gray-700 mb-6">"{{ testimonial.text }}"</p>
+          <div>
+            <p class="font-bold">{{ testimonial.author }}</p>
+            <p class="text-gray-600">{{ testimonial.position }}</p>
+            <p class="text-gray-500 text-sm">{{ testimonial.location }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        OUR TRAINING & CERTIFICATIONS
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        We're committed to excellence and continuous learning.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-6">
+      @for (cert of certifications; track cert) {
+        <div
+          class="flex items-center bg-white rounded-full px-6 py-3 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+        >
+          <!-- Award Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-red-600 mr-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 10.5V6.75a3.75 3.75 0 10-7.5 0V10.5m10.125 9.375l1.125-3.375m-12 0l1.125 3.375m9.75 0a2.625 2.625 0 002.625-2.625v-4.5a2.625 2.625 0 00-2.625-2.625h-11.25A2.625 2.625 0 006.375 12.75v4.5A2.625 2.625 0 009 19.875h9.75z"
+            />
+          </svg>
+
+          <span class="font-medium">{{ cert }}</span>
+          <span class="ml-2 text-yellow-500">🌟</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+
+<app-footer />

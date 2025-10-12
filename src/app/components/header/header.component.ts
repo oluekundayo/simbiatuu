@@ -43,7 +43,7 @@ export class HeaderComponent {
     // { title: 'Services', link: '/service' },
     { title: 'Our solutions', click: () => this.toggleSolutions('Our solutions') },
     { title: 'Blog', link: '/blog' },
-    { title: 'Pricing', link: '/pricing' },
+    // { title: 'Pricing', link: '/pricing' },
     { title: 'Contact us', link: '/contact' },
   ];
 
