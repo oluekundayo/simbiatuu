@@ -65,4 +65,11 @@ export const routes: Routes = [
         (m) => m.DigitalComponent
       ),
   },
+  {
+    path: 'smp',
+    loadComponent: () =>
+      import('./page/smg/smg.component').then(
+        (m) => m.SmgComponent
+      ),
+  },
 ];

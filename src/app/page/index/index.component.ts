@@ -117,7 +117,7 @@ export class IndexComponent implements OnInit {
 
   services = [
     {
-      name: 'Affiliate Marketing',
+      name: 'SimAffiliate',
       desc: 'Build new revenue streams.',
       icon: 'heroLink',
       color: 'from-blue-400 to-indigo-400',
@@ -129,7 +129,7 @@ export class IndexComponent implements OnInit {
     //   color: 'from-pink-400 to-rose-400',
     // },
     {
-      name: 'Charity & Non-Profit Support',
+      name: 'SMP',
       desc: 'Strategies with purpose.',
       icon: 'heroHandThumbUp',
       color: 'from-green-400 to-emerald-400',
@@ -141,7 +141,7 @@ export class IndexComponent implements OnInit {
     //   color: 'from-purple-400 to-violet-400',
     // },
     {
-      name: 'Coutoure',
+      name: '⁠KindCart',
       desc: 'Style-driven solutions for brands & consumers.',
       icon: 'heroSparkles',
       color: 'from-fuchsia-400 to-pink-400',
@@ -153,7 +153,7 @@ export class IndexComponent implements OnInit {
     //   color: 'from-cyan-400 to-teal-400',
     // },
     {
-      name: 'Events & Styling',
+      name: 'SÍBÚ',
       desc: 'Memorable experiences that connect.',
       icon: 'heroCalendarDays',
       color: 'from-orange-400 to-amber-400',
@@ -165,23 +165,23 @@ export class IndexComponent implements OnInit {
     //   color: 'from-red-400 to-rose-400',
     // },
     {
-      name: 'Full-Stack Content Marketing',
+      name: 'Her BeautFit',
       desc: 'Strategy, storytelling, and execution.',
       icon: 'heroGlobeAlt',
       color: 'from-indigo-400 to-sky-400',
     },
     {
-      name: 'Gift Shop',
+      name: '⁠360 degree CM',
       desc: 'Curated gifting for every occasion.',
       icon: 'heroGift',
       color: 'from-pink-400 to-purple-400',
     },
-    // {
-    //   name: 'Photography',
-    //   desc: 'Visual storytelling that captures impact.',
-    //   icon: 'heroCamera',
-    //   color: 'from-teal-400 to-green-400',
-    // },
+    {
+      name: 'SimEventingUK',
+      desc: 'Visual storytelling that captures impact.',
+      icon: 'heroCamera',
+      color: 'from-teal-400 to-green-400',
+    },
     // {
     //   name: 'Public Speaking',
     //   desc: 'Inspiring talks that spark change.',
@@ -203,16 +203,28 @@ export class IndexComponent implements OnInit {
   ];
 
   colors = [
-    { name: 'Dusty Purple', hex: '#9a7aa4' },
-    { name: 'Dark Aquamarine', hex: '#488e82' },
-    { name: 'Harvest Gold', hex: '#c8932b' },
-    { name: 'Rosewood', hex: '#b74852' },
-    { name: 'Persimmon', hex: '#c86635' },
-    { name: 'Jungle Green', hex: '#318144' },
-    { name: 'Dusty Purple (variant)', hex: '#af849e' },
-    { name: 'Gunmetal Blue', hex: '#343f5e' },
-    { name: 'Tyrian Purple', hex: '#6c2346' },
+    { name: 'Dusty Purple', hex: '#eb002b' },
+    { name: 'Dark Aquamarine', hex: '#eb002b' },
+    { name: 'Harvest Gold', hex: '#eb002b' },
+    { name: 'Rosewood', hex: '#eb002b' },
+    { name: 'Persimmon', hex: '#eb002b' },
+    { name: 'Jungle Green', hex: '#eb002b' },
+    { name: 'Dusty Purple (variant)', hex: '#eb002b' },
+    { name: 'Gunmetal Blue', hex: '#eb002b' },
+    { name: 'Tyrian Purple', hex: '#eb002b' },
   ];
+
+  // colors = [
+  //   { name: 'Dusty Purple', hex: '#9a7aa4' },
+  //   { name: 'Dark Aquamarine', hex: '#488e82' },
+  //   { name: 'Harvest Gold', hex: '#c8932b' },
+  //   { name: 'Rosewood', hex: '#b74852' },
+  //   { name: 'Persimmon', hex: '#c86635' },
+  //   { name: 'Jungle Green', hex: '#318144' },
+  //   { name: 'Dusty Purple (variant)', hex: '#af849e' },
+  //   { name: 'Gunmetal Blue', hex: '#343f5e' },
+  //   { name: 'Tyrian Purple', hex: '#6c2346' },
+  // ];
   ngOnInit(): void {
     this.services = this.services.map((service) => {
       const color = this.colors[Math.floor(Math.random() * this.colors.length)];

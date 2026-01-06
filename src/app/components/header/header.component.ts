@@ -49,9 +49,14 @@ export class HeaderComponent {
 
   services = [
     {
-      title: 'Affiliate Marketing',
+      title: 'SimAffiliate',
       description: 'Build new revenue streams.',
       link: '/affiliate',
+    },
+    {
+      title: 'SMP',
+      description: '⁠SÍMBÍÀTÚÚ MENTORSHIP GROUP',
+      link: '/smp',
     },
     {
       title: 'Couture',
@@ -69,7 +74,7 @@ export class HeaderComponent {
       link: '/events',
     },
     {
-      title: '360 Content Marketing',
+      title: '360 degree CM',
       description: 'Strategy, storytelling, and execution.',
       link: '/360Content',
     },

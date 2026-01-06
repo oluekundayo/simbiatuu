@@ -52,8 +52,8 @@ export class StreamlineComponent {
     {
       name: 'Awe Simbiat.',
       role: 'CEO',
-      country: 'UK',
-      skills: ['Founder', ''],
+      country: 'UK, NG',
+      skills: ['Founder'],
       image: 'simbi3.jpg'
     },
     {
@@ -61,50 +61,50 @@ export class StreamlineComponent {
       role: 'Software Engineer',
       country: 'NG',
       skills: ['Engineer'],
-      image: 'https://via.placeholder.com/300x400?text=Marley'
+      image: 'olumide.jpg'
     },
     {
-      name: 'Yalin E.',
-      role: 'Fullstack Developer',
-      country: '🇹u',
-      skills: ['Designer', ''],
+      name: 'Emmanuel A.',
+      role: 'Graphics Designer',
+      country: 'NG',
+      skills: ['Designer'],
       image: 'https://via.placeholder.com/300x400?text=Yalin'
     },
     {
-      name: 'Juan R.',
-      role: 'DevOps Engineer',
-      country: '🇪🇸',
-      skills: ['Azure', 'Docker'],
+      name: 'Redeemer Sena D.',
+      role: 'Social Media Manager',
+      country: 'GH',
+      skills: ['Social Media'],
       image: 'https://via.placeholder.com/300x400?text=Juan'
     },
-    {
-      name: 'Yalin E.',
-      role: 'Fullstack Developer',
-      country: '🇹🇷',
-      skills: ['JavaScript', 'Java'],
-      image: 'https://via.placeholder.com/300x400?text=Yalin'
-    },
-    {
-      name: 'Juan R.',
-      role: 'DevOps Engineer',
-      country: '🇪🇸',
-      skills: ['Azure', 'Docker'],
-      image: 'https://via.placeholder.com/300x400?text=Juan'
-    },
-    {
-      name: 'Yalin E.',
-      role: 'Fullstack Developer',
-      country: '🇹🇷',
-      skills: ['JavaScript', 'Java'],
-      image: 'https://via.placeholder.com/300x400?text=Yalin'
-    },
-    {
-      name: 'Juan R.',
-      role: 'DevOps Engineer',
-      country: '🇪🇸',
-      skills: ['Azure', 'Docker'],
-      image: 'https://via.placeholder.com/300x400?text=Juan'
-    }
+    // {
+    //   name: 'Yalin E.',
+    //   role: 'Fullstack Developer',
+    //   country: '🇹🇷',
+    //   skills: ['JavaScript', 'Java'],
+    //   image: 'https://via.placeholder.com/300x400?text=Yalin'
+    // },
+    // {
+    //   name: 'Juan R.',
+    //   role: 'DevOps Engineer',
+    //   country: '🇪🇸',
+    //   skills: ['Azure', 'Docker'],
+    //   image: 'https://via.placeholder.com/300x400?text=Juan'
+    // },
+    // {
+    //   name: 'Yalin E.',
+    //   role: 'Fullstack Developer',
+    //   country: '🇹🇷',
+    //   skills: ['JavaScript', 'Java'],
+    //   image: 'https://via.placeholder.com/300x400?text=Yalin'
+    // },
+    // {
+    //   name: 'Juan R.',
+    //   role: 'DevOps Engineer',
+    //   country: '🇪🇸',
+    //   skills: ['Azure', 'Docker'],
+    //   image: 'https://via.placeholder.com/300x400?text=Juan'
+    // }
   ];
 
   scrollLeft(container: HTMLElement) {
