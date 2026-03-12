@@ -1,625 +1,648 @@
+<app-header></app-header>
 
-  <app-header></app-header>
-<section
-  class="relative min-h-[90vh] flex items-center bg-navy-900 overflow-hidden"
->
-  <!-- Background decorative elements -->
-  <div class="absolute inset-0 opacity-10">
-    <div
-      class="absolute top-0 right-0 w-1/2 h-full bg-gold-500 blur-[150px] rounded-full transform translate-x-1/2"
-    ></div>
-    <div
-      class="absolute bottom-0 left-0 w-1/3 h-2/3 bg-gold-600 blur-[120px] rounded-full transform -translate-x-1/2"
-    ></div>
-  </div>
+<main class="smg-page">
+  <section class="smg-hero">
+    <div class="smg-hero-glow smg-hero-glow-right"></div>
+    <div class="smg-hero-glow smg-hero-glow-left"></div>
 
-  <div class="container mx-auto px-4 md:px-6 relative z-10">
-    <div class="max-w-4xl mx-auto text-center">
-      <div @fadeUp>
-        <span
-          class="inline-block py-1 px-3 rounded-full bg-navy-800 border border-gold-500/30 text-gold-500 text-sm font-medium tracking-wide mb-6"
-        >
-          SÍMBÍÀTÚÚ MENTORSHIP GROUP
-        </span>
-
-        <h1
-          class="text-4xl md:text-6xl lg:text-7xl font-bold font-serif text-white leading-tight mb-6"
-        >
-          From Salary Dependency to
-          <span class="text-gold-500">Financial Independence</span>
+    <div class="smg-shell smg-hero-grid">
+      <div class="smg-hero-copy">
+        <p class="smg-kicker">Welcome to {{ programName }} (SMP)</p>
+        <h1 class="smg-display smg-hero-title">
+          From Salary Dependency to Financial Independence
         </h1>
-
-        <p
-          class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed"
-        >
-          A structured mentorship pathway for professionals who want to build
-          wealth, choices, and freedom without compromising their values or
-          careers.
+        <p class="smg-tagline">
+          With structure, mentorship, and guidance that works.
+        </p>
+        <p class="smg-hero-text">
+          SMP introduces serious professionals to a structured mentorship and
+          business education pathway designed to help them build long-term
+          financial independence without abandoning their careers, values, or
+          responsibilities.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <div class="smg-actions">
           <button
-            class="group inline-flex items-center justify-center rounded-md bg-gold-500 px-6 py-3 text-base font-medium text-navy-900 hover:bg-gold-400 transition"
+            type="button"
+            class="smg-button smg-button-primary"
             (click)="scrollTo('contact')"
           >
-            Start Your Journey
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M13 7l5 5m0 0l-5 5m5-5H6"
-              />
-            </svg>
+            Book a Discovery Session
           </button>
-
           <button
-            class="inline-flex items-center justify-center rounded-md border border-gray-600 px-6 py-3 text-base font-medium text-white hover:bg-white hover:text-navy-900 transition"
+            type="button"
+            class="smg-button smg-button-secondary"
             (click)="scrollTo('about')"
           >
-            Learn More
+            Explore the Pathway
           </button>
         </div>
       </div>
+
+      <aside class="smg-hero-panel">
+        <p class="smg-panel-label">Tagline</p>
+        <p class="smg-panel-copy">
+          From Salary Dependency to Financial Independence, with the structure,
+          mentorship, and guidance needed to grow with clarity.
+        </p>
+
+        <div class="smg-stat-grid">
+          @for (item of heroStats; track item.value) {
+            <article class="smg-stat-card">
+              <h2>{{ item.value }}</h2>
+              <p>{{ item.label }}</p>
+            </article>
+          }
+        </div>
+      </aside>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section id="about" class="smg-section smg-section-light">
+    <div class="smg-shell smg-about-grid">
+      <div class="smg-founder-column">
+        <div class="smg-founder-photo-wrap">
+          <img
+            class="smg-founder-photo"
+            src="madam.jpg"
+            alt="Portrait of Simbiat Atinuke Awe"
+          />
+        </div>
 
-<!-- about -->
-
-<section
-  id="about"
-  class="bg-cream py-20"
->
-  <div
-    class="container mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
-  >
-    <!-- Image Block -->
-    <div
-      class="relative"
-      #leftEl
-      [class.opacity-0]="!leftVisible"
-      [class.translate-x-[-30px]]="!leftVisible"
-      [class.opacity-100]="leftVisible"
-      [class.translate-x-0]="leftVisible"
-      class="transition-all duration-600 ease-out"
-    >
-      <div
-        class="aspect-[3/4] rounded-sm overflow-hidden bg-gray-200 relative z-10 shadow-xl"
-      >
-        <div
-          class="w-full h-full bg-navy-800 flex items-center justify-center text-white/20 relative"
-        >
-          <span class="sr-only">Simbiat Atinuke Awe</span>
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-navy-900/80 to-transparent"
-          ></div>
+        <div class="smg-founder-card">
+          <p class="smg-kicker">About Me</p>
+          <h2 class="smg-display smg-card-title">{{ founderName }}</h2>
+          <p class="smg-muted">
+            Working professional. Single mother. Integrity-led mentor.
+          </p>
+          <div class="smg-founder-meta">
+            <span>Career-conscious</span>
+            <span>Growth-oriented</span>
+            <span>Values-aligned</span>
+          </div>
         </div>
       </div>
 
-      <!-- Decorative frame -->
-      <div
-        class="absolute top-8 -left-8 w-full h-full border-2 border-gold-500/30 z-0 hidden md:block"
-      ></div>
-    </div>
+      <div class="smg-copy-stack">
+        <p class="smg-kicker">{{ programName }}</p>
+        <h2 class="smg-display smg-section-title">
+          Built for professionals who know a salary alone is not a long-term
+          financial strategy.
+        </h2>
 
-    <!-- Content Block -->
-    <div
-      #rightEl
-      [class.opacity-0]="!rightVisible"
-      [class.translate-x-[30px]]="!rightVisible"
-      [class.opacity-100]="rightVisible"
-      [class.translate-x-0]="rightVisible"
-      class="transition-all duration-600 ease-out"
-    >
-      <h4
-        class="text-gold-600 font-medium tracking-wider uppercase text-sm mb-2"
-      >
-        About The Founder
-      </h4>
-
-      <h2
-        class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif text-navy-900 mb-6"
-      >
-        Simbiat Atinuke Awe
-      </h2>
-
-      <div class="space-y-6 text-gray-600 leading-relaxed">
         <p>
-          I am a working professional, a single mother, and a woman who followed
-          the traditional path — education, employment, responsibility — yet
-          reached a point where I realized that a stable job alone was not a
-          long-term financial strategy.
+          My name is {{ founderName }}. I am a working professional, a single
+          mother, and a woman who followed the traditional path of education,
+          employment, and responsibility, yet reached a point where I realized
+          that a stable job alone was not a long-term financial strategy.
         </p>
 
         <p>
-          Like many professionals, I worked hard, showed up consistently, and did
-          everything that was expected — yet I began to see the limitations of
-          relying solely on a salary for freedom, flexibility, and future
-          security. I wanted more than survival. I wanted options.
+          Like many professionals, I worked hard, showed up consistently, and
+          did everything that was expected, yet I began to see the limitations
+          of relying solely on a salary for freedom, flexibility, and future
+          security. I wanted more than survival. I wanted options, control, and
+          the ability to design a life that aligned with my values and
+          responsibilities.
         </p>
 
         <p>
           My turning point came when I was introduced to a structured global
-          mentorship and business education system. Through this system, I
-          experienced a shift not just financially, but mentally and emotionally.
+          mentorship and business education system that focuses on long-term
+          wealth building, personal development, and leadership while allowing
+          professionals to keep their careers intact.
         </p>
-
-        <div
-          class="bg-white p-6 border-l-4 border-gold-500 shadow-sm my-8"
-        >
-          <p
-            class="text-navy-900 font-serif italic text-lg"
-          >
-            "I created SMG to introduce serious professionals to this structured
-            mentorship pathway and guide them through the process with
-            transparency, support, and integrity."
-          </p>
-        </div>
 
         <p>
-          SMG exists for professionals who know they are capable of more — and
+          Through this system, I experienced a shift not just financially, but
+          mentally and emotionally. I gained clarity, confidence, discipline,
+          and a new understanding of how income, mindset, and systems work
+          together.
+        </p>
+
+        <blockquote class="smg-quote-card">
+          I created SMP to do one thing clearly and ethically: to introduce
+          serious professionals to this structured mentorship pathway and guide
+          them through the process with transparency, support, and integrity.
+        </blockquote>
+
+        <p>
+          SMP exists for professionals who know they are capable of more and
           are ready to explore a smarter, more sustainable way to build
-          financial independence.
+          financial independence without abandoning their careers or values.
+        </p>
+
+        <p>
+          If you feel that quiet inner knowing that you were created for more,
+          SMP may be the next step in your journey.
         </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Features -->
-
-<!-- SECTION: Reality vs Solution -->
-<section class="bg-white py-20">
-  <div
-    class="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20"
-  >
-    <!-- Pain Points -->
-    <div
-      #leftBlock
-      class="transition-all duration-500 ease-out"
-      [class.opacity-0]="!leftVisible"
-      [class.translate-y-[20px]]="!leftVisible"
-      [class.opacity-100]="leftVisible"
-      [class.translate-y-0]="leftVisible"
-    >
-      <h3
-        class="text-2xl md:text-3xl font-serif font-bold text-navy-900 mb-8"
-      >
-        The Reality for Many Professionals
-      </h3>
-
-      <div class="bg-cream-50 p-8 rounded-sm border border-gray-100">
-        <ul class="space-y-4">
-          @for (point of painPoints; track point) {
-            <li class="flex items-start text-gray-600">
-              <!-- X icon -->
-              <svg
-                class="h-6 w-6 text-red-400 mr-3 flex-shrink-0 mt-0.5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-              <span>{{ point }}</span>
-            </li>
-          }
-        </ul>
+  <section class="smg-section smg-section-dark">
+    <div class="smg-shell smg-pathway-grid">
+      <div class="smg-section-intro">
+        <p class="smg-kicker">What is {{ programName }} all about?</p>
+        <h2 class="smg-display smg-section-title smg-title-light">
+          A professional introduction to financial independence beyond salary
+          dependency.
+        </h2>
       </div>
-    </div>
 
-    <!-- Solution -->
-    <div
-      #rightBlock
-      class="transition-all duration-500 ease-out delay-200"
-      [class.opacity-0]="!rightVisible"
-      [class.translate-y-[20px]]="!rightVisible"
-      [class.opacity-100]="rightVisible"
-      [class.translate-y-0]="rightVisible"
-    >
-      <h3
-        class="text-2xl md:text-3xl font-serif font-bold text-navy-900 mb-8"
-      >
-        The SMG Solution
-      </h3>
-
-      <div
-        class="bg-navy-900 p-8 rounded-sm text-white relative overflow-hidden"
-      >
-        <div
-          class="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-3xl"
-        ></div>
-
-        <p class="text-lg leading-relaxed mb-6 text-gray-200">
-          We offer a solution that is realistic, structured, and proven. Within
-          2–3 years, we help committed individuals build a profitable independent
-          business and gain the mindset of a leader.
+      <div class="smg-dark-panel">
+        <p>
+          Millions of professionals work tirelessly every day, earning stable
+          incomes yet still feeling financially restricted, time-poor, and
+          uncertain about the future.
         </p>
 
-        <ul class="space-y-4">
-          @for (item of solutionPoints; track item) {
-            <li class="flex items-center text-gray-200">
-              <!-- Check icon -->
-              <svg
-                class="h-6 w-6 text-gold-500 mr-3 flex-shrink-0"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <span>{{ item }}</span>
-            </li>
-          }
-        </ul>
+        <p>
+          SMP was created to change that narrative. It is a professional
+          introduction and guidance platform designed for individuals who want
+          to explore financial independence beyond salary dependency without
+          quitting their jobs, taking reckless risks, or chasing unrealistic
+          promises.
+        </p>
+
+        <p>
+          Through a structured mentorship and business education system
+          partnered with a global organization, professionals are guided to
+          build long-term assets, strengthen their mindset, and develop
+          leadership skills that support sustainable growth.
+        </p>
+
+        <p>
+          SMP exists to help you make informed, empowered decisions about your
+          financial future with clarity, structure, and support.
+        </p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- SECTION: Benefits -->
-<section class="bg-cream py-20">
-  <div class="container mx-auto px-4 md:px-6">
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <h2
-        class="text-3xl md:text-4xl font-serif font-bold text-navy-900 mb-4"
-      >
-        What You Will Gain
-      </h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        A comprehensive approach to professional and personal growth.
-      </p>
-    </div>
-
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-    >
-      @for (benefit of benefits; let i = $index; track benefit.title) {
-        <div
-          #benefitEl
-          class="bg-white p-8 rounded-sm shadow-sm hover:shadow-md transition-all border-t-4 border-transparent hover:border-gold-500 group"
-          [style.transitionDelay.ms]="i * 100"
-          [class.opacity-0]="!benefitsVisible"
-          [class.translate-y-[20px]]="!benefitsVisible"
-          [class.opacity-100]="benefitsVisible"
-          [class.translate-y-0]="benefitsVisible"
-        >
-          <div
-            class="h-12 w-12 bg-navy-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold-50 transition-colors"
-          >
-            <span
-              class="text-navy-900 group-hover:text-gold-600 transition-colors text-xl font-bold"
-            >
-              {{ benefit.icon }}
-            </span>
-          </div>
-
-          <h4 class="text-xl font-bold text-navy-900 mb-3">
-            {{ benefit.title }}
-          </h4>
-
-          <p class="text-gray-600 text-sm leading-relaxed">
-            {{ benefit.desc }}
-          </p>
-        </div>
+    <div class="smg-shell smg-highlight-grid">
+      @for (item of pathwayHighlights; track item.title) {
+        <article class="smg-highlight-card">
+          <p class="smg-highlight-number">0{{ $index + 1 }}</p>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
       }
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="smg-section smg-section-light">
+    <div class="smg-shell smg-dual-grid">
+      <article class="smg-card">
+        <p class="smg-kicker">Who We Serve</p>
+        <h2 class="smg-display smg-card-title">
+          We work with professionals who think long-term and act intentionally.
+        </h2>
+        <ul class="smg-list">
+          @for (item of servePoints; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </article>
 
-<!-- testimonials -->
-
-
-<section class="bg-navy-900 py-20">
-  <div class="container mx-auto px-4 md:px-6">
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <h2
-        class="text-3xl md:text-4xl font-serif font-bold text-white mb-4"
-      >
-        Success Stories
-      </h2>
-      <p class="text-gray-300 max-w-2xl mx-auto">
-        Real professionals building real results.
-      </p>
+      <article class="smg-card smg-card-dark-accent">
+        <p class="smg-kicker">The Challenges We Address</p>
+        <h2 class="smg-display smg-card-title">
+          Financial pressure often grows even when your income looks stable.
+        </h2>
+        <ul class="smg-list">
+          @for (item of challengePoints; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </article>
     </div>
+  </section>
 
-    <!-- Testimonials Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      @for (t of testimonials; let i = $index; track t.name) {
-        <div
-          #testimonialEl
-          class="bg-navy-800 p-8 rounded-sm relative group hover:bg-navy-700 transition-all duration-500 ease-out"
-          [style.transitionDelay.ms]="i * 100"
-          [class.opacity-0]="!testimonialsVisible"
-          [class.translate-y-[20px]]="!testimonialsVisible"
-          [class.opacity-100]="testimonialsVisible"
-          [class.translate-y-0]="testimonialsVisible"
-        >
-          <!-- Quote Icon -->
-          <svg
-            class="h-8 w-8 text-gold-500/30 mb-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5h3v6H9zM15 5h3v6h-3z"
-            />
-          </svg>
+  <section class="smg-section smg-section-light smg-section-tight-top">
+    <div class="smg-shell smg-approach-grid">
+      <div class="smg-copy-stack">
+        <p class="smg-kicker">Our Approach and Promise</p>
+        <h2 class="smg-display smg-section-title">
+          A guided process for professionals who are ready to grow with
+          structure.
+        </h2>
 
-          <p
-            class="text-gray-300 mb-6 leading-relaxed italic"
-          >
-            "{{ t.text }}"
+        <p>
+          SMP introduces committed individuals to a mentorship and business
+          education pathway that supports long-term change, not impulsive
+          decisions.
+        </p>
+
+        <ul class="smg-list smg-list-check">
+          @for (item of approachPoints; track item) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+
+        <p class="smg-emphasis">
+          This is not a shortcut. It is a guided process for people who are
+          ready to grow.
+        </p>
+      </div>
+
+      <div class="smg-vision-stack">
+        <article class="smg-mission-card smg-mission-card-dark">
+          <p class="smg-panel-label">Mission Statement</p>
+          <p>
+            To introduce and guide professionals toward financial independence
+            by connecting them to structured mentorship, business education, and
+            personal development systems without compromising integrity, family,
+            faith, or values.
           </p>
+        </article>
 
-          <div class="border-t border-navy-700 pt-6">
-            <p class="font-bold text-white">
-              {{ t.name }}
-            </p>
-            <p class="text-gold-500 text-sm">
-              {{ t.location }}
-            </p>
-          </div>
-        </div>
-      }
+        <article class="smg-mission-card">
+          <p class="smg-panel-label">Vision Statement</p>
+          <p>
+            To build a global community of professionals who transition from
+            limitation to leadership, from dependency to ownership, and from
+            survival to intentional living, one individual and one family at a
+            time.
+          </p>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section class="smg-section smg-section-light">
+    <div class="smg-shell">
+      <div class="smg-section-head smg-center">
+        <p class="smg-kicker">What Makes SMP Different</p>
+        <h2 class="smg-display smg-section-title">
+          Clear guidance, selective mentorship, and growth that respects your
+          values.
+        </h2>
+      </div>
 
-<!-- FAQ -->
+      <div class="smg-feature-grid">
+        @for (item of differentiators; track item.title) {
+          <article class="smg-feature-card">
+            <p class="smg-feature-index">0{{ $index + 1 }}</p>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
 
-<section class="bg-white py-20">
-  <div class="max-w-5xl mx-auto px-4">
-    <!-- Header -->
-    <h2 class="text-3xl md:text-4xl font-bold text-navy-900 text-center mb-12">
-      Frequently Asked Questions
-    </h2>
+  <section class="smg-section smg-section-dark">
+    <div class="smg-shell">
+      <div class="smg-section-head smg-center">
+        <p class="smg-kicker">The Selection Process</p>
+        <h2 class="smg-display smg-section-title smg-title-light">
+          Fit-based, intentional, and guided step by step.
+        </h2>
+        <p class="smg-muted-light smg-section-subtext">
+          SMP does not operate on mass enrollment. We look for people who are
+          ready for disciplined and values-aligned growth.
+        </p>
+      </div>
 
-    <!-- FAQ List -->
-    <div class="max-w-3xl mx-auto">
-      @for (faq of faqs; track $index) {
-        <div
-          class="mb-4 border-b border-gray-100 last:border-0 pb-4"
-        >
-          <!-- Question -->
+      <div class="smg-selection-shell">
+        <div class="smg-trait-grid">
+          @for (item of selectionTraits; track item) {
+            <div class="smg-trait-pill">{{ item }}</div>
+          }
+        </div>
+
+        <div class="smg-step-grid">
+          @for (item of selectionSteps; track item.step) {
+            <article class="smg-step-card">
+              <p class="smg-step-number">{{ item.step }}</p>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.description }}</p>
+            </article>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="smg-section smg-section-light">
+    <div class="smg-shell">
+      <div class="smg-section-head smg-center">
+        <p class="smg-kicker">What You Will Gain</p>
+        <h2 class="smg-display smg-section-title">
+          Practical development for the life and future you want to build.
+        </h2>
+      </div>
+
+      <div class="smg-gain-grid">
+        @for (item of gains; track item) {
+          <article class="smg-gain-card">
+            <div class="smg-gain-icon"></div>
+            <p>{{ item }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="smg-section smg-section-light smg-section-tight-top">
+    <div class="smg-shell">
+      <div class="smg-cta-banner">
+        <div>
+          <p class="smg-kicker">Free 1-on-1 Clarity Consultation</p>
+          <h2 class="smg-display smg-card-title">Book a Private Discovery Session</h2>
+          <p class="smg-muted">
+            This session is designed to help you assess your current financial
+            direction, gain clarity on your long-term goals, understand the
+            mentorship pathway, and decide whether SMP is a suitable fit for
+            you. This is a conversation, not a pressure call.
+          </p>
+        </div>
+
+        <div class="smg-cta-side">
+          <ul class="smg-list smg-list-light">
+            @for (item of consultationIncludes; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+
           <button
             type="button"
-            (click)="toggle($index)"
-            class="flex items-center justify-between w-full text-left py-4 focus:outline-none group"
+            class="smg-button smg-button-primary"
+            (click)="scrollTo('contact')"
           >
-            <span
-              class="text-lg font-medium transition-colors"
-              [class.text-gold-600]="openIndex === $index"
-              [class.text-navy-900]="openIndex !== $index"
-            >
-              {{ faq.q }}
-            </span>
-
-            <!-- Icon -->
-            <span
-              class="text-xl font-bold flex-shrink-0"
-              [class.text-gold-500]="openIndex === $index"
-              [class.text-gray-400]="openIndex !== $index"
-            >
-              {{ openIndex === $index ? '−' : '+' }}
-            </span>
+            Book Your Session
           </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <!-- Answer -->
-          @if (openIndex === $index) {
-            <p class="text-gray-600 pb-4 leading-relaxed">
-              {{ faq.a }}
-            </p>
-          }
+  <section class="smg-section smg-section-dark smg-closing-section">
+    <div class="smg-shell smg-center smg-closing-copy">
+      <p class="smg-kicker">Closing Section</p>
+      <h2 class="smg-display smg-section-title smg-title-light">
+        Your future does not change through hope alone.
+      </h2>
+      <p class="smg-muted-light">
+        It changes through clarity, education, and intentional action.
+      </p>
+      <p class="smg-muted-light">
+        If you are ready to explore a structured pathway toward financial
+        independence while maintaining your professionalism and values, SMP is
+        here to guide you.
+      </p>
+      <p class="smg-muted-light">
+        Your next chapter can begin with one informed decision.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="smg-section smg-section-light">
+    <div class="smg-shell">
+      @if (isSubmitted) {
+        <div class="smg-success-card">
+          <p class="smg-kicker">Consultation Request Received</p>
+          <h2 class="smg-display smg-card-title">
+            Your discovery session request has been submitted.
+          </h2>
+          <p class="smg-muted">
+            Thank you for taking the first step. Your details have been
+            received, and follow-up will happen shortly to confirm the next
+            stage.
+          </p>
+          <button
+            type="button"
+            class="smg-button smg-button-primary"
+            (click)="reset()"
+          >
+            Submit Another Request
+          </button>
+        </div>
+      } @else {
+        <div class="smg-section-head">
+          <p class="smg-kicker">Free 1-on-1 Consultation</p>
+          <h2 class="smg-display smg-section-title">Book a Free Discovery Session</h2>
+          <p class="smg-section-subtext">
+            Ready to start your journey? Fill the form below to schedule a free
+            1-on-1 consultation.
+          </p>
+        </div>
+
+        <div class="smg-consult-grid">
+          <aside class="smg-side-panel">
+            <p class="smg-panel-label">Consultation Includes</p>
+            <ul class="smg-list">
+              @for (item of consultationIncludes; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+            <div class="smg-side-note">
+              Your information is treated confidentially and reviewed with care.
+            </div>
+          </aside>
+
+          <form
+            [formGroup]="form"
+            (ngSubmit)="submit()"
+            class="smg-form-card"
+          >
+            <div class="smg-form-grid">
+              <div class="smg-form-field">
+                <label for="fullName">Full Name</label>
+                <input
+                  id="fullName"
+                  type="text"
+                  formControlName="fullName"
+                  placeholder="Your full name"
+                  [class.is-invalid]="fieldInvalid('fullName')"
+                />
+              </div>
+
+              <div class="smg-form-field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  formControlName="email"
+                  placeholder="name@example.com"
+                  [class.is-invalid]="fieldInvalid('email')"
+                />
+              </div>
+
+              <div class="smg-form-field">
+                <label for="phone">Phone Number</label>
+                <input
+                  id="phone"
+                  type="tel"
+                  formControlName="phone"
+                  placeholder="+44 0000 000000"
+                  [class.is-invalid]="fieldInvalid('phone')"
+                />
+              </div>
+
+              <div class="smg-form-field">
+                <label for="country">Country</label>
+                <input
+                  id="country"
+                  type="text"
+                  formControlName="country"
+                  placeholder="United Kingdom"
+                  [class.is-invalid]="fieldInvalid('country')"
+                />
+              </div>
+
+              <div class="smg-form-field smg-form-field-full">
+                <label for="employment">Current Employment Situation</label>
+                <select
+                  id="employment"
+                  formControlName="employment"
+                  [class.is-invalid]="fieldInvalid('employment')"
+                >
+                  <option value="">Select an option</option>
+                  @for (option of employmentOptions; track option) {
+                    <option [value]="option">{{ option }}</option>
+                  }
+                </select>
+              </div>
+
+              <div class="smg-form-field smg-form-field-full">
+                <label for="story">What's your story?</label>
+                <textarea
+                  id="story"
+                  formControlName="story"
+                  placeholder="Share a little about where you are right now and what brought you here."
+                  [class.is-invalid]="fieldInvalid('story')"
+                ></textarea>
+              </div>
+
+              <div class="smg-form-field smg-form-field-full">
+                <label for="goals">
+                  What are your financial goals in the next 2-3 years?
+                </label>
+                <textarea
+                  id="goals"
+                  formControlName="goals"
+                  placeholder="Describe the kind of future, freedom, and financial outcomes you want to create."
+                  [class.is-invalid]="fieldInvalid('goals')"
+                ></textarea>
+              </div>
+
+              <div class="smg-form-field">
+                <label for="consultationDateTime">
+                  Preferred Consultation Date and Time
+                </label>
+                <input
+                  id="consultationDateTime"
+                  type="datetime-local"
+                  formControlName="consultationDateTime"
+                  [class.is-invalid]="fieldInvalid('consultationDateTime')"
+                />
+              </div>
+
+              <div class="smg-form-field">
+                <label for="readiness">How ready are you to start? (1-10)</label>
+                <select
+                  id="readiness"
+                  formControlName="readiness"
+                  [class.is-invalid]="fieldInvalid('readiness')"
+                >
+                  <option value="">Select readiness level</option>
+                  @for (option of readinessOptions; track option) {
+                    <option [value]="option">{{ option }}</option>
+                  }
+                </select>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="smg-button smg-button-primary smg-submit"
+              [disabled]="isSubmitting"
+            >
+              {{ isSubmitting ? 'Submitting...' : 'Submit Consultation Request' }}
+            </button>
+          </form>
         </div>
       }
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact" class="bg-cream-50 py-20">
-  <div class="max-w-5xl mx-auto px-4">
-
-    @if (isSubmitted) {
-      <!-- SUCCESS STATE -->
-      <div class="max-w-2xl mx-auto text-center py-12">
-        <div
-          class="bg-white p-12 rounded-sm shadow-lg border-t-4 border-gold-500"
-        >
-          <div class="text-green-500 text-6xl mb-6">✔</div>
-
-          <h3 class="text-3xl font-serif font-bold text-navy-900 mb-4">
-            Application Received
-          </h3>
-
-          <p class="text-gray-600 text-lg mb-8">
-            Thank you for taking the first step. We will review your details
-            and contact you shortly to schedule your discovery session.
-          </p>
-
-          <button
-            (click)="reset()"
-            class="px-6 py-3 border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition"
-          >
-            Return to Home
-          </button>
-        </div>
-      </div>
-    } @else {
-      <!-- FORM -->
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
-          Book a Free Discovery Session
+  <section id="faq" class="smg-section smg-section-dark">
+    <div class="smg-shell smg-faq-shell">
+      <div class="smg-section-head smg-center">
+        <p class="smg-kicker">Frequently Asked Questions</p>
+        <h2 class="smg-display smg-section-title smg-title-light">
+          Clarity before commitment.
         </h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          Ready to start your journey? Fill the form below to schedule a free
-          1-on-1 consultation.
+      </div>
+
+      <div class="smg-faq-list">
+        @for (item of faqs; track item.q) {
+          <article class="smg-faq-item">
+            <button
+              type="button"
+              class="smg-faq-question"
+              (click)="toggle($index)"
+            >
+              <span>{{ item.q }}</span>
+              <span class="smg-faq-symbol">
+                {{ openIndex === $index ? '-' : '+' }}
+              </span>
+            </button>
+
+            @if (openIndex === $index) {
+              <p class="smg-faq-answer">{{ item.a }}</p>
+            }
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="smg-section smg-section-light">
+    <div class="smg-shell">
+      <div class="smg-section-head smg-center">
+        <p class="smg-kicker">Client Testimonials</p>
+        <h2 class="smg-display smg-section-title">
+          Stories from professionals building with clarity and support.
+        </h2>
+      </div>
+
+      <div class="smg-testimonial-grid">
+        @for (item of testimonials; track item.name) {
+          <article class="smg-testimonial-card">
+            <p class="smg-testimonial-mark">"</p>
+            <p class="smg-testimonial-copy">{{ item.text }}</p>
+            <div class="smg-testimonial-meta">
+              <strong>{{ item.name }}</strong>
+              <span>{{ item.location }}</span>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <footer class="smg-footer">
+    <div class="smg-shell smg-footer-grid">
+      <div>
+        <p class="smg-kicker">SMP</p>
+        <h2 class="smg-display smg-footer-title">{{ programName }}</h2>
+        <p class="smg-muted-light">
+          Structured mentorship for professionals ready to move from dependency
+          to intentional financial independence.
         </p>
       </div>
 
-      <div class="max-w-3xl mx-auto">
-        <form
-          [formGroup]="form"
-          (ngSubmit)="submit()"
-          class="bg-white p-8 md:p-12 rounded-sm shadow-lg border-t-4 border-gold-500"
-        >
-          <!-- ROW 1 -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">
-                Full Name
-              </label>
-              <input
-                formControlName="fullName"
-                placeholder="John Doe"
-                class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-              />
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">
-                Email Address
-              </label>
-              <input
-                type="email"
-                formControlName="email"
-                placeholder="john@example.com"
-                class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-              />
-            </div>
-          </div>
-
-          <!-- ROW 2 -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                formControlName="phone"
-                placeholder="+1 (555) 000-0000"
-                class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-              />
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">
-                Country
-              </label>
-              <input
-                formControlName="country"
-                placeholder="United Kingdom"
-                class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-              />
-            </div>
-          </div>
-
-          <!-- SELECT -->
-          <div class="mt-6">
-            <label class="block text-sm font-medium text-gray-700 mb-1">
-              Current Employment Situation
-            </label>
-            <select
-              formControlName="employment"
-              class="w-full px-4 py-3 border border-gray-300 rounded-sm bg-white focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-            >
-              <option value="">Select option...</option>
-              <option>Employed Full-time</option>
-              <option>Employed Part-time</option>
-              <option>Self-employed</option>
-              <option>Unemployed</option>
-              <option>Student</option>
-            </select>
-          </div>
-
-          <!-- TEXTAREA -->
-          <div class="mt-6">
-            <label class="block text-sm font-medium text-gray-700 mb-1">
-              What are your financial goals in the next 2–3 years?
-            </label>
-            <textarea
-              formControlName="goals"
-              placeholder="I want to build a secondary income stream..."
-              class="w-full px-4 py-3 border border-gray-300 rounded-sm min-h-[120px] focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-            ></textarea>
-          </div>
-
-          <!-- ROW 3 -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">
-                Preferred Consultation Date
-              </label>
-              <input
-                type="date"
-                formControlName="date"
-                class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-              />
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">
-                How ready are you to start? (1–10)
-              </label>
-              <select
-                formControlName="readiness"
-                class="w-full px-4 py-3 border border-gray-300 rounded-sm bg-white focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none"
-              >
-                <option>10 - Ready now</option>
-                <option>9</option>
-                <option>8</option>
-                <option>7</option>
-                <option>6</option>
-                <option>5 - Just curious</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- SUBMIT -->
-          <div class="mt-8">
-            <button
-              type="submit"
-              [disabled]="isSubmitting"
-              class="w-full py-4 bg-navy-900 text-white font-semibold hover:bg-navy-800 transition disabled:opacity-50"
-            >
-              {{ isSubmitting ? 'Submitting...' : 'Submit Application' }}
-            </button>
-
-            <p class="text-center text-xs text-gray-500 mt-4">
-              Your information is kept strictly confidential.
-            </p>
-          </div>
-        </form>
+      <div class="smg-footer-links">
+        <button type="button" (click)="scrollTo('about')">About</button>
+        <button type="button" (click)="scrollTo('contact')">Consultation</button>
+        <button type="button" (click)="scrollTo('faq')">FAQ</button>
       </div>
-    }
-  </div>
-</section>
 
-  <app-footer />
+      <p class="smg-footer-copy">
+        © {{ currentYear }} {{ brandName }}. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</main>

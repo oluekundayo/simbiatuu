@@ -11,7 +11,6 @@ import { StreamlineComponent } from "../../components/streamline/streamline.comp
   imports: [
     HeaderComponent,
     FooterComponent,
-    TestimonialsComponent,
     RouterLink,
     StreamlineComponent
 ],
