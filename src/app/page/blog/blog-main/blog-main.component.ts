@@ -1,66 +1,17 @@
-import { Component, inject } from '@angular/core';
-import { FooterComponent } from "../../../components/footer/footer.component";
-import { HeaderComponent } from "../../../components/header/header.component";
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { FooterComponent } from '../../../components/footer/footer.component';
+import { HeaderComponent } from '../../../components/header/header.component';
+import { BLOG_POSTS, FEATURED_POST } from '../blog.data';
 
 @Component({
   selector: 'app-blog-main',
-  imports: [FooterComponent, HeaderComponent, RouterLink, RouterLinkActive],
+  imports: [FooterComponent, HeaderComponent, RouterLink],
   templateUrl: './blog-main.component.html',
-  styleUrl: './blog-main.component.css'
+  styleUrl: './blog-main.component.css',
 })
 export class BlogMainComponent {
-  _router = inject(Router);
-
-  blogs = [
-    {
-      title: 'Migrating to Linear 101',
-      details:' Let’s get one thing out of the way: you don’t need a fancy Bachelor’s Degree to get into Product Design...',
-      author: 'Jonathan Wills',
-      date: '19 Jan 2022',
-      image: 'blog1.jpg'
-    },
-    {
-      title: 'Building your API Stack',
-      details:' Let’s get one thing out of the way: you don’t need a fancy Bachelor’s Degree to get into Product Design...',
-      author: 'Lana Steiner',
-      date: '18 Jan 2022',
-      image: 'blog2.jpg'
-    },
-    {
-      title: 'Migrating to Linear 101',
-      details:' Let’s get one thing out of the way: you don’t need a fancy Bachelor’s Degree to get into Product Design...',
-      author: 'Jonathan Wills',
-      date: '19 Jan 2022',
-      image: 'blog1.jpg'
-    },
-    {
-      title: 'Building your API Stack',
-      details:' Let’s get one thing out of the way: you don’t need a fancy Bachelor’s Degree to get into Product Design...',
-      author: 'Lana Steiner',
-      date: '18 Jan 2022',
-      image: 'blog2.jpg'
-    },
-    {
-      title: 'Migrating to Linear 101',
-      details:' Let’s get one thing out of the way: you don’t need a fancy Bachelor’s Degree to get into Product Design...',
-      author: 'Jonathan Wills',
-      date: '19 Jan 2022',
-      image: 'blog1.jpg'
-    },
-    {
-      title: 'Building your API Stack',
-      details:' Let’s get one thing out of the way: you don’t need a fancy Bachelor’s Degree to get into Product Design...',
-      author: 'Lana Steiner',
-      date: '18 Jan 2022',
-      image: 'blog2.jpg'
-    },
-    // ... more blog posts
-  ];
-
-  blogDetails(e: any) {
-    this._router.navigate(["blog", "blog-details"], {
-          state: { e }
-        });
-  }
+  protected readonly featuredPost = FEATURED_POST;
+  protected readonly recentPosts = BLOG_POSTS.slice(1, 7);
+  protected readonly archiveCount = BLOG_POSTS.length;
 }

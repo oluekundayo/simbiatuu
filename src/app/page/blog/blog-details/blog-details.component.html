@@ -1,39 +1,137 @@
-
-  <!-- NAVIGATION -->
+<div class="blog-details-page">
   <app-header></app-header>
-<div class="container mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-3 gap-10 pt-28 relative">
-  <!-- Main Blog Content -->
-  <div class="lg:col-span-2">
-    <!-- Title -->
-    <h1 class="text-3xl font-bold mb-4">{{ blog.title }}</h1>
 
-    <!-- Hero Image -->
-    <img [src]="blog.image" alt="Blog Cover" class="rounded-lg w-full mb-6" />
+  <main class="blog-details-shell">
+    <div class="blog-details-layout">
+      <article class="blog-article">
+        <header class="blog-article-header">
+          <p class="blog-kicker">{{ blog.category }}</p>
+          <h1>{{ blog.title }}</h1>
+          <p class="blog-article-excerpt">{{ blog.excerpt }}</p>
+          <div class="blog-article-meta">
+            <div class="blog-article-author">
+              <img [src]="blog.author.avatar" [alt]="blog.author.name" />
+              <div>
+                <p>{{ blog.author.name }}</p>
+                <span>{{ blog.publishedAt }} · {{ blog.readTime }}</span>
+              </div>
+            </div>
+            <a class="blog-back-link" [routerLink]="['/blog']">Back to journal</a>
+          </div>
+        </header>
 
-    <!-- Blog Content -->
-    <div class="prose max-w-none" [innerHTML]="blog.content"></div>
+        <figure class="blog-cover">
+          <img [src]="blog.image" [alt]="blog.title" />
+        </figure>
 
-    <!-- Tags & Actions -->
-    <div class="mt-6 flex flex-wrap items-center justify-between text-sm text-gray-500">
-      <div class="space-x-2">
-        <span *ngFor="let tag of blog.tags" class="bg-gray-100 px-3 py-1 rounded-full text-xs">#{{ tag }}</span>
-      </div>
-      <div class="flex items-center gap-4">
-        <!-- <button class="hover:text-black">♥ Like</button> -->
-        <button class="hover:text-black">↗ Share</button>
-      </div>
+        <div class="blog-prose">
+          @for (paragraph of blog.introduction; track $index) {
+            <p>{{ paragraph }}</p>
+          }
+
+          <blockquote>
+            <p>{{ blog.quote.text }}</p>
+            <cite>{{ blog.quote.attribution }}</cite>
+          </blockquote>
+
+          @for (section of blog.sections; track section.heading) {
+            <section class="blog-prose-section">
+              <h2>{{ section.heading }}</h2>
+              @for (paragraph of section.paragraphs; track $index) {
+                <p>{{ paragraph }}</p>
+              }
+              @if (section.bullets?.length) {
+                <ul>
+                  @for (item of section.bullets; track item) {
+                    <li>{{ item }}</li>
+                  }
+                </ul>
+              }
+            </section>
+          }
+        </div>
+
+        <section class="blog-takeaways">
+          <div>
+            <p class="blog-kicker">Key takeaways</p>
+            <h2>Keep these close for the next campaign.</h2>
+          </div>
+          <div class="blog-takeaway-list">
+            @for (item of blog.takeaways; track item) {
+              <article class="blog-takeaway-card">
+                <span></span>
+                <p>{{ item }}</p>
+              </article>
+            }
+          </div>
+        </section>
+
+        <div class="blog-article-footer">
+          <div class="blog-tags">
+            @for (tag of blog.tags; track tag) {
+              <span>{{ tag }}</span>
+            }
+          </div>
+          <div class="blog-share-actions">
+            <button type="button">Share</button>
+            <button type="button">Save</button>
+          </div>
+        </div>
+
+        <app-blog-author
+          [author]="blog.author"
+          [publishedAt]="blog.publishedAt"
+          [readTime]="blog.readTime"
+        ></app-blog-author>
+
+        <app-related-posts [posts]="relatedPosts"></app-related-posts>
+
+        <section class="blog-comments">
+          <div class="blog-comments-head">
+            <div>
+              <p class="blog-kicker">Discussion</p>
+              <h2>{{ blog.comments.length }} comments</h2>
+            </div>
+          </div>
+
+          <div class="blog-comments-list">
+            @for (comment of blog.comments; track comment.name + comment.publishedAt) {
+              <article class="blog-comment-card">
+                <img [src]="comment.avatar" [alt]="comment.name" />
+                <div>
+                  <div class="blog-comment-topline">
+                    <div>
+                      <p>{{ comment.name }}</p>
+                      <span>{{ comment.role }}</span>
+                    </div>
+                    <time>{{ comment.publishedAt }}</time>
+                  </div>
+                  <p>{{ comment.message }}</p>
+                </div>
+              </article>
+            }
+          </div>
+
+          <div class="blog-comment-box">
+            <h3>Commenting opens soon</h3>
+            <p>
+              The UI is in place here, but the submission flow is not wired yet.
+            </p>
+            <textarea disabled placeholder="Share your thoughts"></textarea>
+            <button type="button" disabled>Post comment</button>
+          </div>
+        </section>
+      </article>
+
+      <aside class="blog-sidebar-wrap">
+        <app-blog-sidebar
+          [post]="blog"
+          [recentPosts]="recentPosts"
+          [categories]="categories"
+        ></app-blog-sidebar>
+      </aside>
     </div>
+  </main>
 
-    <!-- Author Info -->
-    <app-blog-author [author]="blog.author"></app-blog-author>
-
-    <!-- Related Posts -->
-    <app-related-posts></app-related-posts>
-  </div>
-
-  <!-- Sidebar -->
-  <div class="sticky top-20 self-start">
-    <app-blog-sidebar></app-blog-sidebar>
-  </div>
+  <app-footer></app-footer>
 </div>
-<app-footer />

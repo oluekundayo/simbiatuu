@@ -1,0 +1,74 @@
+:host {
+  display: block;
+}
+
+.related-shell {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.related-label {
+  margin: 0;
+  color: var(--blog-accent-deep);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.related-head h2,
+.related-card-copy h3 {
+  margin: 0;
+}
+
+.related-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.related-card {
+  overflow: hidden;
+  border: 1px solid var(--blog-border);
+  border-radius: 1.35rem;
+  background: var(--blog-surface-strong);
+  box-shadow: var(--blog-card-shadow);
+}
+
+.related-card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.related-card img {
+  width: 100%;
+  aspect-ratio: 1.35;
+  object-fit: cover;
+}
+
+.related-card-copy {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem;
+}
+
+.related-card-copy span {
+  color: var(--blog-accent-deep);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.related-card-copy p {
+  margin: 0;
+  color: var(--blog-muted);
+  line-height: 1.7;
+}
+
+@media (min-width: 860px) {
+  .related-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

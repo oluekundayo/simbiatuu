@@ -1,7 +1,13 @@
-<div class="mt-12 flex items-center gap-4 border-t pt-6">
-  <img [src]="author.image" class="w-14 h-14 rounded-full" />
-  <div>
-    <p class="font-semibold">{{ author.name }}</p>
-    <p class="text-sm text-gray-500">{{ author.bio }}</p>
+<section class="blog-author-card">
+  <img [src]="author.avatar" [alt]="author.name" />
+  <div class="blog-author-copy">
+    <p class="blog-author-label">Written by</p>
+    <h2>{{ author.name }}</h2>
+    <p class="blog-author-role">{{ author.role }}</p>
+    <p class="blog-author-bio">{{ author.bio }}</p>
   </div>
-</div>
+  <div class="blog-author-meta">
+    <span>{{ publishedAt }}</span>
+    <span>{{ readTime }}</span>
+  </div>
+</section>

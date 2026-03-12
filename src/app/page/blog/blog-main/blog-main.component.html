@@ -1,54 +1,120 @@
-<div class="min-h-screen bg-[#0f0f0f] text-white font-sans">
-  <!-- NAVIGATION -->
+<div class="blog-main-page">
   <app-header></app-header>
-  <section class="relative w-full h-[500px] rounded-xl overflow-hidden">
-    <img
-      src="unsplash-2.jpg"
-      class="w-full h-full object-cover"
-      alt="Featured"
-    />
-    <div
-      class="absolute inset-0 bg-opacity-40 flex flex-col justify-center p-10 text-white"
-    >
-      <p class="mb-2 font-medium">Featured</p>
-      <h1 class="text-4xl font-bold max-w-2xl leading-tight">
-        Breaking Into Product Design: Advice from Untitled Founder, Frankie
-      </h1>
-      <p class="mt-4 max-w-xl text-gray-200">
-        Let’s get one thing out of the way: you don’t need a fancy Bachelor’s
-        Degree to get into Product Design...
-      </p>
-    </div>
-  </section>
 
-  <section class="py-12 px-6">
-    <h2 class="text-2xl font-bold mb-6">Recent blog posts</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      @for (blog of blogs; track blog) {
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" (click)="blogDetails(blog)">
-        <img [src]="blog.image" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <h3 class="font-semibold text-lg mb-2 text-black">{{ blog.title }}</h3>
-          <p class="text-xs text-black mb-4">{{ blog.details }}</p>
-          <p class="text-sm text-gray-600">
-            {{ blog.author }} • {{ blog.date }}
-          </p>
+  <main class="blog-main-shell">
+    <section class="blog-hero">
+      <img
+        class="blog-hero-media"
+        [src]="featuredPost.image"
+        [alt]="featuredPost.title"
+      />
+      <div class="blog-hero-overlay"></div>
+      <div class="blog-hero-content">
+        <p class="blog-kicker">Featured story</p>
+        <h1 class="blog-hero-title">{{ featuredPost.title }}</h1>
+        <p class="blog-hero-summary">{{ featuredPost.excerpt }}</p>
+        <div class="blog-hero-footer">
+          <div class="blog-meta-cluster">
+            <img
+              class="blog-avatar"
+              [src]="featuredPost.author.avatar"
+              [alt]="featuredPost.author.name"
+            />
+            <div>
+              <p class="blog-meta-name">{{ featuredPost.author.name }}</p>
+              <p class="blog-meta-copy">
+                {{ featuredPost.publishedAt }} · {{ featuredPost.readTime }}
+              </p>
+            </div>
+          </div>
+          <a class="blog-hero-action" [routerLink]="['/blog', featuredPost.slug]">
+            Read story
+          </a>
         </div>
       </div>
-      }
-    </div>
+    </section>
 
-    <div class="mt-8 flex justify-center">
-      <button
-      [routerLink]="['/blog/blog-list']" routerLinkActive="router-link-active" 
-        class="bg-gray-900 text-white px-4 py-2 rounded hover:bg-black transition"
-      >
-        Loading more…
-      </button>
-    </div>
-  </section>
+    <section class="blog-section">
+      <div class="blog-section-head">
+        <div>
+          <p class="blog-kicker blog-kicker-dark">Journal</p>
+          <h2 class="blog-section-title">Recent blog posts</h2>
+          <p class="blog-section-copy">
+            Strategy notes, campaign lessons, and practical growth thinking for
+            brands building with intention.
+          </p>
+        </div>
+        <a class="blog-section-link" [routerLink]="['/blog/blog-list']">
+          Browse all {{ archiveCount }} stories
+        </a>
+      </div>
 
-  <!-- Testimonials Section -->
-  <!-- <app-testimonials /> -->
-  <app-footer />
+      <div class="blog-card-grid">
+        @for (post of recentPosts; track post.slug) {
+          <article class="blog-card">
+            <a [routerLink]="['/blog', post.slug]">
+              <img
+                class="blog-card-media"
+                [src]="post.image"
+                [alt]="post.title"
+              />
+              <div class="blog-card-body">
+                <div class="blog-card-topline">
+                  <span class="blog-chip">{{ post.category }}</span>
+                  <span>{{ post.readTime }}</span>
+                </div>
+                <h3 class="blog-card-title">{{ post.title }}</h3>
+                <p class="blog-card-excerpt">{{ post.excerpt }}</p>
+                <div class="blog-card-meta">
+                  <img
+                    class="blog-card-author-image"
+                    [src]="post.author.avatar"
+                    [alt]="post.author.name"
+                  />
+                  <div>
+                    <p class="blog-card-author-name">{{ post.author.name }}</p>
+                    <p class="blog-card-author-copy">{{ post.publishedAt }}</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+        }
+      </div>
+    </section>
+
+    <section class="blog-cta-panel">
+      <div class="blog-cta-copy">
+        <p class="blog-kicker">Build with intention</p>
+        <h2 class="blog-cta-title">Let us turn your next campaign into clearer growth.</h2>
+        <p class="blog-cta-text">
+          We help founders and growing teams shape the message, content system,
+          and launch rhythm behind stronger brand momentum.
+        </p>
+        <div class="blog-cta-actions">
+          <a class="blog-cta-primary" [routerLink]="['/contact']">Start a project</a>
+          <a class="blog-cta-secondary" [routerLink]="['/blog/blog-list']">
+            Explore the archive
+          </a>
+        </div>
+      </div>
+
+      <div class="blog-cta-grid">
+        <article class="blog-cta-card">
+          <h3>Strategy</h3>
+          <p>Campaign direction, message positioning, and sharper launch planning.</p>
+        </article>
+        <article class="blog-cta-card">
+          <h3>Content</h3>
+          <p>Editorial systems and creator workflows that help teams stay consistent.</p>
+        </article>
+        <article class="blog-cta-card">
+          <h3>Experience</h3>
+          <p>Events and brand moments designed to feel polished, warm, and memorable.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <app-footer></app-footer>
 </div>

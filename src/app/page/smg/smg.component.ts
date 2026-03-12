@@ -1,13 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HeaderComponent } from '../../components/header/header.component';
+import { LucideAngularModule, ArrowDown } from 'lucide-angular';
 
 @Component({
   selector: 'app-smg',
   standalone: true,
   templateUrl: './smg.component.html',
   styleUrl: './smg.component.css',
-  imports: [HeaderComponent, ReactiveFormsModule],
+  imports: [HeaderComponent, ReactiveFormsModule, LucideAngularModule],
 })
 export class SmgComponent {
   readonly brandName = 'S\u00cdMB\u00cd\u00c0T\u00da\u00da';

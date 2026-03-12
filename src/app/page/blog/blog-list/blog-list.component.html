@@ -1,38 +1,65 @@
-<div class="min-h-screen bg-[#0f0f0f] text-white font-sans">
-  <!-- NAVIGATION -->
+<div class="blog-list-page">
   <app-header></app-header>
 
-  <section class="py-12 px-6 pt-22">
-    <h2 class="text-2xl font-bold mb-6">Recent blog posts</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      @for (blog of blogs; track blog) {
-      <div class="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" (click)="blogDetails(blog)">
-        <img [src]="blog.image" class="w-full h-48 object-cover" />
-        <div class="p-4">
-          <h3 class="font-semibold text-lg mb-2 text-black">
-            {{ blog.title }}
-          </h3>
-          <p class="text-xs  text-black mb-4">
-            {{ blog.details }}
-          </p>
-          <p class="text-sm text-gray-600">
-            {{ blog.author }} • {{ blog.date }}
-          </p>
-        </div>
+  <main class="blog-list-shell">
+    <section class="blog-list-hero">
+      <div class="blog-list-copy">
+        <p class="blog-kicker">Archive</p>
+        <h1>Notes on growth, brand, content, and experience design.</h1>
+        <p>
+          A running library of campaign lessons, founder notes, and practical
+          guidance drawn from the work we do with ambitious brands.
+        </p>
       </div>
-      }
-    </div>
+      <div class="blog-list-highlight">
+        <p class="blog-highlight-label">Featured</p>
+        <h2>{{ featuredPost.title }}</h2>
+        <p>{{ featuredPost.excerpt }}</p>
+        <a [routerLink]="['/blog', featuredPost.slug]">Read the featured story</a>
+      </div>
+    </section>
 
-    <div class="mt-8 flex justify-center w-full px-8 ">
+    <section class="blog-list-grid">
+      @for (post of visiblePosts; track post.slug) {
+        <article class="blog-list-card">
+          <a [routerLink]="['/blog', post.slug]">
+            <img
+              class="blog-list-card-media"
+              [src]="post.image"
+              [alt]="post.title"
+            />
+            <div class="blog-list-card-body">
+              <div class="blog-list-card-topline">
+                <span class="blog-list-chip">{{ post.category }}</span>
+                <span>{{ post.readTime }}</span>
+              </div>
+              <h2>{{ post.title }}</h2>
+              <p>{{ post.excerpt }}</p>
+              <div class="blog-list-card-meta">
+                <img
+                  class="blog-list-avatar"
+                  [src]="post.author.avatar"
+                  [alt]="post.author.name"
+                />
+                <div>
+                  <strong>{{ post.author.name }}</strong>
+                  <span>{{ post.publishedAt }}</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </article>
+      }
+    </section>
+
+    <div class="blog-pagination">
       <app-pagination
         [currentPage]="currentPage"
         [totalPages]="totalPages"
         (pageChange)="onPageChange($event)"
       ></app-pagination>
     </div>
-  </section>
+  </main>
 
-  <!-- Testimonials Section -->
-  <!-- <app-testimonials /> -->
-  <app-footer />
+  <app-footer></app-footer>
 </div>

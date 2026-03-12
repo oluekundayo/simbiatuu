@@ -1,0 +1,130 @@
+:host {
+  display: block;
+}
+
+.sidebar-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.sidebar-card {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.25rem;
+  border: 1px solid var(--blog-border);
+  border-radius: 1.35rem;
+  background: var(--blog-surface);
+  box-shadow: var(--blog-card-shadow);
+}
+
+.sidebar-label {
+  margin: 0;
+  color: var(--blog-accent-deep);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.sidebar-author img,
+.sidebar-post img {
+  object-fit: cover;
+}
+
+.sidebar-author img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 999px;
+}
+
+.sidebar-author h2,
+.sidebar-card h3,
+.sidebar-role,
+.sidebar-copy {
+  margin: 0;
+}
+
+.sidebar-role,
+.sidebar-copy,
+.sidebar-row span:last-child,
+.sidebar-post span {
+  color: var(--blog-muted);
+}
+
+.sidebar-form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.sidebar-form input,
+.sidebar-form button {
+  width: 100%;
+  min-height: 2.9rem;
+  border-radius: 999px;
+  font: inherit;
+}
+
+.sidebar-form input {
+  border: 1px solid var(--blog-border);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0 1rem;
+}
+
+.sidebar-form button {
+  border: 0;
+  background: var(--blog-accent);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.sidebar-list,
+.sidebar-posts,
+.sidebar-tags {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.sidebar-row,
+.sidebar-post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+}
+
+.sidebar-post {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sidebar-post img {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 1rem;
+}
+
+.sidebar-post div {
+  display: grid;
+  gap: 0.18rem;
+}
+
+.sidebar-post strong,
+.sidebar-post span {
+  display: block;
+}
+
+.sidebar-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar-tags span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.4rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--blog-border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+}
