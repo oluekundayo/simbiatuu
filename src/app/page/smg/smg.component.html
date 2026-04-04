@@ -1,37 +1,52 @@
 <app-header></app-header>
 
 <main class="smg-page">
-  <section class="smg-hero">
-    <div class="smg-hero-glow smg-hero-glow-right"></div>
-    <div class="smg-hero-glow smg-hero-glow-left"></div>
+  <section
+    class="relative overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.18),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.1),transparent_24%),linear-gradient(180deg,#eb002b_0%,#eb002b_100%)] px-0 pb-22 pt-30 text-smg-ivory max-[699px]:pt-[7.4rem]"
+  >
+    <div
+      class="absolute -right-32 -top-24 h-88 w-88 rounded-full bg-[rgba(235,0,43,0.72)] opacity-45 blur-[72px]"
+    ></div>
+    <div
+      class="absolute -bottom-32 -left-24 h-88 w-88 rounded-full bg-[rgba(235,0,43,0.68)] opacity-45 blur-[72px]"
+    ></div>
+    <div
+      class="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(rgba(255,255,255,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.8)_1px,transparent_1px)] [background-size:32px_32px]"
+    ></div>
 
-    <div class="smg-shell smg-hero-grid">
-      <div class="smg-hero-copy">
-        <p class="smg-kicker">Welcome to {{ programName }} (SMP)</p>
-        <h1 class="smg-display smg-hero-title">
+    <div
+      class="relative mx-auto grid w-full max-w-[1180px] gap-8 px-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-end"
+    >
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-smg-gold">
+          Welcome to {{ programName }} (SMP)
+        </p>
+        <h1
+          class="mt-4 max-w-[11ch] font-display text-[clamp(2.9rem,6vw,5.6rem)] leading-[0.95] tracking-[-0.03em] text-smg-ivory max-[699px]:max-w-none"
+        >
           From Salary Dependency to Financial Independence
         </h1>
-        <p class="smg-tagline">
+        <p class="mt-4 text-xl font-semibold text-smg-gold-soft">
           With structure, mentorship, and guidance that works.
         </p>
-        <p class="smg-hero-text">
+        <p class="mt-4 max-w-2xl text-base leading-8 text-[rgba(255,248,235,0.76)]">
           SMP introduces serious professionals to a structured mentorship and
           business education pathway designed to help them build long-term
           financial independence without abandoning their careers, values, or
           responsibilities.
         </p>
 
-        <div class="smg-actions">
+        <div class="mt-8 flex flex-wrap gap-4">
           <button
             type="button"
-            class="smg-button smg-button-primary"
+            class="inline-flex min-h-12 items-center justify-center rounded-full bg-smg-gold px-6 py-4 text-sm font-bold text-[#16110a] transition duration-150 hover:-translate-y-0.5 hover:bg-[#d8b761]"
             (click)="scrollTo('contact')"
           >
             Book a Discovery Session
           </button>
           <button
             type="button"
-            class="smg-button smg-button-secondary"
+            class="inline-flex min-h-12 items-center justify-center rounded-full border border-[rgba(255,248,235,0.28)] px-6 py-4 text-sm font-bold text-smg-ivory transition duration-150 hover:-translate-y-0.5 hover:border-[rgba(255,248,235,0.5)] hover:bg-[rgba(255,248,235,0.05)]"
             (click)="scrollTo('about')"
           >
             Explore the Pathway
@@ -39,18 +54,28 @@
         </div>
       </div>
 
-      <aside class="smg-hero-panel">
-        <p class="smg-panel-label">Tagline</p>
-        <p class="smg-panel-copy">
+      <aside
+        class="rounded-[1.6rem] border border-[rgba(255,255,255,0.22)] bg-[rgba(235,0,43,0.84)] p-6 shadow-smg backdrop-blur-xl"
+      >
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-smg-gold">
+          Tagline
+        </p>
+        <p class="mt-4 leading-8 text-[rgba(255,248,235,0.76)]">
           From Salary Dependency to Financial Independence, with the structure,
           mentorship, and guidance needed to grow with clarity.
         </p>
 
-        <div class="smg-stat-grid">
+        <div class="mt-6 grid gap-4 sm:grid-cols-2">
           @for (item of heroStats; track item.value) {
-            <article class="smg-stat-card">
-              <h2>{{ item.value }}</h2>
-              <p>{{ item.label }}</p>
+            <article
+              class="rounded-[1.1rem] border border-[rgba(255,248,235,0.08)] bg-[rgba(255,248,235,0.05)] p-4"
+            >
+              <h2 class="mb-2 text-base font-semibold text-[#fff9ee]">
+                {{ item.value }}
+              </h2>
+              <p class="m-0 text-sm text-[rgba(255,248,235,0.76)]">
+                {{ item.label }}
+              </p>
             </article>
           }
         </div>
@@ -58,89 +83,99 @@
     </div>
   </section>
 
-  <!-- <section id="about" class="smg-section smg-section-light">
-    <div class="smg-shell smg-about-grid">
-      <div class="smg-founder-column">
-        <div class="smg-founder-photo-wrap">
-          <img
-            class="smg-founder-photo"
-            src="madam.jpg"
-            alt="Portrait of Simbiat Atinuke Awe"
-          />
-        </div>
+  <section id="about" class="smg-section smg-section-light">
+    <div class="mx-auto w-full max-w-[1180px] px-4">
+      <div class="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+        <div class="lg:col-span-5 lg:sticky lg:top-32">
+          <div class="mb-6 flex items-center gap-4">
+            <div class="h-px w-12 bg-smg-gold"></div>
+            <span
+              class="text-sm font-semibold uppercase tracking-[0.2em] text-smg-gold"
+            >
+              About Me
+            </span>
+          </div>
 
-        <div class="smg-founder-card">
-          <p class="smg-kicker">About Me</p>
-          <h2 class="smg-display smg-card-title">{{ founderName }}</h2>
-          <p class="smg-muted">
-            Working professional. Single mother. Integrity-led mentor.
-          </p>
-          <div class="smg-founder-meta">
-            <span>Career-conscious</span>
-            <span>Growth-oriented</span>
-            <span>Values-aligned</span>
+          <h2
+            class="mb-8 font-display text-4xl leading-tight text-smg-black-soft md:text-5xl"
+          >
+            {{ brandName }} <br />
+            <span class="text-smg-muted">Mentorship Pathway</span>
+          </h2>
+
+          <div
+            class="relative mt-12 rounded-2xl border border-smg-sand-deep bg-white p-8 shadow-2xl shadow-black/5"
+          >
+            <img
+              src="https://atlasdigital.blob.core.windows.net/marketing-files/20260312-2c8b38bbc01b4b8391e03f9c8992360e-Frame.png"
+              alt=""
+              aria-hidden="true"
+              class="absolute -left-5 -top-5 w-16 sm:w-20"
+            />
+            <p class="font-display text-xl italic leading-relaxed text-smg-muted">
+              "If you feel that quiet inner knowing that you were created for
+              more, SMP may be the next step in your journey."
+            </p>
           </div>
         </div>
-      </div>
 
-      <div class="smg-copy-stack">
-        <p class="smg-kicker">{{ programName }}</p>
-        <h2 class="smg-display smg-section-title">
-          Built for professionals who know a salary alone is not a long-term
-          financial strategy.
-        </h2>
+        <div
+          class="space-y-6 text-lg font-light leading-relaxed text-smg-black-soft lg:col-span-7"
+        >
+          <p class="text-xl font-medium text-smg-black-soft">
+            My name is {{ founderName }}. I am a working professional, a single
+            mother, and a woman who followed the traditional path - education,
+            employment, responsibility - yet reached a point where I realized
+            that a stable job alone was not a long-term financial strategy.
+          </p>
 
-        <p>
-          My name is {{ founderName }}. I am a working professional, a single
-          mother, and a woman who followed the traditional path of education,
-          employment, and responsibility, yet reached a point where I realized
-          that a stable job alone was not a long-term financial strategy.
-        </p>
+          <p>
+            Like many professionals, I worked hard, showed up consistently, and
+            did everything that was expected - yet I began to see the
+            limitations of relying solely on a salary for freedom, flexibility,
+            and future security. I wanted more than survival. I wanted options,
+            control, and the ability to design a life that aligned with my
+            values and responsibilities.
+          </p>
 
-        <p>
-          Like many professionals, I worked hard, showed up consistently, and
-          did everything that was expected, yet I began to see the limitations
-          of relying solely on a salary for freedom, flexibility, and future
-          security. I wanted more than survival. I wanted options, control, and
-          the ability to design a life that aligned with my values and
-          responsibilities.
-        </p>
+          <p>
+            My turning point came when I was introduced to a structured global
+            mentorship and business education system that focuses on long-term
+            wealth building, personal development, and leadership - while
+            allowing professionals to keep their careers intact.
+          </p>
 
-        <p>
-          My turning point came when I was introduced to a structured global
-          mentorship and business education system that focuses on long-term
-          wealth building, personal development, and leadership while allowing
-          professionals to keep their careers intact.
-        </p>
+          <p>
+            Through this system, I experienced a shift not just financially,
+            but mentally and emotionally. I gained clarity, confidence,
+            discipline, and a new understanding of how income, mindset, and
+            systems work together.
+          </p>
 
-        <p>
-          Through this system, I experienced a shift not just financially, but
-          mentally and emotionally. I gained clarity, confidence, discipline,
-          and a new understanding of how income, mindset, and systems work
-          together.
-        </p>
+          <div class="my-8 border-l-4 border-smg-gold bg-[#f5f5f1]/30 p-6">
+            <p class="font-medium text-smg-black-soft">
+              I created {{ programName }} (SMP) to do one thing clearly and
+              ethically:
+            </p>
+            <p class="mt-2">
+              To introduce serious professionals to this structured mentorship
+              pathway and guide them through the process with transparency,
+              support, and integrity.
+            </p>
+          </div>
 
-        <blockquote class="smg-quote-card">
-          I created SMP to do one thing clearly and ethically: to introduce
-          serious professionals to this structured mentorship pathway and guide
-          them through the process with transparency, support, and integrity.
-        </blockquote>
-
-        <p>
-          SMP exists for professionals who know they are capable of more and
-          are ready to explore a smarter, more sustainable way to build
-          financial independence without abandoning their careers or values.
-        </p>
-
-        <p>
-          If you feel that quiet inner knowing that you were created for more,
-          SMP may be the next step in your journey.
-        </p>
+          <p>
+            SMP exists for professionals who know they are
+            <span class="font-medium text-smg-gold">capable of more</span> -
+            and are ready to explore a smarter, more sustainable way to build
+            financial independence without abandoning their careers or values.
+          </p>
+        </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
-  <section id="about" class="smg-section smg-section-light">
+  <!-- <section id="about" class="smg-section smg-section-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
       
@@ -221,9 +256,9 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-  <section class="smg-section smg-section-dark">
+  <section class="smg-section bg-[#eb002b]">
     <div class="smg-shell smg-pathway-grid">
       <div class="smg-section-intro">
         <p class="smg-kicker">What is {{ programName }} all about?</p>
@@ -233,7 +268,7 @@
         </h2>
       </div>
 
-      <div class="smg-dark-panel">
+      <div class="smg-dark-panel text-white">
         <p>
           Millions of professionals work tirelessly every day, earning stable
           incomes yet still feeling financially restricted, time-poor, and
@@ -267,7 +302,7 @@
         <article class="smg-highlight-card">
           <p class="smg-highlight-number">0{{ $index + 1 }}</p>
           <h3>{{ item.title }}</h3>
-          <p>{{ item.description }}</p>
+          <p class="text-[#ffffff9f]">{{ item.description }}</p>
         </article>
       }
     </div>
@@ -329,7 +364,7 @@
       </div>
 
       <div class="smg-vision-stack">
-        <article class="smg-mission-card smg-mission-card-dark">
+        <article class="bg-[#eb002b] smg-mission-card smg-mission-card-darsk">
           <p class="smg-panel-label">Mission Statement</p>
           <p>
             To introduce and guide professionals toward financial independence
@@ -433,7 +468,7 @@
         <div>
           <p class="smg-kicker">Free 1-on-1 Clarity Consultation</p>
           <h2 class="smg-display smg-card-title">Book a Private Discovery Session</h2>
-          <p class="smg-muted">
+          <p class=" text-white">
             This session is designed to help you assess your current financial
             direction, gain clarity on your long-term goals, understand the
             mentorship pathway, and decide whether SMP is a suitable fit for

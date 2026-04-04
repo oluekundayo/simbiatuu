@@ -8,7 +8,7 @@ import { LucideAngularModule, ArrowDown } from 'lucide-angular';
   standalone: true,
   templateUrl: './smg.component.html',
   styleUrl: './smg.component.css',
-  imports: [HeaderComponent, ReactiveFormsModule, LucideAngularModule],
+  imports: [HeaderComponent, ReactiveFormsModule],
 })
 export class SmgComponent {
   readonly brandName = 'S\u00cdMB\u00cd\u00c0T\u00da\u00da';

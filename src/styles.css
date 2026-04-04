@@ -20,6 +20,21 @@ Gunmetal Blue — #343f5e
 Tyrian Purple — #6c2346 */
 @import "tailwindcss";
 
+@theme {
+  --font-body: "Aptos", "Segoe UI", sans-serif;
+  --font-display: "Baskerville", "Palatino Linotype", serif;
+  --color-smg-gold: #caa64e;
+  --color-smg-gold-soft: #e4cb91;
+  --color-smg-black: #090909;
+  --color-smg-black-soft: #121212;
+  --color-smg-sand: #f1ebdf;
+  --color-smg-sand-deep: #e7decd;
+  --color-smg-ivory: #fffaf1;
+  --color-smg-text: #1f1a15;
+  --color-smg-muted: #6e665a;
+  --shadow-smg: 0 24px 60px rgba(15, 10, 3, 0.12);
+}
+
 .custom-button {
   position: relative;
   overflow: hidden;
@@ -128,7 +143,7 @@ app-smg {
   --smg-shadow: 0 24px 60px rgba(15, 10, 3, 0.12);
   background: var(--smg-sand);
   color: var(--smg-text);
-  font-family: 'Aptos', 'Segoe UI', sans-serif;
+  font-family: var(--font-body);
 }
 
 .smg-page {
@@ -180,8 +195,8 @@ app-smg {
 
 .smg-section-dark {
   background:
-    radial-gradient(circle at top right, rgba(202, 166, 78, 0.12), transparent 24%),
-    linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.16), transparent 24%),
+    linear-gradient(180deg, #eb002b 0%, #eb002b 100%);
   color: #fff6e7;
 }
 
@@ -190,8 +205,8 @@ app-smg {
   overflow: hidden;
   padding: 8.5rem 0 5.5rem;
   background:
-    radial-gradient(circle at top right, rgba(202, 166, 78, 0.16), transparent 26%),
-    linear-gradient(180deg, #070707 0%, #101010 100%);
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 26%),
+    linear-gradient(180deg, #eb002b 0%, #eb002b 100%);
   color: #fff8eb;
 }
 
@@ -207,13 +222,13 @@ app-smg {
 .smg-hero-glow-right {
   top: -6rem;
   right: -8rem;
-  background: rgba(202, 166, 78, 0.45);
+  background: rgba(235, 0, 43, 0.56);
 }
 
 .smg-hero-glow-left {
   bottom: -8rem;
   left: -6rem;
-  background: rgba(202, 166, 78, 0.2);
+  background: rgba(235, 0, 43, 0.42);
 }
 
 .smg-hero-grid,
@@ -330,7 +345,7 @@ app-smg {
 
 .smg-hero-panel {
   padding: 1.6rem;
-  background: rgba(19, 19, 19, 0.88);
+  background: rgba(235, 0, 43, 0.84);
   backdrop-filter: blur(12px);
 }
 
@@ -392,7 +407,7 @@ app-smg {
   position: relative;
   overflow: hidden;
   border-radius: 1.75rem;
-  background: linear-gradient(180deg, #1a1a1a 0%, #090909 100%);
+  background: linear-gradient(180deg, #eb002b 0%, #eb002b 100%);
   min-height: 24rem;
 }
 
@@ -471,7 +486,7 @@ app-smg {
 
 .smg-dark-panel {
   padding: 1.75rem;
-  background: rgba(255, 248, 235, 0.04);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .smg-highlight-grid {
@@ -575,7 +590,7 @@ app-smg {
 
 .smg-mission-card-dark {
   background:
-    linear-gradient(180deg, rgba(12, 12, 12, 0.98) 0%, rgba(24, 24, 24, 0.96) 100%);
+    linear-gradient(180deg, rgba(235, 0, 43, 0.98) 0%, rgba(235, 0, 43, 0.96) 100%);
   color: #fff6e7;
 }
 
@@ -612,7 +627,7 @@ app-smg {
 
 .smg-selection-shell {
   padding: 1.5rem;
-  background: rgba(255, 248, 235, 0.05);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .smg-trait-grid {
@@ -625,8 +640,8 @@ app-smg {
 
 .smg-trait-pill {
   color: #fff6e7;
-  background: rgba(255, 248, 235, 0.06);
-  border-color: rgba(255, 248, 235, 0.12);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .smg-step-card h3,
@@ -654,8 +669,8 @@ app-smg {
   display: grid;
   gap: 1.5rem;
   background:
-    radial-gradient(circle at top right, rgba(202, 166, 78, 0.18), transparent 28%),
-    linear-gradient(180deg, #080808 0%, #111111 100%);
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 28%),
+    linear-gradient(180deg, #eb002b 0%, #eb002b 100%);
   color: #fff7ea;
   padding: 1.75rem;
 }
@@ -779,8 +794,8 @@ app-smg {
 
 .smg-faq-item {
   border-radius: 1.25rem;
-  border: 1px solid rgba(255, 248, 235, 0.1);
-  background: rgba(255, 248, 235, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
   overflow: hidden;
 }
 
@@ -837,10 +852,10 @@ app-smg {
 }
 
 .smg-footer {
-  background: #090909;
+  background: #eb002b;
   color: #fff8eb;
   padding: 2.4rem 0;
-  border-top: 1px solid rgba(202, 166, 78, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .smg-footer-grid {
