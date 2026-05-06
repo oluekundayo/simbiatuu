@@ -49,6 +49,11 @@ export class HeaderComponent {
 
   services = [
     {
+      title: '⁠SÍMBÍÀTÚÚ',
+      description: 'Build new revenue streams.',
+      link: '/simbiatuu',
+    },
+    {
       title: 'SimAffiliate',
       description: 'Build new revenue streams.',
       link: '/affiliate',

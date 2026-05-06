@@ -1,0 +1,552 @@
+:host {
+  display: block;
+  --sim-bg: #130505;
+  --sim-band: #2b0909;
+  --sim-accent: #cf0c0c;
+  --sim-accent-strong: #f01010;
+  --sim-text: #f7e7e7;
+  --sim-text-soft: rgba(247, 231, 231, 0.82);
+  --sim-border: rgba(240, 16, 16, 0.72);
+  color: var(--sim-text);
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(207, 12, 12, 0.18), transparent 22%),
+    radial-gradient(circle at bottom right, rgba(118, 10, 10, 0.22), transparent 26%),
+    var(--sim-bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+.sim-page {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0)),
+    var(--sim-bg);
+}
+
+.sim-shell {
+  width: min(1060px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.sim-display,
+.sim-brand-mark,
+.sim-kicker,
+.sim-label,
+.sim-subtitle,
+.sim-stat-label {
+  font-family: 'Arial Black', 'Trebuchet MS', sans-serif;
+}
+
+.sim-body-copy {
+  margin: 0;
+  color: var(--sim-text-soft);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.sim-kicker,
+.sim-label {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sim-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.9rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--sim-border);
+  border-radius: 0.25rem;
+  color: var(--sim-accent-strong);
+  background: rgba(20, 5, 5, 0.38);
+}
+
+.sim-brand-mark {
+  margin: 0 0 1rem;
+  color: var(--sim-accent-strong);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.sim-section {
+  padding: 6.5rem 0;
+}
+
+.sim-band {
+  background: linear-gradient(180deg, rgba(61, 12, 12, 0.96), rgba(23, 7, 7, 0.98));
+}
+
+.sim-hero {
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  padding: 4.5rem 0;
+}
+
+.sim-hero-grid,
+.sim-story-grid,
+.sim-audience-grid,
+.sim-value-grid,
+.sim-contact-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.sim-hero-grid {
+  align-items: center;
+}
+
+.sim-hero-title {
+  margin: 0;
+  max-width: 10ch;
+  font-size: clamp(2.55rem, 6vw, 4.5rem);
+  line-height: 1.18;
+}
+
+.sim-hero-text {
+  max-width: 37rem;
+  margin-top: 1.3rem;
+}
+
+.sim-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.8rem;
+}
+
+.sim-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid transparent;
+  border-radius: 0.28rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.sim-button:hover {
+  transform: translateY(-1px);
+}
+
+.sim-button-primary {
+  color: #fff5f5;
+  background: linear-gradient(180deg, #ff2424 0%, var(--sim-accent) 100%);
+  box-shadow: 0 14px 24px rgba(207, 12, 12, 0.2);
+}
+
+.sim-button-secondary {
+  border-color: var(--sim-border);
+  background: transparent;
+  color: var(--sim-accent-strong);
+}
+
+.sim-button-secondary:hover {
+  background: rgba(207, 12, 12, 0.08);
+}
+
+.sim-hero-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.24));
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.34);
+  max-width: 420px;
+  justify-self: center;
+}
+
+.sim-hero-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sim-hero-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sim-section-title {
+  margin: 0;
+  max-width: 15ch;
+  font-size: clamp(2rem, 4.4vw, 3.1rem);
+  line-height: 1.24;
+}
+
+.sim-section-intro {
+  max-width: 60rem;
+  margin-top: 1.15rem;
+}
+
+.sim-card-title,
+.sim-subtitle,
+.sim-offer-title,
+.sim-value-title,
+.sim-collab-title,
+.sim-contact-title,
+.sim-pillar-title,
+.sim-demo-title,
+.sim-psych-title,
+.sim-testimonial-title {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.sim-card-title,
+.sim-subtitle {
+  font-size: 1.45rem;
+}
+
+.sim-story-grid {
+  margin-top: 1.9rem;
+  align-items: start;
+}
+
+.sim-copy-stack {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.sim-journey-card,
+.sim-offer-card,
+.sim-demo-card,
+.sim-premium-card,
+.sim-value-card,
+.sim-testimonial-card,
+.sim-contact-card,
+.sim-notice-card {
+  border-radius: 0.35rem;
+  border: 1px solid var(--sim-border);
+}
+
+.sim-journey-card {
+  padding: 1.45rem 1.35rem;
+  background: linear-gradient(180deg, #c50606 0%, #a10505 100%);
+  color: #fff8f8;
+}
+
+.sim-journey-list {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sim-journey-item {
+  padding: 0.7rem 0 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.sim-journey-item:first-child {
+  border-top: 0;
+  padding-top: 0.15rem;
+}
+
+.sim-journey-number {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.sim-journey-title {
+  font-size: 1.05rem;
+}
+
+.sim-pillars-grid {
+  display: grid;
+  gap: 1.6rem;
+  margin-top: 2.3rem;
+}
+
+.sim-pillar-photo {
+  position: relative;
+  width: 116px;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  filter: saturate(0.8);
+}
+
+.sim-pillar-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(255, 160, 105, 0.36), transparent 34%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(47, 6, 6, 0.6));
+}
+
+.sim-pillar-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.65rem;
+}
+
+.sim-audience-grid {
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.sim-demographics-grid,
+.sim-psychographics-list,
+.sim-testimonials-grid,
+.sim-contact-cards {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.sim-demo-card {
+  padding: 1rem 1rem 0.95rem;
+  background: rgba(10, 5, 5, 0.86);
+  border-left-width: 5px;
+}
+
+.sim-demo-title {
+  font-size: 1rem;
+  margin-bottom: 0.45rem;
+}
+
+.sim-psych-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 0.25rem 0;
+}
+
+.sim-psych-arrow {
+  color: #fff3f3;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.sim-psych-title {
+  font-size: 1rem;
+  margin-bottom: 0.45rem;
+}
+
+.sim-offers-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.3rem;
+}
+
+.sim-offer-card {
+  padding: 1.1rem 1rem 1.2rem;
+  background: linear-gradient(180deg, rgba(190, 11, 11, 0.92), rgba(144, 7, 7, 0.96));
+}
+
+.sim-offer-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.65rem;
+}
+
+.sim-icon-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff9f9;
+  font-size: 1rem;
+}
+
+.sim-value-grid {
+  margin-top: 2.3rem;
+  align-items: stretch;
+}
+
+.sim-premium-card {
+  padding: 1.25rem 1.15rem 1.45rem;
+  background: linear-gradient(180deg, #c50606 0%, #b00606 100%);
+  min-height: 100%;
+}
+
+.sim-premium-card p + p {
+  margin-top: 1rem;
+}
+
+.sim-value-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.sim-value-card {
+  position: relative;
+  padding: 2.15rem 1rem 1.1rem;
+  background: rgba(11, 6, 6, 0.92);
+  border-top-width: 4px;
+}
+
+.sim-value-icon {
+  position: absolute;
+  top: -1.1rem;
+  left: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  background: var(--sim-accent-strong);
+  color: #fff;
+  transform: translateX(-50%);
+}
+
+.sim-value-title {
+  font-size: 1.08rem;
+  margin-bottom: 0.55rem;
+}
+
+.sim-collab-list {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.sim-collab-item {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.sim-collab-marker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 4rem;
+  background: linear-gradient(180deg, rgba(188, 13, 13, 0.95), rgba(140, 6, 6, 0.95));
+  clip-path: polygon(0 0, 100% 14%, 100% 84%, 50% 100%, 0 84%);
+  color: #fff8f8;
+}
+
+.sim-collab-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.45rem;
+}
+
+.sim-testimonials-grid {
+  margin-top: 2rem;
+}
+
+.sim-testimonial-card {
+  position: relative;
+  padding: 1.35rem 1rem 1.2rem;
+  background: rgba(11, 6, 6, 0.88);
+}
+
+.sim-quote-mark {
+  position: absolute;
+  top: -0.1rem;
+  left: 0.65rem;
+  color: var(--sim-accent-strong);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.sim-testimonial-title {
+  margin-bottom: 0.65rem;
+  padding-top: 0.55rem;
+  font-size: 1.04rem;
+}
+
+.sim-testimonial-author {
+  margin: 1rem 0 0;
+  font-weight: 700;
+  color: #fff3f3;
+}
+
+.sim-stats-grid {
+  display: grid;
+  gap: 1.4rem;
+  margin-top: 2rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.sim-stat-card {
+  text-align: center;
+}
+
+.sim-stat-value {
+  margin: 0;
+  font-size: clamp(2.6rem, 8vw, 4rem);
+  line-height: 1;
+}
+
+.sim-stat-label {
+  margin: 0.55rem 0 0.45rem;
+  font-size: 1rem;
+}
+
+.sim-contact-grid {
+  margin-top: 1.9rem;
+  align-items: start;
+}
+
+.sim-contact-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.sim-notice-card {
+  padding: 1rem 1rem 1.05rem;
+  background: rgba(104, 84, 0, 0.8);
+  border-color: rgba(255, 211, 72, 0.32);
+}
+
+.sim-contact-card {
+  padding: 1.1rem 1rem 1.1rem;
+  background: rgba(11, 6, 6, 0.9);
+  border-left-width: 5px;
+}
+
+.sim-contact-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.08rem;
+  margin-bottom: 0.8rem;
+}
+
+.sim-contact-link {
+  margin: 0 0 0.65rem;
+}
+
+.sim-contact-link a {
+  color: var(--sim-accent-strong);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}

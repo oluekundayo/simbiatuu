@@ -886,6 +886,147 @@ app-smg {
   color: #fff8eb;
 }
 
+.sim-footer {
+  padding: 4.5rem 0 5.25rem;
+  background: linear-gradient(180deg, #320909 0%, #190707 100%);
+}
+
+.sim-footer-inner {
+  text-align: center;
+}
+
+.sim-footer-brand {
+  margin-bottom: 0.85rem;
+}
+
+.sim-footer-copy {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.sim-footer-tags {
+  display: grid;
+  gap: 0;
+  margin: 1.8rem auto 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.sim-footer-tag {
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.7rem 1rem;
+  background: rgba(197, 8, 8, 0.76);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff2f2;
+  text-align: left;
+}
+
+.sim-footer-statement {
+  margin: 1.5rem auto 0;
+  max-width: 18ch;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  line-height: 1.35;
+}
+
+@media (min-width: 700px) {
+  .sim-pillars-grid,
+  .sim-testimonials-grid,
+  .sim-stats-grid,
+  .sim-footer-tags {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sim-offers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .sim-hero-grid,
+  .sim-story-grid,
+  .sim-audience-grid,
+  .sim-contact-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  }
+
+  .sim-pillars-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sim-offers-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .sim-offer-card:nth-child(1),
+  .sim-offer-card:nth-child(2),
+  .sim-offer-card:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  .sim-offer-card:nth-child(4),
+  .sim-offer-card:nth-child(5) {
+    grid-column: span 3;
+  }
+
+  .sim-value-grid {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  }
+
+  .sim-stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sim-footer-tags {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sim-footer-tag:nth-child(4) {
+    grid-column: 1 / 2;
+  }
+
+  .sim-footer-tag:nth-child(5) {
+    grid-column: 2 / 4;
+  }
+}
+
+@media (max-width: 959px) {
+  .sim-hero {
+    min-height: auto;
+    padding-top: 5.5rem;
+  }
+
+  .sim-hero-title,
+  .sim-section-title {
+    max-width: none;
+  }
+}
+
+@media (max-width: 699px) {
+  .sim-shell {
+    width: min(100%, calc(100% - 1.25rem));
+  }
+
+  .sim-section {
+    padding: 4.75rem 0;
+  }
+
+  .sim-hero {
+    padding-top: 4rem;
+  }
+
+  .sim-collab-item {
+    grid-template-columns: 1fr;
+  }
+
+  .sim-collab-marker {
+    width: 3.25rem;
+    height: 3.7rem;
+  }
+}
+
 @media (min-width: 700px) {
   .smg-highlight-grid,
   .smg-step-grid,

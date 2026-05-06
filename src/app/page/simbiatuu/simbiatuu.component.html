@@ -1,0 +1,349 @@
+<div class="sim-page">
+  <section class="sim-hero">
+    <div class="sim-shell sim-hero-grid">
+      <div class="sim-hero-copy">
+        <p class="sim-kicker">Faith. Discipline. Power.</p>
+        <p class="sim-brand-mark">{{ brandName }}</p>
+        <h1 class="sim-display sim-hero-title">
+          Transform Pain Into Power. Experience Into Profit.
+        </h1>
+        <p class="sim-body-copy sim-hero-text">
+          Faith-rooted. Discipline-driven. Built for women who refuse to be
+          diminished.
+        </p>
+
+        <div class="sim-actions">
+          <a class="sim-button sim-button-primary" [href]="mailHref">
+            Partner With Us
+          </a>
+          <a class="sim-button sim-button-secondary" href="#story">
+            Discover the Brand
+          </a>
+        </div>
+      </div>
+
+      <div class="sim-hero-frame">
+        <img
+          class="sim-hero-photo"
+          src="madam.jpg"
+          alt="Portrait of {{ brandName }} seated in a burgundy chair"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="sim-section sim-band">
+    <div class="sim-shell">
+      <p class="sim-label">The Brand Story</p>
+      <h2 class="sim-display sim-section-title">
+        From Hardship to Her Highest Self
+      </h2>
+
+      <div class="sim-story-grid">
+        <div class="sim-copy-stack">
+          @for (paragraph of brandStoryParagraphs; track paragraph) {
+            <p class="sim-body-copy" [innerHTML]="paragraph"></p>
+          }
+        </div>
+
+        <article class="sim-journey-card">
+          <h3 class="sim-display sim-card-title">The Journey</h3>
+          <ol class="sim-journey-list">
+            @for (step of journeySteps; track step.number) {
+              <li class="sim-journey-item">
+                <span class="sim-journey-number">{{ step.number }}</span>
+                <p class="sim-display sim-journey-title">{{ step.title }}</p>
+              </li>
+            }
+          </ol>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sim-section">
+    <div class="sim-shell">
+      <p class="sim-label">What She Stands For</p>
+      <h2 class="sim-display sim-section-title">
+        Four Pillars. One Powerful Woman.
+      </h2>
+      <p class="sim-body-copy sim-section-intro">
+        Every piece of content, every offer, and every collaboration is
+        anchored in these four transformational pillars - each one a dimension
+        of the complete woman {{ brandName }} is becoming, and helping others
+        become.
+      </p>
+
+      <div class="sim-pillars-grid">
+        @for (pillar of pillars; track pillar.title) {
+          <article class="sim-pillar-card">
+            <div
+              class="sim-pillar-photo"
+              [style.background-image]="'url(' + pillar.image + ')'"
+              [attr.aria-label]="pillar.title"
+              role="img"
+            ></div>
+            <h3 class="sim-display sim-pillar-title">{{ pillar.title }}</h3>
+            <p class="sim-body-copy">{{ pillar.description }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="sim-section sim-band">
+    <div class="sim-shell">
+      <p class="sim-label">The Audience</p>
+      <h2 class="sim-display sim-section-title">
+        She Speaks to Women Who Are Rising
+      </h2>
+      <p class="sim-body-copy sim-section-intro">
+        {{ brandName }}'s community is not passive - it is deeply engaged, highly
+        motivated, and actively investing in transformation. These are women
+        with purchasing power, purpose, and a deep desire to level up in every
+        dimension of their lives.
+      </p>
+
+      <div class="sim-audience-grid">
+        <div>
+          <h3 class="sim-display sim-subtitle">Demographics</h3>
+          <div class="sim-demographics-grid">
+            @for (item of demographics; track item.title) {
+              <article class="sim-demo-card">
+                <h4 class="sim-display sim-demo-title">{{ item.title }}</h4>
+                <p class="sim-body-copy">{{ item.description }}</p>
+              </article>
+            }
+          </div>
+        </div>
+
+        <div>
+          <h3 class="sim-display sim-subtitle">Psychographics</h3>
+          <div class="sim-psychographics-list">
+            @for (item of psychographics; track item.title) {
+              <article class="sim-psych-card">
+                <span class="sim-psych-arrow" aria-hidden="true">&rarr;</span>
+                <div>
+                  <h4 class="sim-display sim-psych-title">{{ item.title }}</h4>
+                  <p class="sim-body-copy">{{ item.description }}</p>
+                </div>
+              </article>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sim-section">
+    <div class="sim-shell">
+      <p class="sim-label">Services & Offers</p>
+      <h2 class="sim-display sim-section-title">
+        A Full Ecosystem of Transformation
+      </h2>
+      <p class="sim-body-copy sim-section-intro">
+        {{ brandName }} operates a multi-revenue, multi-touchpoint brand that
+        creates genuine value at every level - from entry-point digital
+        products to
+        high-ticket personal coaching. Every offer is designed to meet a woman
+        exactly where she is and carry her to where she is going.
+      </p>
+
+      <div class="sim-offers-grid">
+        @for (offer of offers; track offer.title) {
+          <article class="sim-offer-card">
+            <span class="sim-icon-chip">
+              <fa-icon [icon]="offer.icon"></fa-icon>
+            </span>
+            <h3 class="sim-display sim-offer-title">{{ offer.title }}</h3>
+            <p class="sim-body-copy">{{ offer.description }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="sim-section sim-band">
+    <div class="sim-shell">
+      <p class="sim-label">Brand Value Proposition</p>
+      <h2 class="sim-display sim-section-title">
+        Why Partner With {{ brandName }}?
+      </h2>
+
+      <div class="sim-value-grid">
+        <article class="sim-premium-card">
+          <h3 class="sim-display sim-card-title">The Premium Advantage</h3>
+          <p class="sim-body-copy">
+            {{ brandName }} reaches an underserved yet extraordinarily powerful
+            demographic: the immigrant woman, the single mother, the
+            faith-driven entrepreneur. These women are not passive content
+            consumers - they are active decision-makers with real purchasing
+            power and fierce brand loyalty.
+          </p>
+          <p class="sim-body-copy">
+            When you partner with {{ brandName }}, you are not buying an ad slot. You
+            are being woven into a trusted narrative that your target customers
+            already believe in.
+          </p>
+        </article>
+
+        <div class="sim-value-stack">
+          @for (item of valueHighlights; track item.title) {
+            <article class="sim-value-card">
+              <span class="sim-value-icon">
+                <fa-icon [icon]="item.icon"></fa-icon>
+              </span>
+              <h3 class="sim-display sim-value-title">{{ item.title }}</h3>
+              <p class="sim-body-copy">{{ item.description }}</p>
+            </article>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sim-section">
+    <div class="sim-shell">
+      <p class="sim-label">Collaboration Opportunities</p>
+      <h2 class="sim-display sim-section-title">
+        Let's Build Something Powerful Together
+      </h2>
+      <p class="sim-body-copy sim-section-intro">
+        {{ brandName }} offers a range of strategic partnership formats, each designed
+        to integrate your brand naturally and memorably into content that
+        converts. Every collaboration is crafted with intention - no generic
+        placements, no inauthentic promotions.
+      </p>
+
+      <div class="sim-collab-list">
+        @for (item of collaborationOpportunities; track item.title) {
+          <article class="sim-collab-item">
+            <div class="sim-collab-marker">
+              <fa-icon [icon]="item.icon"></fa-icon>
+            </div>
+            <div>
+              <h3 class="sim-display sim-collab-title">{{ item.title }}</h3>
+              <p class="sim-body-copy">{{ item.description }}</p>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="sim-section sim-band">
+    <div class="sim-shell">
+      <p class="sim-label">Social Proof</p>
+      <h2 class="sim-display sim-section-title">What Women Are Saying</h2>
+      <p class="sim-body-copy sim-section-intro">
+        The {{ brandName }} community speaks loudly. These are the voices of real
+        women whose lives have been impacted - the kind of testimonials that
+        demonstrate why this brand converts, and why your partnership will too.
+      </p>
+
+      <div class="sim-testimonials-grid">
+        @for (item of testimonials; track item.quote) {
+          <article class="sim-testimonial-card">
+            <span class="sim-quote-mark" aria-hidden="true">&ldquo;</span>
+            <h3 class="sim-display sim-testimonial-title">
+              "{{ item.quote }}"
+            </h3>
+            <p class="sim-body-copy">{{ item.text }}</p>
+            <p class="sim-testimonial-author">- {{ item.author }}</p>
+          </article>
+        }
+      </div>
+
+      <div class="sim-stats-grid">
+        @for (item of stats; track item.label) {
+          <article class="sim-stat-card">
+            <p class="sim-display sim-stat-value">{{ item.value }}</p>
+            <p class="sim-display sim-stat-label">{{ item.label }}</p>
+            <p class="sim-body-copy">{{ item.description }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="sim-section">
+    <div class="sim-shell">
+      <p class="sim-label">Let's Work Together</p>
+      <h2 class="sim-display sim-section-title">
+        Ready to Partner With a Brand That Moves People?
+      </h2>
+
+      <div class="sim-contact-grid">
+        <div class="sim-contact-copy">
+          <p class="sim-body-copy">
+            {{ brandName }} is selectively accepting brand partnerships with
+            organizations that genuinely align with her audience's values and
+            aspirations. If your brand serves women, supports transformation,
+            and operates with integrity - this is the collaboration you have
+            been looking for.
+          </p>
+          <p class="sim-body-copy">
+            Reach out today to receive the full partnership deck, media kit
+            statistics, and collaboration package details. Spaces are
+            intentionally limited to protect the authenticity and trust that
+            makes this brand so powerful.
+          </p>
+
+          <div class="sim-notice-card">
+            <p class="sim-body-copy">
+              Premium partnerships only. All collaborations are personally
+              reviewed and approved to ensure full alignment with the {{ brandName }}
+              brand and community values.
+            </p>
+          </div>
+
+          <div class="sim-actions">
+            <a class="sim-button sim-button-primary" [href]="mailHref">
+              Send Partnership Inquiry
+            </a>
+            <a class="sim-button sim-button-secondary" [href]="phoneHref">
+              Book a Discovery Call
+            </a>
+          </div>
+        </div>
+
+        <div class="sim-contact-cards">
+          @for (channel of contactChannels; track channel.title) {
+            <article class="sim-contact-card">
+              <h3 class="sim-display sim-contact-title">
+                <fa-icon [icon]="channel.icon"></fa-icon>
+                <span>{{ channel.title }}</span>
+              </h3>
+              <p class="sim-contact-link">
+                <a [href]="channel.href" target="_blank" rel="noreferrer">
+                  {{ channel.value }}
+                </a>
+              </p>
+              <p class="sim-body-copy">{{ channel.description }}</p>
+            </article>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sim-footer">
+    <div class="sim-shell sim-footer-inner">
+        <p class="sim-brand-mark sim-footer-brand">{{ brandName }}</p>
+      <p class="sim-body-copy sim-footer-copy">
+        Becoming whole. Becoming wealthy. Becoming aligned - after motherhood
+        and beyond.
+      </p>
+
+      <div class="sim-footer-tags">
+        @for (theme of footerThemes; track theme) {
+          <span class="sim-footer-tag">{{ theme }}</span>
+        }
+      </div>
+
+      <p class="sim-display sim-footer-statement">
+        This is not a moment. This is a movement. Join it.
+      </p>
+    </div>
+  </footer>
+</div>

@@ -72,4 +72,11 @@ export const routes: Routes = [
         (m) => m.SmgComponent
       ),
   },
+  {
+    path: 'simbiatuu',
+    loadComponent: () =>
+      import('./page/simbiatuu/simbiatuu.component').then(
+        (m) => m.SimbiatuuComponent
+      ),
+  },
 ];
