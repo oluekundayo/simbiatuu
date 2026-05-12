@@ -184,7 +184,7 @@ a {
 
 .sim-hero-photo {
   display: block;
-  width: 100%;
+  width: 10%;
   height: 100%;
   object-fit: cover;
 }
@@ -286,7 +286,7 @@ a {
   width: 116px;
   aspect-ratio: 1;
   border-radius: 999px;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   margin-bottom: 1rem;
   overflow: hidden;
