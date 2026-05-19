@@ -24,10 +24,10 @@ import { HeaderComponent } from "../../components/header/header.component";
 })
 export class SimbiatuuComponent {
   readonly brandName = 'S\u00cdMB\u00cd\u00c0T\u00da\u00da';
-  readonly email = 'Info@simbiatuu.uk';
+  readonly email = 'workwithsimbiatuu@gmail.com';
   readonly phone = '+447852304977';
   readonly phoneHref = 'tel:+447852304977';
-  readonly mailHref = 'mailto:Info@simbiatuu.uk';
+  readonly mailHref = 'mailto:workwithsimbiatuu@gmail.com';
   readonly instagram = '@simbiatuu / @simaffiliates';
 
   readonly brandStoryParagraphs = [
